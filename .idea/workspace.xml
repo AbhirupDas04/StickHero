@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f8d3197-9abd-4249-9eb0-21fbff063383" name="Changes" comment="Changes">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+    <list default="true" id="1f8d3197-9abd-4249-9eb0-21fbff063383" name="Changes" comment="changed Background_Selector">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/Background_Selector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/Background_Selector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/stickhero/stickhero/_21x_9scmwivqq_5-Free-Game-Backgrounds-Frebers.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/stickhero/stickhero/Pic_7.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/stickhero/stickhero/_21x_9scmwivqq_Free-Games-Background-Frebers.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/stickhero/stickhero/Pic_6.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/stickhero/stickhero/_21x_9scmwivqq_Fresh-Game-Background-Emerald-Lake.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/stickhero/stickhero/Pic_5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/stickhero/stickhero/glowing-lines-human-heart-3d-shape-dark-background-generative-ai.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/stickhero/stickhero/Pic_3.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +117,21 @@
       <option name="project" value="LOCAL" />
       <updated>1699617577984</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="changed Background_Selector">
+      <created>1699642424723</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1699642424723</updated>
+    </task>
+    <task id="LOCAL-00007" summary="changed Background_Selector">
+      <created>1699642644659</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1699642644659</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -152,6 +159,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes" />
+    <MESSAGE value="changed Background_Selector" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed Background_Selector" />
   </component>
 </project>
