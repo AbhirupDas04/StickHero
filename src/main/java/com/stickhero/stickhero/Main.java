@@ -20,7 +20,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) {
         Background_Selector selector = new Background_Selector();
         Pane pane = selector.selectOne();
-        Image image = new Image(this.getClass().getResourceAsStream("PNG Image.png"));
+        Image image = new Image(this.getClass().getResourceAsStream("IMG_8951.png"));
         pane.getChildren().add(new ImageView(image));
 
         Scene scene = new Scene(pane, 1000, 650);
