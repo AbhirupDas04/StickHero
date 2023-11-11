@@ -3,10 +3,9 @@ package com.stickhero.stickhero;
 import javafx.scene.image.Image;
 import javafx.scene.layout.*;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
-public class Background_Selector {
+public class Game_Screen extends ParentBackground {
     public ArrayList<String> imagesArray = new ArrayList<>();
 
     public void setImagesArray(ArrayList<String> imagesArray){
