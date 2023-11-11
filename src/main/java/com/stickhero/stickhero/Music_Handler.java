@@ -1,4 +1,4 @@
 package com.stickhero.stickhero;
 
-public class Music_Handler {
+public abstract class Music_Handler {
 }
