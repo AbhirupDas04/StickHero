@@ -13,7 +13,7 @@ public class FlowControl extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        BackgroundHandler handler1 = new Game_Screen();
+        BackgroundHandler handler1 = new GameScreen();
         Pane game_pane = handler1.returnBackground();
 //        Image image = new Image(this.getClass().getResourceAsStream("IMG_8951.png"));
 //        pane.getChildren().add(new ImageView(image));
