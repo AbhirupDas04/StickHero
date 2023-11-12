@@ -1,7 +1,9 @@
 package com.stickhero.stickhero;
 
+import javafx.scene.image.Image;
+
 public class Pillar {
     private int height;
     private int width;
-    public Pillar generatePillar(){return null;}
+    public Image generatePillar(){ return null; }
 }
