@@ -7,16 +7,16 @@ import java.util.Random;
 
 public class Game_Screen extends Background_Handler {
     public Game_Screen(){
-        this.selectOne();
+        this.selectRandomImage();
     }
-    public String selectRandomImage(){
+    public String selectRandomIndex(){
         Random random = new Random();
         int rand = random.nextInt(11) + 1;
         String num = Integer.toString(rand);
         return num;
     }
-    public void selectOne(){
-        String randomImage = "Pic_" + selectRandomImage() + ".jpg";
+    public void selectRandomImage(){
+        String randomImage = "Pic_" + selectRandomIndex() + ".jpg";
         Image image = new Image(getClass().getResourceAsStream(randomImage));
 
         BackgroundSize backgroundSize = new BackgroundSize(1000,650,false,false,true,true);
