@@ -9,13 +9,13 @@ public class Game_Screen extends Background_Handler {
     public Game_Screen(){
         this.selectRandomImage();
     }
-    public String selectRandomIndex(){
+    private String selectRandomIndex(){
         Random random = new Random();
         int rand = random.nextInt(11) + 1;
         String num = Integer.toString(rand);
         return num;
     }
-    public void selectRandomImage(){
+    private void selectRandomImage(){
         String randomImage = "Pic_" + selectRandomIndex() + ".jpg";
         Image image = new Image(getClass().getResourceAsStream(randomImage));
 
