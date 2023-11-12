@@ -5,7 +5,7 @@ import javafx.scene.layout.*;
 
 import java.util.Random;
 
-public class Game_Screen extends Background_Handler {
+public class Game_Screen extends BackgroundHandler {
     public Game_Screen(){
         this.selectRandomImage();
     }
