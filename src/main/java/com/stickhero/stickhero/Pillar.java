@@ -1,6 +1,7 @@
 package com.stickhero.stickhero;
 
 public class Pillar {
-    public int height;
-    public int width;
+    private int height;
+    private int width;
+    public Pillar generatePillar(){return null;}
 }

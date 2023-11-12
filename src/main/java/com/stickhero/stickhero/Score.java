@@ -1,5 +1,8 @@
 package com.stickhero.stickhero;
 
+import javafx.scene.image.Image;
+
 public class Score {
-    public int score;
+    private int score;
+    private Image image;
 }

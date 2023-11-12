@@ -4,7 +4,11 @@ import javafx.scene.layout.Background;
 import javafx.scene.layout.Pane;
 
 public abstract class Background_Handler {
-    public Background background;
+    private Background background;
+
+    public void setBackground(Background background) {
+        this.background = background;
+    }
 
     public Pane returnBackground(){
         Pane pane = new Pane();

@@ -1,5 +1,6 @@
 package com.stickhero.stickhero;
 
 public class Stick {
-    public int length;
+    private int length;
+    public Stick generateStick(){return null;}
 }

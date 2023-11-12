@@ -21,6 +21,6 @@ public class Game_Screen extends Background_Handler {
 
         BackgroundSize backgroundSize = new BackgroundSize(1000,650,false,false,true,true);
         BackgroundImage backgroundimage = new BackgroundImage(image, BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT, backgroundSize);
-        this.background = new Background(backgroundimage);
+        this.setBackground(new Background(backgroundimage));
     }
 }

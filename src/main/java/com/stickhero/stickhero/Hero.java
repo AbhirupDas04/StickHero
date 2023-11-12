@@ -1,5 +1,7 @@
 package com.stickhero.stickhero;
 
 public class Hero {
-    public float speed;
+    private float speed;
+    private int n_rewards;
+    private int score;
 }
