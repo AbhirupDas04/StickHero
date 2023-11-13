@@ -3,7 +3,12 @@ package com.stickhero.stickhero;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.*;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
+
+import javax.sound.sampled.*;
+import java.io.IOException;
 
 public class FlowControl extends Application {
 
