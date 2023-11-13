@@ -6,7 +6,9 @@ import javafx.scene.layout.*;
 import java.util.Random;
 
 public class GameScreen extends BackgroundHandler {
+    private Hero hero;
     public GameScreen(){
+        this.hero = new Hero();
         this.selectRandomImage();
     }
     private String selectRandomIndex(){
@@ -23,4 +25,6 @@ public class GameScreen extends BackgroundHandler {
         BackgroundImage backgroundimage = new BackgroundImage(image, BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT, backgroundSize);
         this.setBackground(new Background(backgroundimage));
     }
+
+    public void startGame(){}
 }
