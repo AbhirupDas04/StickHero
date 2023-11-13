@@ -7,9 +7,11 @@ import java.util.Random;
 
 public class GameScreen extends BackgroundHandler {
     private Hero hero;
+    private int gamespeed;
     public GameScreen(){
         this.hero = new Hero();
         this.selectRandomImage();
+        this.gamespeed = 1;
     }
     private String selectRandomIndex(){
         Random random = new Random();

@@ -8,5 +8,4 @@ public class EndScreen extends BackgroundHandler {
         this.game = game;
     }
     public void endGame(){}
-    public void restartGame(){}
 }
