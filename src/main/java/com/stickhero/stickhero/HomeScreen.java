@@ -5,6 +5,10 @@ import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.layout.*;
 import javafx.scene.shape.Circle;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontPosture;
+import javafx.scene.text.FontWeight;
+import javafx.scene.text.Text;
 
 public class HomeScreen extends BackgroundHandler {
     public HBox openHome(){
@@ -15,11 +19,23 @@ public class HomeScreen extends BackgroundHandler {
 
         HBox pane = this.returnBackground();
         Button bt = new Button();
-        bt.setShape(new Circle(200));
-        bt.setMinSize(200,200);
-        bt.setMaxSize(200,200);
-        pane.setAlignment(Pos.CENTER);
-        pane.getChildren().add(bt);
+        bt.setStyle("-fx-background-color:rgb(255, 0, 0);-fx-font-size:40;-fx-text-fill:white");
+        bt.setShape(new Circle(150));
+        bt.setMinSize(150,150);
+        bt.setMaxSize(150,150);
+        bt.setText("PLAY");
+        Text text = new Text();
+
+        //Setting font to the text
+        text.setFont(Font.font("verdana", FontWeight.BOLD, FontPosture.REGULAR, 20));
+
+        //setting the position of the text
+        text.setX(50);
+        text.setY(130);
+
+        //Setting the text to be added.
+        text.setText("Hi how are you");
+        pane.getChildren().addAll(bt,text);
 
         return pane;
     }
