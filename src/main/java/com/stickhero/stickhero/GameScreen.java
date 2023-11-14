@@ -13,6 +13,9 @@ public class GameScreen extends BackgroundHandler {
         this.selectRandomImage();
         this.gamespeed = 1;
     }
+    public void updateGameSpeed(int speed){
+        this.gamespeed = speed;
+    }
     private String selectRandomIndex(){
         Random random = new Random();
         int rand = random.nextInt(11) + 1;
