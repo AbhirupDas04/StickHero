@@ -21,6 +21,7 @@ public class EndScreen extends BackgroundHandler {
         this.hero = hero;
         this.game = game;
         this.image = image;
+        super.setMusic(new EndingMusic());
     }
     public void endGame(Pane pane, Scene scene1){
         Rectangle rectangle1 = new Rectangle(500, 650);

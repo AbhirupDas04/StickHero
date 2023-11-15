@@ -29,6 +29,7 @@ public class GameScreen extends BackgroundHandler {
         this.selectRandomImage();
         this.gamespeed = 1;
         this.score = 0;
+        super.setMusic(new InGameMusic());
     }
     public void updateGameSpeed(int speed){
         this.gamespeed = speed;

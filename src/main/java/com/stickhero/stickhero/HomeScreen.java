@@ -23,6 +23,7 @@ public class HomeScreen extends BackgroundHandler {
     public HomeScreen(Stage stage, GameScreen game){
         super(stage);
         this.game = game;
+        super.setMusic(new IntroMusic());
     }
     public void openHome(){
         Image image = new Image(getClass().getResourceAsStream("Pic_10.jpg"));
