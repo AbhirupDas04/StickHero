@@ -17,6 +17,7 @@ public class EndScreen extends BackgroundHandler {
     private GameScreen game;
     private Image image;
     private HistoryStorage storage;
+    private Score score;
     public EndScreen(Stage stage, Hero hero, GameScreen game, Image image, HistoryStorage storage){
         super(stage);
         this.hero = hero;

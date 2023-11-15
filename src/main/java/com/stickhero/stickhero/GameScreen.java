@@ -21,18 +21,20 @@ import java.util.Random;
 public class GameScreen extends BackgroundHandler {
     private Hero hero;
     private int gamespeed;
-    private int score;
     private int n_cherries;
     private Image image;
     private HistoryStorage storage;
+    private Score score;
+    private int level;
     public GameScreen(Stage stage, HistoryStorage storage){
         super(stage);
         this.hero = new Hero();
         this.selectRandomImage();
         this.gamespeed = 1;
-        this.score = 0;
+        this.score = new Score();
         this.n_cherries = 0;
         this.storage = storage;
+        this.level = 0;
         super.setMusic(new InGameMusic());
     }
     public void updateGameSpeed(int speed){
