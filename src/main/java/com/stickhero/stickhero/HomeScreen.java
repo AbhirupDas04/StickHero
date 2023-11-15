@@ -20,10 +20,12 @@ import javafx.stage.Stage;
 public class HomeScreen extends BackgroundHandler {
     private Rectangle rectangle;
     private GameScreen game;
-    public HomeScreen(Stage stage, GameScreen game){
+    private HistoryStorage storage;
+    public HomeScreen(Stage stage, GameScreen game, HistoryStorage storage){
         super(stage);
         this.game = game;
         super.setMusic(new IntroMusic());
+        this.storage = storage;
     }
     public void openHome(){
         Image image = new Image(getClass().getResourceAsStream("Pic_10.jpg"));

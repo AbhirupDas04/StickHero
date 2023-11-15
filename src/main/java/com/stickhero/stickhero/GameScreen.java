@@ -22,13 +22,17 @@ public class GameScreen extends BackgroundHandler {
     private Hero hero;
     private int gamespeed;
     private int score;
+    private int n_cherries;
     private Image image;
-    public GameScreen(Stage stage){
+    private HistoryStorage storage;
+    public GameScreen(Stage stage, HistoryStorage storage){
         super(stage);
         this.hero = new Hero();
         this.selectRandomImage();
         this.gamespeed = 1;
         this.score = 0;
+        this.n_cherries = 0;
+        this.storage = storage;
         super.setMusic(new InGameMusic());
     }
     public void updateGameSpeed(int speed){
@@ -130,7 +134,7 @@ public class GameScreen extends BackgroundHandler {
         super.getStage().setResizable(false);
         super.getStage().show();
 
-        EndScreen endScreen = new EndScreen(super.getStage(),new Hero(),this,this.image);
+        EndScreen endScreen = new EndScreen(super.getStage(),new Hero(),this,this.image,storage);
 
         bt.setOnAction(new EventHandler<ActionEvent>() {
             @Override

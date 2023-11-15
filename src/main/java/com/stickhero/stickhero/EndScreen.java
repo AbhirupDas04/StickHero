@@ -16,12 +16,14 @@ public class EndScreen extends BackgroundHandler {
     private Hero hero;
     private GameScreen game;
     private Image image;
-    public EndScreen(Stage stage, Hero hero, GameScreen game, Image image){
+    private HistoryStorage storage;
+    public EndScreen(Stage stage, Hero hero, GameScreen game, Image image, HistoryStorage storage){
         super(stage);
         this.hero = hero;
         this.game = game;
         this.image = image;
         super.setMusic(new EndingMusic());
+        this.storage = storage;
     }
     public void endGame(Pane pane, Scene scene1){
         Rectangle rectangle1 = new Rectangle(500, 650);

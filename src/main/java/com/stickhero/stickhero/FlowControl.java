@@ -19,8 +19,9 @@ public class FlowControl extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        GameScreen game = new GameScreen(primaryStage);
-        HomeScreen home = new HomeScreen(primaryStage,game);
+        HistoryStorage storage = new HistoryStorage();
+        GameScreen game = new GameScreen(primaryStage,storage);
+        HomeScreen home = new HomeScreen(primaryStage,game, storage);
 
         home.openHome();
     }
