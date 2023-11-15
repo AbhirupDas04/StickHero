@@ -1,10 +1,12 @@
 package com.stickhero.stickhero;
 
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
@@ -90,6 +92,33 @@ public class GameScreen extends BackgroundHandler {
         text.setLayoutY(84);
         text.setText("0");
         game_pane.getChildren().add(text);
+
+        Image image3 = new Image(this.getClass().getResourceAsStream("cherry.png"));
+        ImageView view1 = new ImageView(image3);
+        view1.setPreserveRatio(true);
+        view1.setFitHeight(30);
+        view1.setFitWidth(30);
+        view1.setLayoutX(467);
+        view1.setLayoutY(35);
+        game_pane.getChildren().add(view1);
+
+        Text text1 = new Text();
+        text1.setFont(Font.font("verdana", FontPosture.REGULAR, 16));
+        text1.setFill(Color.WHITE);
+        text1.setLayoutX(450);
+        text1.setLayoutY(56);
+        text1.setText("0");
+        game_pane.getChildren().add(text1);
+
+        Button bt = new Button();
+        bt.setStyle("-fx-background-color:rgb(255, 0, 0);-fx-font-size:15;-fx-text-fill:white;-fx-border-radius: 15px;");
+        bt.setShape(new Rectangle(50,30));
+        bt.setMinSize(50,30);
+        bt.setMaxSize(100,60);
+        bt.setText("EXIT");
+        bt.setLayoutX(25);
+        bt.setLayoutY(25);
+        game_pane.getChildren().add(bt);
 
         Scene scene = new Scene(game_pane, 500, 650);
         super.getStage().setScene(scene);
