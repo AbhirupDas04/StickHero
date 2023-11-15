@@ -1,5 +1,7 @@
 package com.stickhero.stickhero;
 
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
@@ -19,11 +21,14 @@ import java.util.Random;
 public class GameScreen extends BackgroundHandler {
     private Hero hero;
     private int gamespeed;
+    private int score;
+    private Image image;
     public GameScreen(Stage stage){
         super(stage);
         this.hero = new Hero();
         this.selectRandomImage();
         this.gamespeed = 1;
+        this.score = 0;
     }
     public void updateGameSpeed(int speed){
         this.gamespeed = speed;
@@ -41,6 +46,7 @@ public class GameScreen extends BackgroundHandler {
         BackgroundSize backgroundSize = new BackgroundSize(1000,650,false,false,true,true);
         BackgroundImage backgroundimage = new BackgroundImage(image, BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT, backgroundSize);
         this.setBackground(new Background(backgroundimage));
+        this.image = image;
     }
 
     public void startGame(){
@@ -110,19 +116,26 @@ public class GameScreen extends BackgroundHandler {
         text1.setText("0");
         game_pane.getChildren().add(text1);
 
-        Button bt = new Button();
-        bt.setStyle("-fx-background-color:rgb(255, 0, 0);-fx-font-size:15;-fx-text-fill:white;-fx-border-radius: 15px;");
-        bt.setShape(new Rectangle(50,30));
+        Button bt = new Button("EXIT");
         bt.setMinSize(50,30);
         bt.setMaxSize(100,60);
-        bt.setText("EXIT");
         bt.setLayoutX(25);
         bt.setLayoutY(25);
+        bt.setStyle("-fx-background-color:rgb(255, 0, 0);-fx-border-radius: 150;-fx-font-size:15;-fx-text-fill:white");
         game_pane.getChildren().add(bt);
 
         Scene scene = new Scene(game_pane, 500, 650);
         super.getStage().setScene(scene);
         super.getStage().setResizable(false);
         super.getStage().show();
+
+        EndScreen endScreen = new EndScreen(super.getStage(),new Hero(),this,this.image);
+
+        bt.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                endScreen.endGame();
+            }
+        });
     }
 }
