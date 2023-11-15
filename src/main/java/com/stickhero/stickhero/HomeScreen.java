@@ -3,16 +3,20 @@ package com.stickhero.stickhero;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.scene.shape.Circle;
+import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 
 public class HomeScreen extends BackgroundHandler {
+    Rectangle rectangle;
+    GameScreen game;
     public Pane openHome(){
-        Image image = new Image(getClass().getResourceAsStream("Pic_5.jpg"));
+        Image image = new Image(getClass().getResourceAsStream("Pic_8.jpg"));
         BackgroundSize backgroundSize = new BackgroundSize(1000,650,false,false,true,true);
         BackgroundImage backgroundimage = new BackgroundImage(image, BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT, backgroundSize);
         this.setBackground(new Background(backgroundimage));
@@ -41,6 +45,21 @@ public class HomeScreen extends BackgroundHandler {
 
         pane.getChildren().addAll(bt,text,text2);
 
+        Pillar pillar = new Pillar();
+        rectangle = pillar.generatePillar(100,120);
+        rectangle.setLayoutX(200);
+        rectangle.setLayoutY(530);
+
+        pane.getChildren().add(rectangle);
+
+        Image image2 = new Image(this.getClass().getResourceAsStream("IMG_8950.png"));
+        ImageView view = new ImageView(image2);
+        view.setPreserveRatio(true);
+        view.setFitHeight(35);
+        view.setFitWidth(35);
+        view.setLayoutX(230);
+        view.setLayoutY(495);
+        pane.getChildren().add(view);
 
         return pane;
     }

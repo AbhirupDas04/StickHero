@@ -8,5 +8,8 @@ import java.awt.*;
 public class Pillar {
     private int height;
     private int width = 50;
-    public Rectangle generatePillar(int height){return null;}
+    public Rectangle generatePillar(int width,int height){
+        Rectangle rectangle = new Rectangle(width,height);
+        return rectangle;
+    }
 }

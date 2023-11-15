@@ -31,5 +31,7 @@ public class GameScreen extends BackgroundHandler {
         this.setBackground(new Background(backgroundimage));
     }
 
-    public void startGame(){}
+    public void startGame(){
+
+    }
 }
