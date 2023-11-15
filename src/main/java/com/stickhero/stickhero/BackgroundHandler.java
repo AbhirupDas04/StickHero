@@ -11,9 +11,9 @@ public abstract class BackgroundHandler {
         this.background = background;
     }
 
-    public HBox returnBackground(){
-        HBox hbox = new HBox();
-        hbox.setBackground(this.background);
-        return hbox;
+    public Pane returnBackground(){
+        Pane pane = new Pane();
+        pane.setBackground(this.background);
+        return pane;
     }
 }
