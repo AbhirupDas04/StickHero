@@ -10,6 +10,9 @@ for the UI creation and nothing else.
 added to them.
 
 
-4) If you want to compile with maven that's also possible but please
+4) All the java classes can be found in the .src folder.
+
+
+5) If you want to compile with maven that's also possible but please
 remember to add the javafx lib path to the module path while running
 if you want to run the pom.xml.
