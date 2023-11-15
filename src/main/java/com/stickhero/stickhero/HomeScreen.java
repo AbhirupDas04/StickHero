@@ -8,6 +8,7 @@ import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
@@ -17,14 +18,14 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class HomeScreen extends BackgroundHandler {
-    Rectangle rectangle;
-    GameScreen game;
+    private Rectangle rectangle;
+    private GameScreen game;
     public HomeScreen(Stage stage, GameScreen game){
         super(stage);
         this.game = game;
     }
     public void openHome(){
-        Image image = new Image(getClass().getResourceAsStream("Pic_2.jpg"));
+        Image image = new Image(getClass().getResourceAsStream("Pic_10.jpg"));
         BackgroundSize backgroundSize = new BackgroundSize(1000,650,false,false,true,true);
         BackgroundImage backgroundimage = new BackgroundImage(image, BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT, backgroundSize);
         this.setBackground(new Background(backgroundimage));

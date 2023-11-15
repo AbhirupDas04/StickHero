@@ -134,7 +134,13 @@ public class GameScreen extends BackgroundHandler {
         bt.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                endScreen.endGame();
+                bt.setVisible(false);
+                text1.setVisible(false);
+                text.setVisible(false);
+                view1.setVisible(false);
+                view.setVisible(false);
+                rectangle1.setVisible(false);
+                endScreen.endGame(game_pane,scene);
             }
         });
     }
