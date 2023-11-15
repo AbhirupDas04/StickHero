@@ -1,6 +1,9 @@
 package com.stickhero.stickhero;
 
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Pos;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -11,11 +14,16 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
 public class HomeScreen extends BackgroundHandler {
     Rectangle rectangle;
     GameScreen game;
-    public Pane openHome(){
+    public HomeScreen(Stage stage, GameScreen game){
+        super(stage);
+        this.game = game;
+    }
+    public void openHome(){
         Image image = new Image(getClass().getResourceAsStream("Pic_8.jpg"));
         BackgroundSize backgroundSize = new BackgroundSize(1000,650,false,false,true,true);
         BackgroundImage backgroundimage = new BackgroundImage(image, BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT, backgroundSize);
@@ -61,6 +69,16 @@ public class HomeScreen extends BackgroundHandler {
         view.setLayoutY(495);
         pane.getChildren().add(view);
 
-        return pane;
+        Scene scene1 = new Scene(pane, 500, 650);
+        super.getStage().setScene(scene1);
+        super.getStage().setResizable(false);
+        super.getStage().show();
+
+        bt.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                game.startGame();
+            }
+        });
     }
 }

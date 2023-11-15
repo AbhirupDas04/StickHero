@@ -8,6 +8,17 @@ import javafx.stage.Stage;
 public abstract class BackgroundHandler {
     private Background background;
     private Stage stage;
+    public BackgroundHandler(Stage stage){
+        this.stage = stage;
+    }
+
+    public void setStage(Stage stage) {
+        this.stage = stage;
+    }
+
+    public Stage getStage() {
+        return stage;
+    }
 
     public void setBackground(Background background) {
         this.background = background;
