@@ -32,7 +32,6 @@ public class EndScreen extends BackgroundHandler {
         rectangle1.setLayoutX(0);
         rectangle1.setLayoutY(0);
         rectangle1.setOpacity(0.45);
-        pane.getChildren().add(rectangle1);
 
         Text text = new Text();
         text.setFont(Font.font("verdana", FontPosture.REGULAR, 65));
@@ -40,7 +39,6 @@ public class EndScreen extends BackgroundHandler {
         text.setLayoutX(40);
         text.setLayoutY(85);
         text.setText("GAME OVER!");
-        pane.getChildren().add(text);
 
         Rectangle rectangle2 = new Rectangle(430,200 );
         rectangle2.setFill(Color.WHITE);
@@ -48,7 +46,6 @@ public class EndScreen extends BackgroundHandler {
         rectangle2.setLayoutY(150);
         rectangle2.setArcHeight(30);
         rectangle2.setArcWidth(30);
-        pane.getChildren().add(rectangle2);
 
         Text text2 = new Text();
         text2.setFont(Font.font("verdana", FontPosture.REGULAR, 30));
@@ -56,7 +53,6 @@ public class EndScreen extends BackgroundHandler {
         text2.setLayoutX(195);
         text2.setLayoutY(185);
         text2.setText("SCORE");
-        pane.getChildren().add(text2);
 
         Text text3 = new Text();
         text3.setFont(Font.font("verdana", FontWeight.BOLD, FontPosture.REGULAR, 55));
@@ -64,7 +60,6 @@ public class EndScreen extends BackgroundHandler {
         text3.setLayoutX(229);
         text3.setLayoutY(241);
         text3.setText("0");
-        pane.getChildren().add(text3);
 
         Text text4 = new Text();
         text4.setFont(Font.font("verdana", FontPosture.REGULAR, 30));
@@ -72,7 +67,6 @@ public class EndScreen extends BackgroundHandler {
         text4.setLayoutX(206);
         text4.setLayoutY(280);
         text4.setText("BEST");
-        pane.getChildren().add(text4);
 
         Text text5 = new Text();
         text5.setFont(Font.font("verdana", FontWeight.BOLD, FontPosture.REGULAR, 55));
@@ -80,7 +74,6 @@ public class EndScreen extends BackgroundHandler {
         text5.setLayoutX(229);
         text5.setLayoutY(333);
         text5.setText("0");
-        pane.getChildren().add(text5);
 
         Rectangle rectangle3 = new Rectangle(200,80 );
         rectangle3.setFill(Color.GRAY);
@@ -88,16 +81,14 @@ public class EndScreen extends BackgroundHandler {
         rectangle3.setLayoutY(430);
         rectangle3.setArcHeight(30);
         rectangle3.setArcWidth(30);
-        pane.getChildren().add(rectangle3);
 
-        Image image2 = new Image(this.getClass().getResourceAsStream("home-button1.png"));
+        Image image2 = new Image(this.getClass().getResourceAsStream("home-button.png"));
         ImageView view = new ImageView(image2);
         view.setPreserveRatio(true);
         view.setFitHeight(50);
         view.setFitWidth(50);
         view.setLayoutX(183);
         view.setLayoutY(445);
-        pane.getChildren().add(view);
 
         Image image3 = new Image(this.getClass().getResourceAsStream("reload.png"));
         ImageView view2 = new ImageView(image3);
@@ -106,7 +97,8 @@ public class EndScreen extends BackgroundHandler {
         view2.setFitWidth(50);
         view2.setLayoutX(266);
         view2.setLayoutY(445);
-        pane.getChildren().add(view2);
+
+        pane.getChildren().addAll(rectangle1,rectangle2,rectangle3,view2,view,text,text2,text3,text4,text5);
 
         super.getStage().setScene(scene1);
         super.getStage().show();
