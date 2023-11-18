@@ -2,8 +2,14 @@ package com.stickhero.stickhero;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
+
+import java.util.Random;
 
 public class FlowControl extends Application {
 
@@ -13,13 +19,10 @@ public class FlowControl extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        Background_Handler handler1 = new Game_Screen();
-        Pane game_pane = handler1.returnBackground();
-//        Image image = new Image(this.getClass().getResourceAsStream("IMG_8951.png"));
-//        pane.getChildren().add(new ImageView(image));
+        HistoryStorage storage = new HistoryStorage();
+        GameScreen game = new GameScreen(primaryStage,storage);
+        HomeScreen home = new HomeScreen(primaryStage,game, storage);
 
-        Scene scene = new Scene(game_pane, 1000, 650);
-        primaryStage.setScene(scene);
-        primaryStage.show();
+        home.openHome();
     }
 }

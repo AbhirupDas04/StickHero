@@ -1,4 +1,4 @@
 package com.stickhero.stickhero;
 
-public class RewardMusic extends Music_Handler{
+public class RewardMusic extends MusicHandler {
 }
