@@ -1,5 +1,6 @@
 package com.stickhero.stickhero;
 
+import javafx.animation.AnimationTimer;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
@@ -8,15 +9,12 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
-import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-import java.net.Authenticator;
 import java.util.Random;
 
 public class GameScreen extends BackgroundHandler {
@@ -57,7 +55,7 @@ public class GameScreen extends BackgroundHandler {
         this.image = image;
     }
 
-    public void startGame(){
+    public void startGame() throws InterruptedException {
         Pane game_pane = this.returnBackground();
         Pillar pillar = new Pillar(100,160,0,490);
         Rectangle rectangle = pillar.getRectangle();
@@ -73,7 +71,7 @@ public class GameScreen extends BackgroundHandler {
         rect3.setLayoutX(rand_posX + rand_width / 2.0 - 5);
         rect3.setLayoutY(490);
 
-        ImageView view = hero.generateStandingHero(35,35,60,455);
+        ImageView view = hero.generateStandingHero(35,35,55,455);
 
         Rectangle rectangle1 = new Rectangle(70, 40);
         rectangle1.setFill(Color.GRAY);
@@ -108,9 +106,10 @@ public class GameScreen extends BackgroundHandler {
         bt.setStyle("-fx-background-color:rgb(255, 0, 0);-fx-border-radius: 150;-fx-font-size:15;-fx-text-fill:white");
 
         game_pane.getChildren().addAll(rectangle,bt,rectangle2,rect3,rectangle1,view,view1,text,text1);
+        this.setPane(game_pane);
 
-        Scene scene = new Scene(game_pane, 500, 650);
-        super.getStage().setScene(scene);
+        Scene scene1 = new Scene(game_pane, 500, 650);
+        super.getStage().setScene(scene1);
         super.getStage().setResizable(false);
         super.getStage().show();
 
@@ -125,8 +124,31 @@ public class GameScreen extends BackgroundHandler {
                 view1.setVisible(false);
                 view.setVisible(false);
                 rectangle1.setVisible(false);
-                endScreen.endGame(game_pane,scene);
+                endScreen.endGame(game_pane,scene1);
             }
         });
+
+        Stick stick = new Stick(5, 95, 480);
+        Rectangle rectangle4 = stick.generateStick();
+
+        Pane pane = this.getPane();
+        pane.getChildren().addAll(rectangle4);
+
+        AnimationTimer timer = new AnimationTimer() {
+            @Override
+            public void handle(long l) {
+                stick.extendLength();
+            }
+        };
+
+        scene1.setOnMousePressed(e -> {
+            timer.start();
+        });
+        scene1.setOnMouseReleased(e -> {
+            timer.stop();
+        });
+    }
+
+    public void playGame(){
     }
 }
