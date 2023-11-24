@@ -21,8 +21,8 @@ public class EndingMusic extends MusicHandler
 
         mediaPlayer = new MediaPlayer(media);
 
-        MediaView mediaView = new MediaView(mediaPlayer);
-        mediaView.setMediaPlayer(mediaPlayer);
+//        MediaView mediaView = new MediaView(mediaPlayer);
+//        mediaView.setMediaPlayer(mediaPlayer);
 
         mediaPlayer.setAutoPlay(true);
 //        primaryStage.setTitle("Playing Audio");
