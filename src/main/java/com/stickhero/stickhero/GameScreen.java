@@ -14,6 +14,7 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.Text;
+import javafx.scene.transform.Rotate;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -147,16 +148,24 @@ public class GameScreen extends BackgroundHandler {
                 stick.extendLength();
             }
         };
+        AnimationTimer timer1 = new AnimationTimer() {
+            int deg = 0;
+            @Override
+            public void handle(long l) {
+                rectangle4.getTransforms().add(new Rotate(1,5, stick.getHeight()));
+                deg++;
+                if(deg == 90){
+                    stop();
+                }
+            }
+        };
 
         this.getScene().setOnMousePressed(e -> {
             timer.start();
         });
         this.getScene().setOnMouseReleased(e -> {
             timer.stop();
-            Duration duration = Duration.millis(2500);
-            RotateTransition rotator = new RotateTransition(duration, stick.getRectangle());
-            rotator.setByAngle(90);
-            rotator.play();
+            timer1.start();
         });
     }
 }
