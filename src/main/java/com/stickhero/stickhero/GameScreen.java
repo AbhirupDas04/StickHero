@@ -1,6 +1,7 @@
 package com.stickhero.stickhero;
 
 import javafx.animation.AnimationTimer;
+import javafx.animation.RotateTransition;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
@@ -14,6 +15,7 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 import java.util.Random;
 
@@ -109,6 +111,7 @@ public class GameScreen extends BackgroundHandler {
         this.setPane(game_pane);
 
         Scene scene1 = new Scene(game_pane, 500, 650);
+        super.setScene(scene1);
         super.getStage().setScene(scene1);
         super.getStage().setResizable(false);
         super.getStage().show();
@@ -128,6 +131,10 @@ public class GameScreen extends BackgroundHandler {
             }
         });
 
+        this.playGame();
+    }
+
+    public void playGame(){
         Stick stick = new Stick(5, 95, 480);
         Rectangle rectangle4 = stick.generateStick();
 
@@ -141,14 +148,15 @@ public class GameScreen extends BackgroundHandler {
             }
         };
 
-        scene1.setOnMousePressed(e -> {
+        this.getScene().setOnMousePressed(e -> {
             timer.start();
         });
-        scene1.setOnMouseReleased(e -> {
+        this.getScene().setOnMouseReleased(e -> {
             timer.stop();
+            Duration duration = Duration.millis(2500);
+            RotateTransition rotator = new RotateTransition(duration, stick.getRectangle());
+            rotator.setByAngle(90);
+            rotator.play();
         });
-    }
-
-    public void playGame(){
     }
 }
