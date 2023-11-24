@@ -1,7 +1,9 @@
 package com.stickhero.stickhero;
 
+import javafx.animation.Animation;
 import javafx.animation.AnimationTimer;
 import javafx.animation.RotateTransition;
+import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
@@ -133,15 +135,20 @@ public class GameScreen extends BackgroundHandler {
             }
         });
 
-        this.playGame();
+        this.playGame(rand_posX + rand_width - 100);
     }
 
-    public void playGame(){
+    public void playGame(int next_pillar_centre){
         Stick stick = new Stick(5, 95, 480);
         Rectangle rectangle4 = stick.generateStick();
 
         Pane pane = this.getPane();
         pane.getChildren().addAll(rectangle4);
+
+        ImageView view = this.hero.getView();
+        TranslateTransition transition = new TranslateTransition();
+        transition.setNode(view);
+        transition.setToX(next_pillar_centre);
 
         AnimationTimer timer = new AnimationTimer() {
             @Override
@@ -159,6 +166,7 @@ public class GameScreen extends BackgroundHandler {
                     deg++;
                     if (deg == 90) {
                         stop();
+                        transition.play();
                         flag = true;
                     }
                 }

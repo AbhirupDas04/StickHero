@@ -9,9 +9,16 @@ public class Hero {
     private Score score;
     private int level;
     private int cherriesCollected;
+    private ImageView view;
+
+    public ImageView getView() {
+        return view;
+    }
+
     public ImageView generateStandingHero(int height, int width, int x_pos, int y_pos){
         Image image2 = new Image(this.getClass().getResourceAsStream("Standing_Hero.png"));
         ImageView view = new ImageView(image2);
+        this.view = view;
         view.setPreserveRatio(true);
         view.setFitHeight(height);
         view.setFitWidth(width);
