@@ -15,7 +15,7 @@ public class InGameMusic extends MusicHandler
 {
     private MediaPlayer mediaPlayer;
     public void start (Stage primaryStage) throws Exception {
-        String musicPath = "src/main/resources/com/stickhero/stickhero/life-of-a-wandering-wizard-15549.mp3";
+        String musicPath = "src/main/resources/com/stickhero/stickhero/InGame_music.mp3";
 
         Media media = new Media(new File(musicPath).toURI().toString());
 
