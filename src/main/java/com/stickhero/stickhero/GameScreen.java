@@ -9,12 +9,14 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.Text;
+import javafx.scene.transform.Rotate;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -158,16 +160,36 @@ public class GameScreen extends BackgroundHandler {
                 stick.extendLength();
             }
         };
+        AnimationTimer timer1 = new AnimationTimer() {
+            int deg = 0;
+            boolean flag = false;
+            @Override
+            public void handle(long l) {
+                if(flag == false) {
+                    rectangle4.getTransforms().add(new Rotate(1, 5, stick.getHeight()));
+                    deg++;
+                    if (deg == 90) {
+                        stop();
+                        flag = true;
+                    }
+                }
+            }
+        };
 
-        this.getScene().setOnMousePressed(e -> {
-            timer.start();
+        this.getScene().setOnMousePressed(new EventHandler<MouseEvent>() {
+            boolean flag = false;
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                if(!flag){
+                    timer.start();
+                    flag = true;
+                }
+            }
         });
+
         this.getScene().setOnMouseReleased(e -> {
             timer.stop();
-            Duration duration = Duration.millis(2500);
-            RotateTransition rotator = new RotateTransition(duration, stick.getRectangle());
-            rotator.setByAngle(90);
-            rotator.play();
+            timer1.start();
         });
     }
 }
