@@ -1,5 +1,6 @@
 package com.stickhero.stickhero;
 
+import com.almasb.fxgl.app.PrimaryStageWindow;
 import javafx.animation.AnimationTimer;
 import javafx.animation.RotateTransition;
 import javafx.event.ActionEvent;
@@ -27,6 +28,7 @@ public class GameScreen extends BackgroundHandler {
     private HistoryStorage storage;
     private Score score;
     private int level;
+    private InGameMusic inGameMusic;
     public GameScreen(Stage stage, HistoryStorage storage){
         super(stage);
         this.hero = new Hero();
@@ -36,7 +38,8 @@ public class GameScreen extends BackgroundHandler {
         this.n_cherries = 0;
         this.storage = storage;
         this.level = 0;
-//        super.setMusic(new InGameMusic());
+        this.inGameMusic = new InGameMusic();
+        super.setMusic(new InGameMusic());
     }
     public void updateGameSpeed(int speed){
         this.gamespeed = speed;
@@ -57,7 +60,8 @@ public class GameScreen extends BackgroundHandler {
         this.image = image;
     }
 
-    public void startGame() throws InterruptedException {
+    public void startGame() throws Exception {
+
         Pane game_pane = this.returnBackground();
         Pillar pillar = new Pillar(100,160,0,490);
         Rectangle rectangle = pillar.getRectangle();
@@ -135,6 +139,12 @@ public class GameScreen extends BackgroundHandler {
     }
 
     public void playGame(){
+        try {
+            inGameMusic.start(super.getStage());
+        } catch (Exception e) {
+            e.printStackTrace();  // Handle the exception according to your application's needs
+        }
+//        inGameMusic.start(getStage());
         Stick stick = new Stick(5, 95, 480);
         Rectangle rectangle4 = stick.generateStick();
 

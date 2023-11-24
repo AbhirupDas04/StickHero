@@ -23,6 +23,10 @@ public class FlowControl extends Application {
         GameScreen game = new GameScreen(primaryStage,storage);
         HomeScreen home = new HomeScreen(primaryStage,game, storage);
 
-        home.openHome();
+        try {
+            home.openHome();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

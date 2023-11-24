@@ -32,7 +32,7 @@ public class HomeScreen extends BackgroundHandler {
         BackgroundImage backgroundimage = new BackgroundImage(image, BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT, backgroundSize);
         this.setBackground(new Background(backgroundimage));
     }
-    public void openHome(){
+    public void openHome() throws InterruptedException{
         Pane pane = this.returnBackground();
 
         Button bt = new Button();
@@ -75,6 +75,8 @@ public class HomeScreen extends BackgroundHandler {
                 try {
                     game.startGame();
                 } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                } catch (Exception e){
                     throw new RuntimeException(e);
                 }
             }
