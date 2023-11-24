@@ -15,7 +15,7 @@ public class EndingMusic extends MusicHandler
 {
     private MediaPlayer mediaPlayer;
     public void start (Stage primaryStage) throws Exception {
-        String musicPath = "src/main/resources/com/stickhero/stickhero/end_page_music.mp3";
+        String musicPath = "src/main/resources/com/stickhero/stickhero/end_screen_music.mp3";
 
         Media media = new Media(new File(musicPath).toURI().toString());
 
