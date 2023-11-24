@@ -46,7 +46,7 @@ public class GameScreen extends BackgroundHandler {
         this.n_cherries = 0;
         this.storage = storage;
         this.level = 0;
-        super.setMusic(new InGameMusic());
+//        super.setMusic(new InGameMusic());
     }
     public void updateGameSpeed(int speed){
         this.gamespeed = speed;

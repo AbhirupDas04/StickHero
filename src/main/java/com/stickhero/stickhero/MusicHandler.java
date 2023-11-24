@@ -4,3 +4,4 @@ public abstract class MusicHandler {
     private String music;
     public void playMusic(){}
 }
+
