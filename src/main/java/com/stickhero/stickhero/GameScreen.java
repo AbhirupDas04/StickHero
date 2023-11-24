@@ -1,8 +1,9 @@
 package com.stickhero.stickhero;
 
-import com.almasb.fxgl.app.PrimaryStageWindow;
+import javafx.animation.Animation;
 import javafx.animation.AnimationTimer;
 import javafx.animation.RotateTransition;
+import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
@@ -30,7 +31,6 @@ public class GameScreen extends BackgroundHandler {
     private HistoryStorage storage;
     private Score score;
     private int level;
-    private InGameMusic inGameMusic;
     public GameScreen(Stage stage, HistoryStorage storage){
         super(stage);
         this.hero = new Hero();
@@ -40,7 +40,6 @@ public class GameScreen extends BackgroundHandler {
         this.n_cherries = 0;
         this.storage = storage;
         this.level = 0;
-        this.inGameMusic = new InGameMusic();
         super.setMusic(new InGameMusic());
     }
     public void updateGameSpeed(int speed){
@@ -62,8 +61,7 @@ public class GameScreen extends BackgroundHandler {
         this.image = image;
     }
 
-    public void startGame() throws Exception {
-
+    public void startGame() throws InterruptedException {
         Pane game_pane = this.returnBackground();
         Pillar pillar = new Pillar(100,160,0,490);
         Rectangle rectangle = pillar.getRectangle();
@@ -133,26 +131,24 @@ public class GameScreen extends BackgroundHandler {
                 view1.setVisible(false);
                 view.setVisible(false);
                 rectangle1.setVisible(false);
-                inGameMusic.stop();
                 endScreen.endGame(game_pane,scene1);
             }
         });
 
-        this.playGame();
+        this.playGame(rand_posX + rand_width - 100);
     }
 
-    public void playGame(){
-        try {
-            inGameMusic.start(super.getStage());
-        } catch (Exception e) {
-            e.printStackTrace();  // Handle the exception according to your application's needs
-        }
-//        inGameMusic.start(getStage());
+    public void playGame(int next_pillar_centre){
         Stick stick = new Stick(5, 95, 480);
         Rectangle rectangle4 = stick.generateStick();
 
         Pane pane = this.getPane();
         pane.getChildren().addAll(rectangle4);
+
+        ImageView view = this.hero.getView();
+        TranslateTransition transition = new TranslateTransition();
+        transition.setNode(view);
+        transition.setToX(next_pillar_centre);
 
         AnimationTimer timer = new AnimationTimer() {
             @Override
@@ -170,6 +166,7 @@ public class GameScreen extends BackgroundHandler {
                     deg++;
                     if (deg == 90) {
                         stop();
+                        transition.play();
                         flag = true;
                     }
                 }
