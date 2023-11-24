@@ -19,6 +19,11 @@ public class Stick {
         this.height = 10;
         this.y_pos = y_pos;
     }
+
+    public Rectangle getRectangle() {
+        return rectangle;
+    }
+
     public Rectangle generateStick(){
         return this.rectangle;
     }

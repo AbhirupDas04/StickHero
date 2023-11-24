@@ -9,8 +9,17 @@ import javafx.stage.Stage;
 public abstract class BackgroundHandler {
     private Background background;
     private Stage stage;
+    private Scene scene;
     private Pane pane;
     private MusicHandler music;
+
+    public void setScene(Scene scene) {
+        this.scene = scene;
+    }
+
+    public Scene getScene() {
+        return scene;
+    }
 
     public void setPane(Pane pane) {
         this.pane = pane;
