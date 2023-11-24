@@ -19,10 +19,10 @@ public class EndingMusic extends MusicHandler
 
         Media media = new Media(new File(musicPath).toURI().toString());
 
-        MediaPlayer mediaPlayer = new MediaPlayer(media);
+        mediaPlayer = new MediaPlayer(media);
 
         mediaPlayer.setAutoPlay(true);
-        primaryStage.setTitle("Playing Audio");
+//        primaryStage.setTitle("Playing Audio");
         primaryStage.show();
         mediaPlayer.setOnEndOfMedia(() -> {
             // Repeat the music when it reaches the end
