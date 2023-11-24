@@ -42,11 +42,11 @@ public class Stick {
         return this.rectangle;
     }
     public void extendLength(){
-        this.length += 1;
-        this.rectangle.setLayoutY(this.y_pos - 1);
-        this.rectangle.setHeight(this.height + 1);
-        this.height+=1;
-        this.y_pos-=1;
+        this.length += 2;
+        this.rectangle.setLayoutY(this.y_pos - 2);
+        this.rectangle.setHeight(this.height + 2);
+        this.height+=2;
+        this.y_pos-=2;
     }
     public void resetLength(){}
     public void changeStickAngle(){}
