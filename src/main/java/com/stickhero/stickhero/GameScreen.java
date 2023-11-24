@@ -1,20 +1,20 @@
 package com.stickhero.stickhero;
 
-import com.almasb.fxgl.app.PrimaryStageWindow;
-import javafx.animation.AnimationTimer;
-import javafx.animation.RotateTransition;
+import javafx.animation.*;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.Text;
+import javafx.scene.transform.Rotate;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -60,7 +60,12 @@ public class GameScreen extends BackgroundHandler {
         this.image = image;
     }
 
-    public void startGame() throws Exception {
+    public void startGame() throws InterruptedException {
+        try {
+            inGameMusic.start(super.getStage());
+        } catch (Exception e) {
+            e.printStackTrace();  // Handle the exception according to your application's needs
+        }
 
         Pane game_pane = this.returnBackground();
         Pillar pillar = new Pillar(100,160,0,490);
@@ -125,32 +130,30 @@ public class GameScreen extends BackgroundHandler {
         bt.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
+                inGameMusic.stop();
                 bt.setVisible(false);
                 text1.setVisible(false);
                 text.setVisible(false);
                 view1.setVisible(false);
                 view.setVisible(false);
                 rectangle1.setVisible(false);
-                inGameMusic.stop();
                 endScreen.endGame(game_pane,scene1);
             }
         });
 
-        this.playGame();
+        this.playGame(rand_posX + rand_width - 100);
     }
 
-    public void playGame(){
-        try {
-            inGameMusic.start(super.getStage());
-        } catch (Exception e) {
-            e.printStackTrace();  // Handle the exception according to your application's needs
-        }
-//        inGameMusic.start(getStage());
-        Stick stick = new Stick(5, 95, 480);
+    public void playGame(int next_pillar_centre){
+        Stick stick = new Stick(3, 95, 480);
         Rectangle rectangle4 = stick.generateStick();
 
         Pane pane = this.getPane();
         pane.getChildren().addAll(rectangle4);
+
+        ImageView view = this.hero.getView();
+
+        Timeline timeline = new Timeline();
 
         AnimationTimer timer = new AnimationTimer() {
             @Override
@@ -158,16 +161,48 @@ public class GameScreen extends BackgroundHandler {
                 stick.extendLength();
             }
         };
+        AnimationTimer timer1 = new AnimationTimer() {
+            int deg = 0;
+            boolean flag = false;
+            @Override
+            public void handle(long l) {
+                if(flag == false) {
+                    rectangle4.getTransforms().add(new Rotate(1, 3, stick.getHeight()));
+                    deg++;
+                    if (deg == 90) {
+                        stop();
+                        flag = true;
+                        Image image1 = new Image(this.getClass().getResourceAsStream("Standing_Hero.png"));
+                        Image image2 = new Image(this.getClass().getResourceAsStream("Side_On.png"));
+                        for(int i = 0; i < stick.getHeight() + 150; i++){
+                            timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + i*10), new KeyValue (view.translateXProperty(), 1 + i*1)));
+                            if(i%2==0){
+                                timeline.getKeyFrames().add(new KeyFrame(Duration.millis(5 + i*10), new KeyValue(view.imageProperty(),image1)));
+                            }
+                            else{
+                                timeline.getKeyFrames().add(new KeyFrame(Duration.millis(5 + i*10), new KeyValue(view.imageProperty(),image2)));
+                            }
+                        }
+                        timeline.play();
+                    }
+                }
+            }
+        };
 
-        this.getScene().setOnMousePressed(e -> {
-            timer.start();
+        this.getScene().setOnMousePressed(new EventHandler<MouseEvent>() {
+            boolean flag = false;
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                if(!flag){
+                    timer.start();
+                    flag = true;
+                }
+            }
         });
+
         this.getScene().setOnMouseReleased(e -> {
             timer.stop();
-            Duration duration = Duration.millis(2500);
-            RotateTransition rotator = new RotateTransition(duration, stick.getRectangle());
-            rotator.setByAngle(90);
-            rotator.play();
+            timer1.start();
         });
     }
 }
