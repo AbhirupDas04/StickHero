@@ -72,7 +72,11 @@ public class HomeScreen extends BackgroundHandler {
         bt.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                game.startGame();
+                try {
+                    game.startGame();
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
             }
         });
     }
