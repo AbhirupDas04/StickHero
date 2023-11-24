@@ -10,8 +10,10 @@ import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 public class InGameMusic extends MusicHandler
 {
+    private MediaPlayer mediaPlayer;
     public void start (Stage primaryStage) throws Exception {
         String musicPath = "src/main/resources/com/stickhero/stickhero/life-of-a-wandering-wizard-15549.mp3";
 
@@ -22,7 +24,19 @@ public class InGameMusic extends MusicHandler
         mediaPlayer.setAutoPlay(true);
         primaryStage.setTitle("Playing Audio");
         primaryStage.show();
+        mediaPlayer.setOnEndOfMedia(() -> {
+            // Repeat the music when it reaches the end
+            mediaPlayer.seek(Duration.ZERO);
+        });
+
+        mediaPlayer.play();
     }
+    public void stop() {
+        if (mediaPlayer != null) {
+            mediaPlayer.stop();
+        }
+    }
+
 //    public static void main(String[] args) {
 //        launch(args);
 //    }
