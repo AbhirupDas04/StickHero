@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f8d3197-9abd-4249-9eb0-21fbff063383" name="Changes" comment="Changes">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="1f8d3197-9abd-4249-9eb0-21fbff063383" name="Changes" comment="Changes:&#10;1) made changes in the GameScreen and InGameMusic to run the music.&#10;2) added generic try/catch block around startGame() in HomeScreen class.&#10;3) added try/catch block around home.openhome() in FlowControl class.">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/GameScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/GameScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/InGameMusic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/InGameMusic.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +24,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Het" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -68,12 +68,12 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "Abhirup",
+    "git-widget-placeholder": "Het",
     "last_opened_file_path": "C:/Users/ABHIRUP-ACER/Downloads/openjfx-21.0.1_windows-x64_bin-sdk/javafx-sdk-21.0.1/lib",
+    "node.js.selected.package.tslint": "(autodetect)",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
   }
 }]]></component>
@@ -371,63 +371,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700067713924</updated>
     </task>
-    <task id="LOCAL-00036" summary="Changes">
+    <task id="LOCAL-00036" summary="Changes:&#10;1) made changes in the GameScreen and InGameMusic to run the music.&#10;2) added generic try/catch block around startGame() in HomeScreen class.&#10;3) added try/catch block around home.openhome() in FlowControl class.">
       <option name="closed" value="true" />
-      <created>1700300025081</created>
+      <created>1700812351279</created>
       <option name="number" value="00036" />
       <option name="presentableId" value="LOCAL-00036" />
       <option name="project" value="LOCAL" />
-      <updated>1700300025081</updated>
+      <updated>1700812351279</updated>
     </task>
-    <task id="LOCAL-00037" summary="Changes">
-      <option name="closed" value="true" />
-      <created>1700809795488</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1700809795488</updated>
-    </task>
-    <task id="LOCAL-00038" summary="Changes">
-      <option name="closed" value="true" />
-      <created>1700840409290</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1700840409290</updated>
-    </task>
-    <task id="LOCAL-00039" summary="Changes">
-      <option name="closed" value="true" />
-      <created>1700844528776</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1700844528776</updated>
-    </task>
-    <task id="LOCAL-00040" summary="Changes">
-      <option name="closed" value="true" />
-      <created>1700932642230</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1700932642230</updated>
-    </task>
-    <task id="LOCAL-00041" summary="Changes">
-      <option name="closed" value="true" />
-      <created>1701021511709</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1701021511709</updated>
-    </task>
-    <task id="LOCAL-00042" summary="Changes">
-      <option name="closed" value="true" />
-      <created>1701065238222</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1701065238222</updated>
-    </task>
-    <option name="localTasksCounter" value="43" />
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -455,6 +407,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes" />
+    <MESSAGE value="Changes:&#10;1) made changes in the GameScreen and InGameMusic to run the music.&#10;2) added generic try/catch block around startGame() in HomeScreen class.&#10;3) added try/catch block around home.openhome() in FlowControl class." />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes:&#10;1) made changes in the GameScreen and InGameMusic to run the music.&#10;2) added generic try/catch block around startGame() in HomeScreen class.&#10;3) added try/catch block around home.openhome() in FlowControl class." />
   </component>
 </project>

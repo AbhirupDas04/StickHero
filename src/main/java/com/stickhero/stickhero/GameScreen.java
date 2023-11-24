@@ -131,6 +131,7 @@ public class GameScreen extends BackgroundHandler {
                 view1.setVisible(false);
                 view.setVisible(false);
                 rectangle1.setVisible(false);
+                inGameMusic.stop();
                 endScreen.endGame(game_pane,scene1);
             }
         });
