@@ -1,9 +1,6 @@
 package com.stickhero.stickhero;
 
-import javafx.animation.Animation;
-import javafx.animation.AnimationTimer;
-import javafx.animation.RotateTransition;
-import javafx.animation.TranslateTransition;
+import javafx.animation.*;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
@@ -139,16 +136,15 @@ public class GameScreen extends BackgroundHandler {
     }
 
     public void playGame(int next_pillar_centre){
-        Stick stick = new Stick(5, 95, 480);
+        Stick stick = new Stick(3, 95, 480);
         Rectangle rectangle4 = stick.generateStick();
 
         Pane pane = this.getPane();
         pane.getChildren().addAll(rectangle4);
 
         ImageView view = this.hero.getView();
-        TranslateTransition transition = new TranslateTransition();
-        transition.setNode(view);
-        transition.setToX(next_pillar_centre);
+
+        Timeline timeline = new Timeline();
 
         AnimationTimer timer = new AnimationTimer() {
             @Override
@@ -162,12 +158,23 @@ public class GameScreen extends BackgroundHandler {
             @Override
             public void handle(long l) {
                 if(flag == false) {
-                    rectangle4.getTransforms().add(new Rotate(1, 5, stick.getHeight()));
+                    rectangle4.getTransforms().add(new Rotate(1, 3, stick.getHeight()));
                     deg++;
                     if (deg == 90) {
                         stop();
-                        transition.play();
                         flag = true;
+                        Image image1 = new Image(this.getClass().getResourceAsStream("Standing_Hero.png"));
+                        Image image2 = new Image(this.getClass().getResourceAsStream("Side_On.png"));
+                        for(int i = 0; i < stick.getHeight() + 150; i++){
+                            timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + i*10), new KeyValue (view.translateXProperty(), 1 + i*1)));
+                            if(i%2==0){
+                                timeline.getKeyFrames().add(new KeyFrame(Duration.millis(5 + i*10), new KeyValue(view.imageProperty(),image1)));
+                            }
+                            else{
+                                timeline.getKeyFrames().add(new KeyFrame(Duration.millis(5 + i*10), new KeyValue(view.imageProperty(),image2)));
+                            }
+                        }
+                        timeline.play();
                     }
                 }
             }
