@@ -28,6 +28,7 @@ public class GameScreen extends BackgroundHandler {
     private HistoryStorage storage;
     private Score score;
     private int level;
+    private InGameMusic inGameMusic;
     public GameScreen(Stage stage, HistoryStorage storage){
         super(stage);
         this.hero = new Hero();
@@ -37,6 +38,7 @@ public class GameScreen extends BackgroundHandler {
         this.n_cherries = 0;
         this.storage = storage;
         this.level = 0;
+        this.inGameMusic = new InGameMusic();
         super.setMusic(new InGameMusic());
     }
     public void updateGameSpeed(int speed){
@@ -59,6 +61,12 @@ public class GameScreen extends BackgroundHandler {
     }
 
     public void startGame() throws InterruptedException {
+        try {
+            inGameMusic.start(super.getStage());
+        } catch (Exception e) {
+            e.printStackTrace();  // Handle the exception according to your application's needs
+        }
+
         Pane game_pane = this.returnBackground();
         Pillar pillar = new Pillar(100,160,0,490);
         Rectangle rectangle = pillar.getRectangle();
@@ -122,6 +130,7 @@ public class GameScreen extends BackgroundHandler {
         bt.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
+                inGameMusic.stop();
                 bt.setVisible(false);
                 text1.setVisible(false);
                 text.setVisible(false);
