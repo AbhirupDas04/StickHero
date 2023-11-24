@@ -21,6 +21,9 @@ public class IntroMusic extends MusicHandler
 
         mediaPlayer = new MediaPlayer(media);
 
+        MediaView mediaView = new MediaView(mediaPlayer);
+        mediaView.setMediaPlayer(mediaPlayer);
+
         mediaPlayer.setAutoPlay(true);
 //        primaryStage.setTitle("Playing Audio");
         primaryStage.show();

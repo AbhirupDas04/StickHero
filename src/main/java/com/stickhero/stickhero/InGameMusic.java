@@ -11,6 +11,7 @@ import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import javafx.scene.media.MediaView;
 public class InGameMusic extends MusicHandler
 {
     private MediaPlayer mediaPlayer;
@@ -20,6 +21,9 @@ public class InGameMusic extends MusicHandler
         Media media = new Media(new File(musicPath).toURI().toString());
 
         mediaPlayer = new MediaPlayer(media);
+
+        MediaView mediaView = new MediaView(mediaPlayer);
+        mediaView.setMediaPlayer(mediaPlayer);
 
         mediaPlayer.setAutoPlay(true);
 //        primaryStage.setTitle("Playing Audio");
