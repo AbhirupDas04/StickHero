@@ -21,6 +21,8 @@ public class HomeScreen extends BackgroundHandler {
     private Pillar pillar;
     private GameScreen game;
     private HistoryStorage storage;
+    private IntroMusic introMusic;
+
     public HomeScreen(Stage stage, GameScreen game, HistoryStorage storage){
         super(stage);
         this.game = game;
@@ -31,9 +33,18 @@ public class HomeScreen extends BackgroundHandler {
         BackgroundSize backgroundSize = new BackgroundSize(1000,650,false,false,true,true);
         BackgroundImage backgroundimage = new BackgroundImage(image, BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT, backgroundSize);
         this.setBackground(new Background(backgroundimage));
+        this.introMusic = new IntroMusic();
+        super.setMusic(new IntroMusic());
     }
     public void openHome() throws InterruptedException{
+        try {
+            introMusic.start(super.getStage());
+        } catch (Exception e) {
+            e.printStackTrace();  // Handle the exception according to your application's needs
+        }
+
         Pane pane = this.returnBackground();
+
 
         Button bt = new Button();
         bt.setStyle("-fx-background-color:rgb(255, 0, 0);-fx-font-size:30;-fx-text-fill:white");
@@ -73,7 +84,9 @@ public class HomeScreen extends BackgroundHandler {
             @Override
             public void handle(ActionEvent actionEvent) {
                 try {
+                    introMusic.stop();
                     game.startGame();
+
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 } catch (Exception e){
