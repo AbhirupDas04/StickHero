@@ -3,6 +3,7 @@ package com.stickhero.stickhero;
 import javafx.scene.shape.Rectangle;
 
 public class Stick {
+    private int x_pos;
     private int length;
     private float speed;
     private Rectangle rectangle;
@@ -18,10 +19,23 @@ public class Stick {
         this.length = 10;
         this.height = 10;
         this.y_pos = y_pos;
+        this.x_pos = x_pos;
     }
 
     public Rectangle getRectangle() {
         return rectangle;
+    }
+
+    public int getX_pos() {
+        return x_pos;
+    }
+
+    public int getY_pos() {
+        return y_pos;
+    }
+
+    public int getHeight() {
+        return height;
     }
 
     public Rectangle generateStick(){
