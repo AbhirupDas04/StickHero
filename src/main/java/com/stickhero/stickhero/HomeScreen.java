@@ -56,8 +56,10 @@ public class HomeScreen extends BackgroundHandler {
         bt.setTranslateY(260);
 
         Rectangle settingsButtonBackground = new Rectangle(90 , 32);
-        settingsButtonBackground.setFill(Color.GRAY);
-        settingsButtonBackground.setTranslateX(16);
+        settingsButtonBackground.setFill(Color.WHITE);
+        settingsButtonBackground.setArcWidth(20);
+        settingsButtonBackground.setArcHeight(20);
+        settingsButtonBackground.setTranslateX(12);
         settingsButtonBackground.setTranslateY(398);
 
 
@@ -68,7 +70,7 @@ public class HomeScreen extends BackgroundHandler {
 
         Text settingsButtonText = new Text("SETTINGS");
         settingsButtonText.setFont(Font.font("verdana", FontWeight.BOLD, FontPosture.REGULAR, 15)); // Adjust the font size
-        settingsButtonText.setFill(Color.WHITE);
+        settingsButtonText.setFill(Color.GREEN);
 
         Button settingsButton = new Button();
         settingsButton.setStyle("-fx-background-color:rgb(255, 0, 0);-fx-font-size:40;-fx-text-fill:white");
@@ -76,7 +78,7 @@ public class HomeScreen extends BackgroundHandler {
         settingsButton.setGraphicTextGap(60);
         settingsButton.setStyle("-fx-background-color: transparent;");
 //        settingsButton.setText("SETTINGS");
-        settingsButton.setTranslateX(10);
+        settingsButton.setTranslateX(6);
         settingsButton.setTranslateY(400);
         settingsButton.setGraphic(settingsButtonText);
 
