@@ -55,11 +55,11 @@ public class HomeScreen extends BackgroundHandler {
         bt.setTranslateX(185);
         bt.setTranslateY(260);
 
-        Rectangle settingsButtonBackground = new Rectangle(90 , 32);
+        Rectangle settingsButtonBackground = new Rectangle(85 , 32);
         settingsButtonBackground.setFill(Color.DARKOLIVEGREEN);
         settingsButtonBackground.setArcWidth(20);
         settingsButtonBackground.setArcHeight(20);
-        settingsButtonBackground.setTranslateX(12);
+        settingsButtonBackground.setTranslateX(14.2);
         settingsButtonBackground.setTranslateY(398);
 
 
@@ -110,11 +110,11 @@ public class HomeScreen extends BackgroundHandler {
 //        reloadSavedGameButton.setTranslateY(403);
 //        reloadSavedGameButton.setGraphic(reloadSavedGameButtonText);
 
-        Rectangle reloadSavedGameButtonBackground = new Rectangle(200 , 32);
+        Rectangle reloadSavedGameButtonBackground = new Rectangle(170 , 32);
         reloadSavedGameButtonBackground.setFill(Color.DARKOLIVEGREEN);
         reloadSavedGameButtonBackground.setArcWidth(20);
         reloadSavedGameButtonBackground.setArcHeight(20);
-        reloadSavedGameButtonBackground.setTranslateX(12);
+        reloadSavedGameButtonBackground.setTranslateX(14);
         reloadSavedGameButtonBackground.setTranslateY(450);
 
 
@@ -133,7 +133,7 @@ public class HomeScreen extends BackgroundHandler {
         reloadSavedGameButton.setGraphicTextGap(60);
         reloadSavedGameButton.setStyle("-fx-background-color: transparent;");
 //        settingsButton.setText("SETTINGS");
-        reloadSavedGameButton.setTranslateX(24);
+        reloadSavedGameButton.setTranslateX(10);
         reloadSavedGameButton.setTranslateY(453);
         reloadSavedGameButton.setGraphic(reloadSavedGameButtonText);
 
