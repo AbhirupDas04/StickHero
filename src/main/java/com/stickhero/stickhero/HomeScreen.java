@@ -69,7 +69,7 @@ public class HomeScreen extends BackgroundHandler {
         settingsButtonImageView.setFitHeight(50);
 
         Text settingsButtonText = new Text("SETTINGS");
-        settingsButtonText.setFont(Font.font("verdana", FontWeight.BOLD, FontPosture.REGULAR, 15)); // Adjust the font size
+        settingsButtonText.setFont(Font.font("verdana", FontWeight.BOLD, FontPosture.REGULAR, 13)); // Adjust the font size
         settingsButtonText.setFill(Color.WHITE);
 
         Button settingsButton = new Button();
@@ -78,7 +78,7 @@ public class HomeScreen extends BackgroundHandler {
         settingsButton.setGraphicTextGap(60);
         settingsButton.setStyle("-fx-background-color: transparent;");
 //        settingsButton.setText("SETTINGS");
-        settingsButton.setTranslateX(6);
+        settingsButton.setTranslateX(12);
         settingsButton.setTranslateY(400);
         settingsButton.setGraphic(settingsButtonText);
 
