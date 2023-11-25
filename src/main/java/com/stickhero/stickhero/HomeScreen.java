@@ -55,10 +55,10 @@ public class HomeScreen extends BackgroundHandler {
         bt.setTranslateX(185);
         bt.setTranslateY(260);
 
-        Circle settingsButtonBackground = new Circle(25);
-        settingsButtonBackground.setFill(Color.WHITE);
-        settingsButtonBackground.setTranslateX(43.5);
-        settingsButtonBackground.setTranslateY(430);
+        Rectangle settingsButtonBackground = new Rectangle(90 , 32);
+        settingsButtonBackground.setFill(Color.GRAY);
+        settingsButtonBackground.setTranslateX(16);
+        settingsButtonBackground.setTranslateY(398);
 
 
         Image settingsButtonImage = new Image(getClass().getResourceAsStream("settings_button.png"));
@@ -66,11 +66,19 @@ public class HomeScreen extends BackgroundHandler {
         settingsButtonImageView.setFitWidth(50);
         settingsButtonImageView.setFitHeight(50);
 
+        Text settingsButtonText = new Text("SETTINGS");
+        settingsButtonText.setFont(Font.font("verdana", FontWeight.BOLD, FontPosture.REGULAR, 15)); // Adjust the font size
+        settingsButtonText.setFill(Color.WHITE);
+
         Button settingsButton = new Button();
+        settingsButton.setStyle("-fx-background-color:rgb(255, 0, 0);-fx-font-size:40;-fx-text-fill:white");
         settingsButton.setGraphic(settingsButtonImageView);
+        settingsButton.setGraphicTextGap(60);
         settingsButton.setStyle("-fx-background-color: transparent;");
+//        settingsButton.setText("SETTINGS");
         settingsButton.setTranslateX(10);
         settingsButton.setTranslateY(400);
+        settingsButton.setGraphic(settingsButtonText);
 
 
         Circle reloadSavedGameButtonBackground = new Circle(25);
@@ -109,7 +117,7 @@ public class HomeScreen extends BackgroundHandler {
         Hero hero = new Hero();
         ImageView view = hero.generateStandingHero(35,35,230,495);
 
-        pane.getChildren().addAll(bt, reloadSavedGameButtonBackground  , reloadSavedGameButton,settingsButtonBackground ,settingsButton,text,text2,rectangle,view);
+        pane.getChildren().addAll(bt , reloadSavedGameButtonBackground , reloadSavedGameButton , settingsButtonBackground,settingsButton,text,text2,rectangle,view);
 
         Scene scene1 = new Scene(pane, 500, 650);
         super.getStage().setScene(scene1);
