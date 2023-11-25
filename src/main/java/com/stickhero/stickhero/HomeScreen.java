@@ -55,6 +55,42 @@ public class HomeScreen extends BackgroundHandler {
         bt.setTranslateX(185);
         bt.setTranslateY(260);
 
+        Circle settingsButtonBackground = new Circle(25);
+        settingsButtonBackground.setFill(Color.WHITE);
+        settingsButtonBackground.setTranslateX(43.5);
+        settingsButtonBackground.setTranslateY(430);
+
+
+        Image settingsButtonImage = new Image(getClass().getResourceAsStream("settings_button.png"));
+        ImageView settingsButtonImageView = new ImageView(settingsButtonImage);
+        settingsButtonImageView.setFitWidth(50);
+        settingsButtonImageView.setFitHeight(50);
+
+        Button settingsButton = new Button();
+        settingsButton.setGraphic(settingsButtonImageView);
+        settingsButton.setStyle("-fx-background-color: transparent;");
+        settingsButton.setTranslateX(10);
+        settingsButton.setTranslateY(400);
+
+
+        Circle reloadSavedGameButtonBackground = new Circle(25);
+        reloadSavedGameButtonBackground.setFill(Color.WHITE);
+        reloadSavedGameButtonBackground.setTranslateX(250.5); // Adjust the X position
+        reloadSavedGameButtonBackground.setTranslateY(432); // Adjust the Y position
+
+
+        Image reloadSavedGameButtonImage = new Image(getClass().getResourceAsStream("reload_saved_game_button.png"));
+        ImageView reloadSavedGameButtonImageView = new ImageView(reloadSavedGameButtonImage);
+        reloadSavedGameButtonImageView.setFitWidth(55);
+        reloadSavedGameButtonImageView.setFitHeight(55);
+
+        Button reloadSavedGameButton = new Button();
+        reloadSavedGameButton.setGraphic(reloadSavedGameButtonImageView);
+        reloadSavedGameButton.setStyle("-fx-background-color: transparent;"); // Set button background to transparent
+        reloadSavedGameButton.setTranslateX(214.5);
+        reloadSavedGameButton.setTranslateY(400);
+
+
         Text text = new Text();
         text.setFont(Font.font("verdana", FontWeight.BOLD, FontPosture.REGULAR, 70));
         text.setLayoutX(130);
@@ -73,7 +109,7 @@ public class HomeScreen extends BackgroundHandler {
         Hero hero = new Hero();
         ImageView view = hero.generateStandingHero(35,35,230,495);
 
-        pane.getChildren().addAll(bt,text,text2,rectangle,view);
+        pane.getChildren().addAll(bt, reloadSavedGameButtonBackground  , reloadSavedGameButton,settingsButtonBackground ,settingsButton,text,text2,rectangle,view);
 
         Scene scene1 = new Scene(pane, 500, 650);
         super.getStage().setScene(scene1);
