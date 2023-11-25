@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f8d3197-9abd-4249-9eb0-21fbff063383" name="Changes" comment="Changes:&#10;1)added settings button to HomeScreen&#10;2)added reload saved game button to HomeScreen" />
+    <list default="true" id="1f8d3197-9abd-4249-9eb0-21fbff063383" name="Changes" comment="Changes:&#10;aligned settings text">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/HomeScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/HomeScreen.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -425,7 +427,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700922214450</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Changes:&#10;aligned settings text">
+      <option name="closed" value="true" />
+      <created>1700922696384</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1700922696384</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -454,6 +464,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Changes" />
     <MESSAGE value="Changes:&#10;1)added settings button to HomeScreen&#10;2)added reload saved game button to HomeScreen" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes:&#10;1)added settings button to HomeScreen&#10;2)added reload saved game button to HomeScreen" />
+    <MESSAGE value="Changes:&#10;aligned settings text" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes:&#10;aligned settings text" />
   </component>
 </project>
