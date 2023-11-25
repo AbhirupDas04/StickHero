@@ -28,6 +28,10 @@ public class GameScreen extends BackgroundHandler {
     private HistoryStorage storage;
     private Score score;
     private int level;
+    private Rectangle pillar1_rect;
+    private Rectangle pillar2_rect;
+    private Pillar pillar1;
+    private Pillar pillar2;
     public GameScreen(Stage stage, HistoryStorage storage){
         super(stage);
         this.hero = new Hero();
@@ -62,12 +66,17 @@ public class GameScreen extends BackgroundHandler {
         Pane game_pane = this.returnBackground();
         Pillar pillar = new Pillar(100,160,0,490);
         Rectangle rectangle = pillar.getRectangle();
+        this.pillar1_rect = rectangle;
+        this.pillar1 = pillar;
 
         Random rand = new Random();
         int rand_width = rand.nextInt(70) + 30;
         int rand_posX = rand.nextInt(370 - rand_width) + 130;
-        pillar = new Pillar(rand_width,160,rand_posX,490);
-        Rectangle rectangle2 = pillar.getRectangle();
+        Pillar pillar2 = new Pillar(rand_width,160,rand_posX,490);
+        Rectangle rectangle2 = pillar2.getRectangle();
+
+        this.pillar2_rect = rectangle2;
+        this.pillar2 = pillar2;
 
         Rectangle rect3 = new Rectangle(10, 5);
         rect3.setFill(Color.RED);
@@ -132,10 +141,10 @@ public class GameScreen extends BackgroundHandler {
             }
         });
 
-        this.playGame(rand_posX + rand_width - 100);
+        this.playGame(rand_posX + rand_width - 100,rect3);
     }
 
-    public void playGame(int next_pillar_centre){
+    public void playGame(int next_pillar_centre, Rectangle red_bar){
         Stick stick = new Stick(3, 95, 480);
         Rectangle rectangle4 = stick.generateStick();
 
@@ -173,6 +182,15 @@ public class GameScreen extends BackgroundHandler {
                             else if (i%20 == 10){
                                 timeline.getKeyFrames().add(new KeyFrame(Duration.millis(5 + i*10), new KeyValue(view.imageProperty(),image2)));
                             }
+                        }
+                        int temp_cur = stick.getHeight() + 20;
+                        for(int j = stick.getHeight() + 20; j < stick.getHeight() + 20 + pillar2.getX_pos(); j++){
+                            timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + j *10), new KeyValue (pillar2_rect.translateXProperty(), -(1+(j-stick.getHeight()- 20)))));
+                            timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + j *10), new KeyValue (pillar1_rect.translateXProperty(), -(1+(j-stick.getHeight()- 20)))));
+                            timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + j *10), new KeyValue (rectangle4.translateXProperty(), -(1+(j-stick.getHeight()- 20)))));
+                            timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + j *10), new KeyValue (red_bar.translateXProperty(), -(1+(j-stick.getHeight()- 20)))));
+                            timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + j *10), new KeyValue (view.translateXProperty(), temp_cur)));
+                            temp_cur-=1;
                         }
                         timeline.play();
                     }
