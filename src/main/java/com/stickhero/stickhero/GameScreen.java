@@ -141,15 +141,25 @@ public class GameScreen extends BackgroundHandler {
             }
         });
 
-        this.playGame(rand_posX + rand_width - 100,rect3);
+        this.playGame(rand_posX,rand_width,rect3);
     }
 
-    public void playGame(int next_pillar_centre, Rectangle red_bar){
+    public void playGame(int next_pillar_start,int next_pillar_width, Rectangle red_bar){
         Stick stick = new Stick(3, 95, 480);
         Rectangle rectangle4 = stick.generateStick();
 
         Pane pane = this.getPane();
-        pane.getChildren().addAll(rectangle4);
+
+        Random rand = new Random();
+        int rand_width = rand.nextInt(70) + 30;
+        int rand_posX = rand.nextInt(370 - (next_pillar_width + 30)) + next_pillar_start + next_pillar_width + 30;
+        int act_rand_posX = rand_posX;
+        if(rand_posX <= 500){
+            rand_posX = 500;
+        }
+        Pillar pillar3 = new Pillar(rand_width,160,rand_posX,490);
+        Rectangle rectangle2 = pillar3.getRectangle();
+        pane.getChildren().addAll(rectangle2,rectangle4);
 
         ImageView view = this.hero.getView();
 
@@ -189,6 +199,7 @@ public class GameScreen extends BackgroundHandler {
                             timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + j *10), new KeyValue (pillar1_rect.translateXProperty(), -(1+(j-stick.getHeight()- 20)))));
                             timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + j *10), new KeyValue (rectangle4.translateXProperty(), -(1+(j-stick.getHeight()- 20)))));
                             timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + j *10), new KeyValue (red_bar.translateXProperty(), -(1+(j-stick.getHeight()- 20)))));
+                            timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + j *10), new KeyValue (rectangle2.translateXProperty(), -(1+(j-stick.getHeight()- 20)))));
                             timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + j *10), new KeyValue (view.translateXProperty(), temp_cur)));
                             temp_cur-=1;
                         }
