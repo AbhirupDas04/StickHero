@@ -79,7 +79,7 @@ public class HomeScreen extends BackgroundHandler {
         settingsButton.setStyle("-fx-background-color: transparent;");
 //        settingsButton.setText("SETTINGS");
         settingsButton.setTranslateX(12);
-        settingsButton.setTranslateY(400);
+        settingsButton.setTranslateY(402);
         settingsButton.setGraphic(settingsButtonText);
 
 
