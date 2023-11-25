@@ -82,30 +82,40 @@ public class HomeScreen extends BackgroundHandler {
         settingsButton.setTranslateY(402);
         settingsButton.setGraphic(settingsButtonText);
 
-//
-//        Circle reloadSavedGameButtonBackground = new Circle(25);
-//        reloadSavedGameButtonBackground.setFill(Color.WHITE);
-//        reloadSavedGameButtonBackground.setTranslateX(250.5); // Adjust the X position
-//        reloadSavedGameButtonBackground.setTranslateY(432); // Adjust the Y position
+
+//        Rectangle reloadSavedGameButtonBackground = new Rectangle(200 , 32);
+//        reloadSavedGameButtonBackground.setFill(Color.DARKOLIVEGREEN);
+//        reloadSavedGameButtonBackground.setArcWidth(20);
+//        reloadSavedGameButtonBackground.setArcHeight(20);
+//        reloadSavedGameButtonBackground.setTranslateX(155);
+//        reloadSavedGameButtonBackground.setTranslateY(400);
 //
 //
 //        Image reloadSavedGameButtonImage = new Image(getClass().getResourceAsStream("reload_saved_game_button.png"));
-//        ImageView reloadSavedGameButtonImageView = new ImageView(reloadSavedGameButtonImage);
-//        reloadSavedGameButtonImageView.setFitWidth(55);
-//        reloadSavedGameButtonImageView.setFitHeight(55);
+//        ImageView reloadSavedGameButtonImageView = new ImageView(settingsButtonImage);
+//        settingsButtonImageView.setFitWidth(50);
+//        settingsButtonImageView.setFitHeight(50);
+//
+//        Text reloadSavedGameButtonText = new Text("RELOAD SAVED GAME");
+//        reloadSavedGameButtonText.setFont(Font.font("verdana", FontWeight.BOLD, FontPosture.REGULAR, 13)); // Adjust the font size
+//        reloadSavedGameButtonText.setFill(Color.WHITE);
 //
 //        Button reloadSavedGameButton = new Button();
-//        reloadSavedGameButton.setGraphic(reloadSavedGameButtonImageView);
-//        reloadSavedGameButton.setStyle("-fx-background-color: transparent;"); // Set button background to transparent
-//        reloadSavedGameButton.setTranslateX(214.5);
-//        reloadSavedGameButton.setTranslateY(400);
+//        reloadSavedGameButton.setStyle("-fx-background-color:rgb(255, 0, 0);-fx-font-size:40;-fx-text-fill:white");
+//        reloadSavedGameButton.setGraphic(settingsButtonImageView);
+//        reloadSavedGameButton.setGraphicTextGap(60);
+//        reloadSavedGameButton.setStyle("-fx-background-color: transparent;");
+////        settingsButton.setText("SETTINGS");
+//        reloadSavedGameButton.setTranslateX(165);
+//        reloadSavedGameButton.setTranslateY(403);
+//        reloadSavedGameButton.setGraphic(reloadSavedGameButtonText);
 
         Rectangle reloadSavedGameButtonBackground = new Rectangle(200 , 32);
         reloadSavedGameButtonBackground.setFill(Color.DARKOLIVEGREEN);
         reloadSavedGameButtonBackground.setArcWidth(20);
         reloadSavedGameButtonBackground.setArcHeight(20);
-        reloadSavedGameButtonBackground.setTranslateX(155);
-        reloadSavedGameButtonBackground.setTranslateY(400);
+        reloadSavedGameButtonBackground.setTranslateX(12);
+        reloadSavedGameButtonBackground.setTranslateY(450);
 
 
         Image reloadSavedGameButtonImage = new Image(getClass().getResourceAsStream("reload_saved_game_button.png"));
@@ -123,13 +133,9 @@ public class HomeScreen extends BackgroundHandler {
         reloadSavedGameButton.setGraphicTextGap(60);
         reloadSavedGameButton.setStyle("-fx-background-color: transparent;");
 //        settingsButton.setText("SETTINGS");
-        reloadSavedGameButton.setTranslateX(165);
-        reloadSavedGameButton.setTranslateY(403);
+        reloadSavedGameButton.setTranslateX(24);
+        reloadSavedGameButton.setTranslateY(453);
         reloadSavedGameButton.setGraphic(reloadSavedGameButtonText);
-
-        //214.5
-        //400
-
 
         Text text = new Text();
         text.setFont(Font.font("verdana", FontWeight.BOLD, FontPosture.REGULAR, 70));
