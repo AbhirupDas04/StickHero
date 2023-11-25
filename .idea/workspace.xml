@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f8d3197-9abd-4249-9eb0-21fbff063383" name="Changes" comment="Changes:&#10;1)added settings button to HomeScreen&#10;2)added reload saved game button to HomeScreen">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/HomeScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/HomeScreen.java" afterDir="false" />
-    </list>
+    <list default="true" id="1f8d3197-9abd-4249-9eb0-21fbff063383" name="Changes" comment="Changes:&#10;1)added settings button to HomeScreen&#10;2)added reload saved game button to HomeScreen" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -419,7 +417,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700921934441</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Changes:&#10;1)added settings button to HomeScreen&#10;2)added reload saved game button to HomeScreen">
+      <option name="closed" value="true" />
+      <created>1700922214450</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1700922214450</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
