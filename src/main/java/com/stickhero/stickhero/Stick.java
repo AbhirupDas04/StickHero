@@ -11,13 +11,13 @@ public class Stick {
     private int height;
 
     public Stick(int width, int x_pos, int y_pos){
-        Rectangle rectangle = new Rectangle(width,10);
+        Rectangle rectangle = new Rectangle(width,0);
         rectangle.setLayoutX(x_pos);
         rectangle.setLayoutY(y_pos);
         this.rectangle = rectangle;
         this.speed = 1;
-        this.length = 10;
-        this.height = 10;
+        this.length = 0;
+        this.height = 0;
         this.y_pos = y_pos;
         this.x_pos = x_pos;
     }
