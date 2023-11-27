@@ -38,7 +38,10 @@ public class GameScreen extends BackgroundHandler {
     private Rectangle first_red_bar;
     private Rectangle old_stick;
 
-    private ImageView collectableCherryView;
+    private ImageView collectableCherryView_curr = null;
+    private ImageView collectableCherryView_new = null;
+
+    private int isCherryGenerated = 0;
 
     Random random = new Random();
     public GameScreen(Stage stage, HistoryStorage storage){
@@ -71,15 +74,35 @@ public class GameScreen extends BackgroundHandler {
         this.image = image;
     }
 
-    public ImageView generateCollectableCherry(int curr_pillar_width , int next_pillar_start){
+    public ImageView generateCollectableCherry(int curr_pillar_width , int next_pillar_start){      //generates cherry if random flag is 1 else no
         //binary random generated number to decide if cherry will be generated or not(put his in play game)
         //generate cherry in between two pillars, so input variable gap everytime
-//        int isCherryGenerated = random.nextInt(2);
+//        int isCherryGenerated = random.nextInt(0,2);
 
+//        if (isCherryGenerated == 1){
+//            Reward collectableCherry = new Reward();
+//            int x_pos = random.nextInt(curr_pillar_width , next_pillar_start);
+//            collectableCherryView_curr = collectableCherry.generateReward(30 , 30 , x_pos , 490);
+//            return collectableCherryView_curr;
+//        }
+//        else{
+//            return null;
+//        }
         Reward collectableCherry = new Reward();
         int x_pos = random.nextInt(curr_pillar_width , next_pillar_start);
-        collectableCherryView = collectableCherry.generateReward(30 , 30 , x_pos , 490);
-        return collectableCherryView;
+        collectableCherryView_curr = collectableCherry.generateReward(30 , 30 , x_pos , 490);
+        isCherryGenerated = 1;
+        return collectableCherryView_curr;
+    }
+    private void removeCherry(Pane pane) {          //function to remove cherry
+        if (collectableCherryView_curr != null) {
+            FadeTransition fadeOut = new FadeTransition(Duration.millis(500), collectableCherryView_curr);
+            fadeOut.setFromValue(1.0);
+            fadeOut.setToValue(0.0);
+            fadeOut.setOnFinished(e -> pane.getChildren().remove(collectableCherryView_curr));
+            fadeOut.play();
+        }
+
     }
 
 
@@ -96,6 +119,8 @@ public class GameScreen extends BackgroundHandler {
         int rand_posX = rand.nextInt(370 - rand_width) + 130;
         Pillar pillar2 = new Pillar(rand_width,160,rand_posX,490);
         Rectangle rectangle2 = pillar2.getRectangle();
+
+        curr_pillar_width = pillar2.getWidth();
 
         this.pillar2_rect = rectangle2;
         this.pillar2 = pillar2;
@@ -140,8 +165,18 @@ public class GameScreen extends BackgroundHandler {
         bt.setLayoutY(25);
         bt.setStyle("-fx-background-color:rgb(255, 0, 0);-fx-border-radius: 150;-fx-font-size:15;-fx-text-fill:white");
 
-        game_pane.getChildren().addAll(rectangle,bt,rectangle2,rect3,rectangle1,view,view1,text,text1);
-        this.setPane(game_pane);
+        ImageView collectableCherry = generateCollectableCherry(pillar1.getWidth() , pillar2.getX_pos());
+
+        if (isCherryGenerated == 1){        //adding cherry to pane if it was generated
+            game_pane.getChildren().addAll(rectangle,bt,rectangle2,rect3,rectangle1,view,view1,text,text1 , collectableCherry);
+            this.setPane(game_pane);
+        }
+        else{
+            game_pane.getChildren().addAll(rectangle,bt,rectangle2,rect3,rectangle1,view,view1,text,text1);
+            this.setPane(game_pane);
+        }
+
+//        game_pane.getChildren().addAll(rectangle,bt,rectangle2,rect3,rectangle1,view,view1,text,text1 , collectableCherry);
 
         Scene scene1 = new Scene(game_pane, 500, 650);
         super.setScene(scene1);
@@ -167,16 +202,7 @@ public class GameScreen extends BackgroundHandler {
         this.playGame(rand_posX,rand_width,rect3);
     }
 
-    private void removeCherry(Pane pane) {
-        if (collectableCherryView != null) {
-            FadeTransition fadeOut = new FadeTransition(Duration.millis(500), collectableCherryView);
-            fadeOut.setFromValue(1.0);
-            fadeOut.setToValue(0.0);
-            fadeOut.setOnFinished(e -> pane.getChildren().remove(collectableCherryView));
-            fadeOut.play();
-        }
 
-    }
 
     public void playGame(int next_pillar_start,int next_pillar_width, Rectangle red_bar){
         GameScreen game = this;
@@ -204,15 +230,17 @@ public class GameScreen extends BackgroundHandler {
         rect3.setLayoutX(rand_posX + rand_width / 2.0 - 5);
         rect3.setLayoutY(490);
 
-        int isCherryGenerated = rand.nextInt(2);
+        collectableCherryView_new = generateCollectableCherry(curr_pillar_width , next_pillar_start);
 
-        if (isCherryGenerated == 1){
-            pane.getChildren().addAll(rectangle2, rectangle4, rect3, generateCollectableCherry(curr_pillar_width , next_pillar_start));        }
+        if (isCherryGenerated != 0){
+            pane.getChildren().addAll(rectangle2, rectangle4, rect3, collectableCherryView_new);
+        }
         else{
-            collectableCherryView = null;
+            collectableCherryView_curr = null;
             pane.getChildren().addAll(rectangle2, rectangle4, rect3);
         }
 
+//        pane.getChildren().addAll(rectangle2, rectangle4, rect3, collectableCherryView_new);
 //        pane.getChildren().addAll(rectangle2, rectangle4, rect3);
 
         Timeline timeline = new Timeline();
@@ -263,6 +291,12 @@ public class GameScreen extends BackgroundHandler {
                         view.setTranslateX(0);
                         view.setLayoutX(pillar1.getWidth() - 43);
                         old_stick = rectangle4;
+//                        collectableCherryView_curr = collectableCherryView_new;
+                        if (isCherryGenerated == 1){
+                            collectableCherryView_new.setTranslateX(0);
+                            collectableCherryView_new.setLayoutX(gap + 30 + pillar1.getWidth());
+                        }
+
 //                        collectableCherryView =
                         game.playGame(gap + 30 + pillar1.getWidth(),pillar3.getWidth(),rect3);
                     }
@@ -279,9 +313,9 @@ public class GameScreen extends BackgroundHandler {
                     } else if (i % 20 == 10) {
                         timeline.getKeyFrames().add(new KeyFrame(Duration.millis(5 + i * 10), new KeyValue(view.imageProperty(), image2)));
                     }
-                    if (collectableCherryView != null) {
-                        timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + i * 10), new KeyValue(collectableCherryView.translateXProperty(), 1 + i * 1)));
-                    }
+//                    if (collectableCherryView != null) {
+//                        timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + i * 10), new KeyValue(collectableCherryView.translateXProperty(), 1 + i * 1)));
+//                    }
                 }
 
                 int temp_cur = distance;
@@ -294,8 +328,8 @@ public class GameScreen extends BackgroundHandler {
                     timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + j * 10), new KeyValue(rectangle4.translateXProperty(), -(1 + (j - distance)))));
                     timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + j * 10), new KeyValue(red_bar.translateXProperty(), -(1 + (j - distance)))));
                     timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + j * 10), new KeyValue(view.translateXProperty(), temp_cur)));
-                    if (collectableCherryView != null) {
-                        timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + j * 10), new KeyValue(collectableCherryView.translateXProperty(),-(1 + (j - distance)) )));
+                    if (collectableCherryView_curr != null) {
+                        timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + j * 10), new KeyValue(collectableCherryView_curr.translateXProperty(),-(1 + (j - distance)) )));
                     }
                     if(first_red_bar != null){
                         timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + j * 10), new KeyValue(first_red_bar.translateXProperty(), -(1 + (j - distance)))));
@@ -309,8 +343,8 @@ public class GameScreen extends BackgroundHandler {
                 for (int k = distance; k < distance + pillar3.getX_pos() - (pillar2.getWidth() + gap + 30); k++) {
                     timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + k * 10), new KeyValue(rectangle2.translateXProperty(), -(1 + (k - distance)))));
                     timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + k * 10), new KeyValue(rect3.translateXProperty(), -(1 + (k - distance)))));
-                    if (collectableCherryView != null) {
-                        timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + k * 10), new KeyValue(collectableCherryView.translateXProperty(), -(1 + (k - distance)))));
+                    if (collectableCherryView_new != null) {
+                        timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + k * 10), new KeyValue(collectableCherryView_new.translateXProperty(), -(1 + (k - distance)))));
                     }
                 }
                 timeline.play();
