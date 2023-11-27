@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f8d3197-9abd-4249-9eb0-21fbff063383" name="Changes" comment="Changes">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/GameScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/GameScreen.java" afterDir="false" />
-    </list>
+    <list default="true" id="1f8d3197-9abd-4249-9eb0-21fbff063383" name="Changes" comment="Changes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,7 +65,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "Abhirup",
+    "git-widget-placeholder": "Het",
     "last_opened_file_path": "C:/Users/ABHIRUP-ACER/Downloads/openjfx-21.0.1_windows-x64_bin-sdk/javafx-sdk-21.0.1/lib",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
