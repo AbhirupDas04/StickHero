@@ -18,7 +18,7 @@ public class FlowControl extends Application {
     }
 
     @Override
-    public void start(Stage primaryStage) {
+    public void start(Stage primaryStage) throws InterruptedException {
         HistoryStorage storage = new HistoryStorage();
         GameScreen game = new GameScreen(primaryStage,storage);
         HomeScreen home = new HomeScreen(primaryStage,game, storage);
