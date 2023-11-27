@@ -15,6 +15,7 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.Text;
 import javafx.scene.transform.Rotate;
+import javafx.scene.transform.Translate;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -275,6 +276,13 @@ public class GameScreen extends BackgroundHandler {
         this.getScene().setOnMouseReleased(e -> {
             timer.stop();
             timer1.start();
+        });
+
+        this.getScene().setOnMouseClicked(e -> {
+            if(timeline.getStatus() == Animation.Status.RUNNING){
+                Rotate flipRotation = new Rotate(180,Rotate.X_AXIS);
+                view.getTransforms().addAll(flipRotation);
+            }
         });
     }
 }
