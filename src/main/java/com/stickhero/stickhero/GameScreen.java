@@ -280,7 +280,7 @@ public class GameScreen extends BackgroundHandler {
 
         this.getScene().setOnMouseClicked(e -> {
             if(timeline.getStatus() == Animation.Status.RUNNING){
-                Rotate flipRotation = new Rotate(180,Rotate.X_AXIS);
+                Rotate flipRotation = new Rotate(180,0,35,0,Rotate.X_AXIS);
                 view.getTransforms().addAll(flipRotation);
             }
         });
