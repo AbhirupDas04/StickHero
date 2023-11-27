@@ -17,16 +17,24 @@ public class EndScreen extends BackgroundHandler {
     private GameScreen game;
     private Image image;
     private HistoryStorage storage;
+    private EndingMusic endingMusic;
+
     private Score score;
     public EndScreen(Stage stage, Hero hero, GameScreen game, Image image, HistoryStorage storage){
         super(stage);
         this.hero = hero;
         this.game = game;
         this.image = image;
+        this.endingMusic = new EndingMusic();
         super.setMusic(new EndingMusic());
         this.storage = storage;
     }
     public void endGame(Pane pane, Scene scene1){
+        try {
+            endingMusic.start(super.getStage());
+        } catch (Exception e) {
+            e.printStackTrace();  // Handle the exception according to your application's needs
+        }
         Rectangle rectangle1 = new Rectangle(500, 650);
         rectangle1.setFill(Color.BLACK);
         rectangle1.setLayoutX(0);
