@@ -1,0 +1,513 @@
+Index: .idea/shelf/Uncommitted_changes_before_Merge_at_18_11_23,_3_19 pm_[Changes]/shelved.patch
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Merge_at_18_11_23,_3_19 pm_[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Merge_at_18_11_23,_3_19 pm_[Changes]/shelved.patch
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Merge_at_18_11_23,_3_19 pm_[Changes]/shelved.patch	(revision 269a05d6b5e5c5a0ddb33af00fd02327d0a2a8d5)
++++ /dev/null	(revision 269a05d6b5e5c5a0ddb33af00fd02327d0a2a8d5)
+@@ -1,459 +0,0 @@
+-Index: .idea/shelf/Uncommitted_changes_before_Update_at_11-11-2023_01_20_[Changes]/shelved.patch
+-===================================================================
+-diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_11-11-2023_01_20_[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_11-11-2023_01_20_[Changes]/shelved.patch
+-deleted file mode 100644
+---- a/.idea/shelf/Uncommitted_changes_before_Update_at_11-11-2023_01_20_[Changes]/shelved.patch	(revision 5a838460c63d65350bd70e546e014cb9e564a3a6)
+-+++ /dev/null	(revision 5a838460c63d65350bd70e546e014cb9e564a3a6)
+-@@ -1,192 +0,0 @@
+--Index: .idea/shelf/Uncommitted_changes_before_Checkout_at_10-11-2023_22_55_[Changes]/shelved.patch
+--===================================================================
+--diff --git a/.idea/shelf/Uncommitted_changes_before_Checkout_at_10-11-2023_22_55_[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Checkout_at_10-11-2023_22_55_[Changes]/shelved.patch
+--deleted file mode 100644
+----- a/.idea/shelf/Uncommitted_changes_before_Checkout_at_10-11-2023_22_55_[Changes]/shelved.patch	(revision c37914350a817902370e3a436b63a44726857672)
+--+++ /dev/null	(revision c37914350a817902370e3a436b63a44726857672)
+--@@ -1,40 +0,0 @@
+---Index: .idea/workspace.xml
+---IDEA additional info:
+---Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+---<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"1f8d3197-9abd-4249-9eb0-21fbff063383\" name=\"Changes\" comment=\"Changes\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/Background_Selector.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/Background_Selector.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/Main.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/Main.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"JavaFXApplication\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"Het\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"mavenHome\" value=\"Use Maven wrapper\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 1\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2XrNYj2DbYGZ2HxGudb3VQaFYH6\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n    <option name=\"showMembers\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"git-widget-placeholder\": \"Abhirup\",\r\n    \"last_opened_file_path\": \"C:/Users/ABHIRUP-ACER/Downloads/openjfx-21.0.1_windows-x64_bin-sdk/javafx-sdk-21.0.1/lib\",\r\n    \"project.structure.last.edited\": \"Project\",\r\n    \"project.structure.proportion\": \"0.15\",\r\n    \"project.structure.side.proportion\": \"0.2\",\r\n    \"settings.editor.selected.configurable\": \"reference.projectsettings.compiler.javacompiler\"\r\n  }\r\n}]]></component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"1f8d3197-9abd-4249-9eb0-21fbff063383\" name=\"Changes\" comment=\"\" />\r\n      <created>1699383289127</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1699383289127</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Changes\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1699387156682</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1699387156682</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Changes\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1699438957427</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1699438957428</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Changes\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1699615461900</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1699615461900</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Changes\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1699615478244</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1699615478244</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Changes\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1699617577984</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1699617577984</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"6\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Changes\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Changes\" />\r\n  </component>\r\n</project>
+---Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+---<+>UTF-8
+---===================================================================
+---diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+------ a/.idea/workspace.xml	
+---+++ b/.idea/workspace.xml	
+---@@ -4,11 +4,7 @@
+---     <option name="autoReloadType" value="SELECTIVE" />
+---   </component>
+---   <component name="ChangeListManager">
+----    <list default="true" id="1f8d3197-9abd-4249-9eb0-21fbff063383" name="Changes" comment="Changes">
+----      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+----      <change beforePath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/Background_Selector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/Background_Selector.java" afterDir="false" />
+----      <change beforePath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/Main.java" afterDir="false" />
+----    </list>
+---+    <list default="true" id="1f8d3197-9abd-4249-9eb0-21fbff063383" name="Changes" comment="Changes" />
+---     <option name="SHOW_DIALOG" value="false" />
+---     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+---     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+---@@ -108,7 +104,15 @@
+---       <option name="project" value="LOCAL" />
+---       <updated>1699617577984</updated>
+---     </task>
+----    <option name="localTasksCounter" value="6" />
+---+    <task id="LOCAL-00006" summary="Changes">
+---+      <option name="closed" value="true" />
+---+      <created>1699636150822</created>
+---+      <option name="number" value="00006" />
+---+      <option name="presentableId" value="LOCAL-00006" />
+---+      <option name="project" value="LOCAL" />
+---+      <updated>1699636150822</updated>
+---+    </task>
+---+    <option name="localTasksCounter" value="7" />
+---     <servers />
+---   </component>
+---   <component name="VcsManagerConfiguration">
+--Index: .idea/shelf/Uncommitted_changes_before_Checkout_at_10-11-2023_22_55__Changes_.xml
+--===================================================================
+--diff --git a/.idea/shelf/Uncommitted_changes_before_Checkout_at_10-11-2023_22_55__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Checkout_at_10-11-2023_22_55__Changes_.xml
+--deleted file mode 100644
+----- a/.idea/shelf/Uncommitted_changes_before_Checkout_at_10-11-2023_22_55__Changes_.xml	(revision c37914350a817902370e3a436b63a44726857672)
+--+++ /dev/null	(revision c37914350a817902370e3a436b63a44726857672)
+--@@ -1,4 +0,0 @@
+---<changelist name="Uncommitted_changes_before_Checkout_at_10-11-2023_22_55_[Changes]" date="1699637153595" recycled="false" toDelete="true">
+---  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10-11-2023_22_55_[Changes]/shelved.patch" />
+---  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 10-11-2023 22:55 [Changes]" />
+---</changelist>
+--\ No newline at end of file
+--Index: .idea/workspace.xml
+--IDEA additional info:
+--Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+--<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"1f8d3197-9abd-4249-9eb0-21fbff063383\" name=\"Changes\" comment=\"changed Background_Selector\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"CodeStyleSettingsInfer\">\r\n    <option name=\"done\" value=\"true\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"JavaFXApplication\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"Het\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"mavenHome\" value=\"Use Maven wrapper\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectCodeStyleSettingsMigration\">\r\n    <option name=\"version\" value=\"2\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 1\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2XrNYj2DbYGZ2HxGudb3VQaFYH6\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n    <option name=\"showMembers\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"git-widget-placeholder\": \"Abhirup\",\r\n    \"last_opened_file_path\": \"C:/Users/ABHIRUP-ACER/Downloads/openjfx-21.0.1_windows-x64_bin-sdk/javafx-sdk-21.0.1/lib\",\r\n    \"project.structure.last.edited\": \"Project\",\r\n    \"project.structure.proportion\": \"0.15\",\r\n    \"project.structure.side.proportion\": \"0.2\",\r\n    \"settings.editor.selected.configurable\": \"reference.projectsettings.compiler.javacompiler\"\r\n  }\r\n}]]></component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"1f8d3197-9abd-4249-9eb0-21fbff063383\" name=\"Changes\" comment=\"\" />\r\n      <created>1699383289127</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1699383289127</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Changes\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1699387156682</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1699387156682</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Changes\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1699438957427</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1699438957428</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Changes\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1699615461900</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1699615461900</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Changes\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1699615478244</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1699615478244</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Changes\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1699617577984</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1699617577984</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"changed Background_Selector\">\r\n      <created>1699642424723</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1699642424723</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"7\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"origin/Het\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Changes\" />\r\n    <MESSAGE value=\"changed Background_Selector\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"changed Background_Selector\" />\r\n  </component>\r\n</project>
+--Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+--<+>UTF-8
+--===================================================================
+--diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+----- a/.idea/workspace.xml	(revision c37914350a817902370e3a436b63a44726857672)
+--+++ b/.idea/workspace.xml	(date 1699645830973)
+--@@ -4,14 +4,15 @@
+--     <option name="autoReloadType" value="SELECTIVE" />
+--   </component>
+--   <component name="ChangeListManager">
+---    <list default="true" id="1f8d3197-9abd-4249-9eb0-21fbff063383" name="Changes" comment="changed Background_Selector" />
+--+    <list default="true" id="1f8d3197-9abd-4249-9eb0-21fbff063383" name="Changes" comment="Changes">
+--+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10-11-2023_22_55_[Changes]/shelved.patch" beforeDir="false" />
+--+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10-11-2023_22_55__Changes_.xml" beforeDir="false" />
+--+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+--+    </list>
+--     <option name="SHOW_DIALOG" value="false" />
+--     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+--     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+--     <option name="LAST_RESOLUTION" value="IGNORE" />
+---  </component>
+---  <component name="CodeStyleSettingsInfer">
+---    <option name="done" value="true" />
+--   </component>
+--   <component name="FileTemplateManagerImpl">
+--     <option name="RECENT_TEMPLATES">
+--@@ -24,13 +25,10 @@
+--   <component name="Git.Settings">
+--     <option name="RECENT_BRANCH_BY_REPOSITORY">
+--       <map>
+---        <entry key="$PROJECT_DIR$" value="Het" />
+--+        <entry key="$PROJECT_DIR$" value="master" />
+--       </map>
+--     </option>
+--     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+---  </component>
+---  <component name="MarkdownSettingsMigration">
+---    <option name="stateVersion" value="1" />
+--   </component>
+--   <component name="MavenImportPreferences">
+--     <option name="generalSettings">
+--@@ -38,9 +36,6 @@
+--         <option name="mavenHome" value="Use Maven wrapper" />
+--       </MavenGeneralSettings>
+--     </option>
+---  </component>
+---  <component name="ProjectCodeStyleSettingsMigration">
+---    <option name="version" value="2" />
+--   </component>
+--   <component name="ProjectColorInfo">{
+--   &quot;associatedIndex&quot;: 1
+--@@ -52,19 +47,18 @@
+--     <option name="showLibraryContents" value="true" />
+--     <option name="showMembers" value="true" />
+--   </component>
+---  <component name="PropertiesComponent"><![CDATA[{
+---  "keyToString": {
+---    "RunOnceActivity.OpenProjectViewOnStart": "true",
+---    "RunOnceActivity.ShowReadmeOnStart": "true",
+---    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+---    "git-widget-placeholder": "Abhirup",
+---    "last_opened_file_path": "C:/Users/ABHIRUP-ACER/Downloads/openjfx-21.0.1_windows-x64_bin-sdk/javafx-sdk-21.0.1/lib",
+---    "project.structure.last.edited": "Project",
+---    "project.structure.proportion": "0.15",
+---    "project.structure.side.proportion": "0.2",
+---    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
+--+  <component name="PropertiesComponent">{
+--+  &quot;keyToString&quot;: {
+--+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+--+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+--+    &quot;git-widget-placeholder&quot;: &quot;Abhirup&quot;,
+--+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ABHIRUP-ACER/Downloads/openjfx-21.0.1_windows-x64_bin-sdk/javafx-sdk-21.0.1/lib&quot;,
+--+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+--+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+--+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+--+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;
+--   }
+---}]]></component>
+--+}</component>
+--   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+--   <component name="TaskManager">
+--     <task active="true" id="Default" summary="Default task">
+--@@ -114,14 +108,7 @@
+--       <option name="project" value="LOCAL" />
+--       <updated>1699617577984</updated>
+--     </task>
+---    <task id="LOCAL-00006" summary="changed Background_Selector">
+---      <created>1699642424723</created>
+---      <option name="number" value="00006" />
+---      <option name="presentableId" value="LOCAL-00006" />
+---      <option name="project" value="LOCAL" />
+---      <updated>1699642424723</updated>
+---    </task>
+---    <option name="localTasksCounter" value="7" />
+--+    <option name="localTasksCounter" value="6" />
+--     <servers />
+--   </component>
+--   <component name="Vcs.Log.Tabs.Properties">
+--@@ -129,19 +116,7 @@
+--       <map>
+--         <entry key="MAIN">
+--           <value>
+---            <State>
+---              <option name="FILTERS">
+---                <map>
+---                  <entry key="branch">
+---                    <value>
+---                      <list>
+---                        <option value="origin/Het" />
+---                      </list>
+---                    </value>
+---                  </entry>
+---                </map>
+---              </option>
+---            </State>
+--+            <State />
+--           </value>
+--         </entry>
+--       </map>
+--@@ -149,7 +124,6 @@
+--   </component>
+--   <component name="VcsManagerConfiguration">
+--     <MESSAGE value="Changes" />
+---    <MESSAGE value="changed Background_Selector" />
+---    <option name="LAST_COMMIT_MESSAGE" value="changed Background_Selector" />
+--+    <option name="LAST_COMMIT_MESSAGE" value="Changes" />
+--   </component>
+-- </project>
+--\ No newline at end of file
+-Index: .idea/shelf/Uncommitted_changes_before_Update_at_11-11-2023_00_29_[Changes]/shelved.patch
+-===================================================================
+-diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_11-11-2023_00_29_[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_11-11-2023_00_29_[Changes]/shelved.patch
+-deleted file mode 100644
+---- a/.idea/shelf/Uncommitted_changes_before_Update_at_11-11-2023_00_29_[Changes]/shelved.patch	(revision 5a838460c63d65350bd70e546e014cb9e564a3a6)
+-+++ /dev/null	(revision 5a838460c63d65350bd70e546e014cb9e564a3a6)
+-@@ -1,137 +0,0 @@
+--Index: .idea/shelf/Uncommitted_changes_before_Checkout_at_10-11-2023_22_55_[Changes]/shelved.patch
+--===================================================================
+--diff --git a/.idea/shelf/Uncommitted_changes_before_Checkout_at_10-11-2023_22_55_[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Checkout_at_10-11-2023_22_55_[Changes]/shelved.patch
+--deleted file mode 100644
+----- a/.idea/shelf/Uncommitted_changes_before_Checkout_at_10-11-2023_22_55_[Changes]/shelved.patch	(revision e59ae8c96b8cf1156927a5aa5d6b4a42f9f14af3)
+--+++ /dev/null	(revision e59ae8c96b8cf1156927a5aa5d6b4a42f9f14af3)
+--@@ -1,40 +0,0 @@
+---Index: .idea/workspace.xml
+---IDEA additional info:
+---Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+---<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"1f8d3197-9abd-4249-9eb0-21fbff063383\" name=\"Changes\" comment=\"Changes\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/Background_Selector.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/Background_Selector.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/Main.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/Main.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"JavaFXApplication\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"Het\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"mavenHome\" value=\"Use Maven wrapper\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 1\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2XrNYj2DbYGZ2HxGudb3VQaFYH6\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n    <option name=\"showMembers\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"git-widget-placeholder\": \"Abhirup\",\r\n    \"last_opened_file_path\": \"C:/Users/ABHIRUP-ACER/Downloads/openjfx-21.0.1_windows-x64_bin-sdk/javafx-sdk-21.0.1/lib\",\r\n    \"project.structure.last.edited\": \"Project\",\r\n    \"project.structure.proportion\": \"0.15\",\r\n    \"project.structure.side.proportion\": \"0.2\",\r\n    \"settings.editor.selected.configurable\": \"reference.projectsettings.compiler.javacompiler\"\r\n  }\r\n}]]></component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"1f8d3197-9abd-4249-9eb0-21fbff063383\" name=\"Changes\" comment=\"\" />\r\n      <created>1699383289127</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1699383289127</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Changes\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1699387156682</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1699387156682</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Changes\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1699438957427</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1699438957428</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Changes\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1699615461900</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1699615461900</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Changes\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1699615478244</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1699615478244</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Changes\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1699617577984</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1699617577984</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"6\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Changes\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Changes\" />\r\n  </component>\r\n</project>
+---Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+---<+>UTF-8
+---===================================================================
+---diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+------ a/.idea/workspace.xml	
+---+++ b/.idea/workspace.xml	
+---@@ -4,11 +4,7 @@
+---     <option name="autoReloadType" value="SELECTIVE" />
+---   </component>
+---   <component name="ChangeListManager">
+----    <list default="true" id="1f8d3197-9abd-4249-9eb0-21fbff063383" name="Changes" comment="Changes">
+----      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+----      <change beforePath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/Background_Selector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/Background_Selector.java" afterDir="false" />
+----      <change beforePath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/Main.java" afterDir="false" />
+----    </list>
+---+    <list default="true" id="1f8d3197-9abd-4249-9eb0-21fbff063383" name="Changes" comment="Changes" />
+---     <option name="SHOW_DIALOG" value="false" />
+---     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+---     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+---@@ -108,7 +104,15 @@
+---       <option name="project" value="LOCAL" />
+---       <updated>1699617577984</updated>
+---     </task>
+----    <option name="localTasksCounter" value="6" />
+---+    <task id="LOCAL-00006" summary="Changes">
+---+      <option name="closed" value="true" />
+---+      <created>1699636150822</created>
+---+      <option name="number" value="00006" />
+---+      <option name="presentableId" value="LOCAL-00006" />
+---+      <option name="project" value="LOCAL" />
+---+      <updated>1699636150822</updated>
+---+    </task>
+---+    <option name="localTasksCounter" value="7" />
+---     <servers />
+---   </component>
+---   <component name="VcsManagerConfiguration">
+--Index: .idea/shelf/Uncommitted_changes_before_Checkout_at_10-11-2023_22_55__Changes_.xml
+--===================================================================
+--diff --git a/.idea/shelf/Uncommitted_changes_before_Checkout_at_10-11-2023_22_55__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Checkout_at_10-11-2023_22_55__Changes_.xml
+--deleted file mode 100644
+----- a/.idea/shelf/Uncommitted_changes_before_Checkout_at_10-11-2023_22_55__Changes_.xml	(revision e59ae8c96b8cf1156927a5aa5d6b4a42f9f14af3)
+--+++ /dev/null	(revision e59ae8c96b8cf1156927a5aa5d6b4a42f9f14af3)
+--@@ -1,4 +0,0 @@
+---<changelist name="Uncommitted_changes_before_Checkout_at_10-11-2023_22_55_[Changes]" date="1699637153595" recycled="false" toDelete="true">
+---  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10-11-2023_22_55_[Changes]/shelved.patch" />
+---  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 10-11-2023 22:55 [Changes]" />
+---</changelist>
+--\ No newline at end of file
+--Index: .idea/workspace.xml
+--IDEA additional info:
+--Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+--<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"1f8d3197-9abd-4249-9eb0-21fbff063383\" name=\"Changes\" comment=\"Changes\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/Background_Selector.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/Background_Selector.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/Main.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/Main.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/com/stickhero/stickhero/4Z_2101.w026.n002.80B.p1.80.jpg\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/com/stickhero/stickhero/Pic_4.jpg\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"JavaFXApplication\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"master\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"mavenHome\" value=\"Use Maven wrapper\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 1\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2XrNYj2DbYGZ2HxGudb3VQaFYH6\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n    <option name=\"showMembers\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;Abhirup&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/ABHIRUP-ACER/Downloads/openjfx-21.0.1_windows-x64_bin-sdk/javafx-sdk-21.0.1/lib&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;\r\n  }\r\n}</component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"1f8d3197-9abd-4249-9eb0-21fbff063383\" name=\"Changes\" comment=\"\" />\r\n      <created>1699383289127</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1699383289127</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Changes\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1699387156682</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1699387156682</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Changes\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1699438957427</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1699438957428</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Changes\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1699615461900</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1699615461900</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Changes\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1699615478244</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1699615478244</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Changes\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1699617577984</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1699617577984</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"6\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Changes\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Changes\" />\r\n  </component>\r\n</project>
+--Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+--<+>UTF-8
+--===================================================================
+--diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+----- a/.idea/workspace.xml	(revision e59ae8c96b8cf1156927a5aa5d6b4a42f9f14af3)
+--+++ b/.idea/workspace.xml	(date 1699642468139)
+--@@ -5,10 +5,7 @@
+--   </component>
+--   <component name="ChangeListManager">
+--     <list default="true" id="1f8d3197-9abd-4249-9eb0-21fbff063383" name="Changes" comment="Changes">
+---      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+---      <change beforePath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/Background_Selector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/Background_Selector.java" afterDir="false" />
+---      <change beforePath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/Main.java" afterDir="false" />
+---      <change beforePath="$PROJECT_DIR$/src/main/resources/com/stickhero/stickhero/4Z_2101.w026.n002.80B.p1.80.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/stickhero/stickhero/Pic_4.jpg" afterDir="false" />
+--+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10-11-2023_22_55_[Changes]/shelved.patch" beforeDir="false" />
+--     </list>
+--     <option name="SHOW_DIALOG" value="false" />
+--     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+--@@ -26,10 +23,24 @@
+--   <component name="Git.Settings">
+--     <option name="RECENT_BRANCH_BY_REPOSITORY">
+--       <map>
+---        <entry key="$PROJECT_DIR$" value="master" />
+--+        <entry key="$PROJECT_DIR$" value="Abhirup" />
+--       </map>
+--     </option>
+--     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+--+  </component>
+--+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+--+  "lastFilter": {
+--+    "state": "OPEN",
+--+    "assignee": "AbhirupDas04"
+--+  }
+--+}]]></component>
+--+  <component name="GithubPullRequestsUISettings">
+--+    <option name="selectedUrlAndAccountId">
+--+      <UrlAndAccount>
+--+        <option name="accountId" value="04e6c538-132f-4b73-827d-69079b77be97" />
+--+        <option name="url" value="https://github.com/AbhirupDas04/StickHero.git" />
+--+      </UrlAndAccount>
+--+    </option>
+--   </component>
+--   <component name="MavenImportPreferences">
+--     <option name="generalSettings">
+--@@ -48,18 +59,18 @@
+--     <option name="showLibraryContents" value="true" />
+--     <option name="showMembers" value="true" />
+--   </component>
+---  <component name="PropertiesComponent">{
+---  &quot;keyToString&quot;: {
+---    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+---    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+---    &quot;git-widget-placeholder&quot;: &quot;Abhirup&quot;,
+---    &quot;last_opened_file_path&quot;: &quot;C:/Users/ABHIRUP-ACER/Downloads/openjfx-21.0.1_windows-x64_bin-sdk/javafx-sdk-21.0.1/lib&quot;,
+---    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+---    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+---    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+---    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;
+--+  <component name="PropertiesComponent"><![CDATA[{
+--+  "keyToString": {
+--+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+--+    "RunOnceActivity.ShowReadmeOnStart": "true",
+--+    "git-widget-placeholder": "Het",
+--+    "last_opened_file_path": "C:/Users/ABHIRUP-ACER/Downloads/openjfx-21.0.1_windows-x64_bin-sdk/javafx-sdk-21.0.1/lib",
+--+    "project.structure.last.edited": "Project",
+--+    "project.structure.proportion": "0.15",
+--+    "project.structure.side.proportion": "0.2",
+--+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
+--   }
+---}</component>
+--+}]]></component>
+--   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+--   <component name="TaskManager">
+--     <task active="true" id="Default" summary="Default task">
+-Index: .idea/shelf/Uncommitted_changes_before_Update_at_11-11-2023_00_29__Changes_.xml
+-===================================================================
+-diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_11-11-2023_00_29__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_11-11-2023_00_29__Changes_.xml
+-deleted file mode 100644
+---- a/.idea/shelf/Uncommitted_changes_before_Update_at_11-11-2023_00_29__Changes_.xml	(revision 5a838460c63d65350bd70e546e014cb9e564a3a6)
+-+++ /dev/null	(revision 5a838460c63d65350bd70e546e014cb9e564a3a6)
+-@@ -1,4 +0,0 @@
+--<changelist name="Uncommitted_changes_before_Update_at_11-11-2023_00_29_[Changes]" date="1699642792196" recycled="true" deleted="true">
+--  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11-11-2023_00_29_[Changes]/shelved.patch" />
+--  <option name="DESCRIPTION" value="Uncommitted changes before Update at 11-11-2023 00:29 [Changes]" />
+--</changelist>
+-\ No newline at end of file
+-Index: .idea/shelf/Uncommitted_changes_before_Update_at_11-11-2023_01_20__Changes_.xml
+-===================================================================
+-diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_11-11-2023_01_20__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_11-11-2023_01_20__Changes_.xml
+-deleted file mode 100644
+---- a/.idea/shelf/Uncommitted_changes_before_Update_at_11-11-2023_01_20__Changes_.xml	(revision 5a838460c63d65350bd70e546e014cb9e564a3a6)
+-+++ /dev/null	(revision 5a838460c63d65350bd70e546e014cb9e564a3a6)
+-@@ -1,4 +0,0 @@
+--<changelist name="Uncommitted_changes_before_Update_at_11-11-2023_01_20_[Changes]" date="1699645844375" recycled="true" deleted="true">
+--  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11-11-2023_01_20_[Changes]/shelved.patch" />
+--  <option name="DESCRIPTION" value="Uncommitted changes before Update at 11-11-2023 01:20 [Changes]" />
+--</changelist>
+-\ No newline at end of file
+-Index: .idea/workspace.xml
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"1f8d3197-9abd-4249-9eb0-21fbff063383\" name=\"Changes\" comment=\"Changes\">\n      <change beforePath=\"$PROJECT_DIR$/Readme.md\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Readme.md\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"JavaFXApplication\" />\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\n      <map>\n        <entry key=\"$PROJECT_DIR$\" value=\"master\" />\n      </map>\n    </option>\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"GitHubPullRequestSearchHistory\"><![CDATA[{\n  \"lastFilter\": {\n    \"state\": \"OPEN\",\n    \"assignee\": \"AbhirupDas04\"\n  }\n}]]></component>\n  <component name=\"GithubPullRequestsUISettings\">\n    <option name=\"selectedUrlAndAccountId\">\n      <UrlAndAccount>\n        <option name=\"accountId\" value=\"04e6c538-132f-4b73-827d-69079b77be97\" />\n        <option name=\"url\" value=\"https://github.com/AbhirupDas04/StickHero.git\" />\n      </UrlAndAccount>\n    </option>\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"MavenImportPreferences\">\n    <option name=\"generalSettings\">\n      <MavenGeneralSettings>\n        <option name=\"mavenHome\" value=\"Use Maven wrapper\" />\n      </MavenGeneralSettings>\n    </option>\n  </component>\n  <component name=\"ProjectColorInfo\">{\n  &quot;associatedIndex&quot;: 1\n}</component>\n  <component name=\"ProjectId\" id=\"2XrNYj2DbYGZ2HxGudb3VQaFYH6\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n    <option name=\"showMembers\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\n    \"git-widget-placeholder\": \"Abhirup\",\n    \"last_opened_file_path\": \"C:/Users/ABHIRUP-ACER/Downloads/openjfx-21.0.1_windows-x64_bin-sdk/javafx-sdk-21.0.1/lib\",\n    \"project.structure.last.edited\": \"Modules\",\n    \"project.structure.proportion\": \"0.15\",\n    \"project.structure.side.proportion\": \"0.2\",\n    \"settings.editor.selected.configurable\": \"reference.projectsettings.compiler.javacompiler\"\n  }\n}]]></component>\n  <component name=\"RecentsManager\">\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"C:\\Users\\ABHIRUP-ACER\\Downloads\\CodeTesting\\Java\\StickHero\\src\\main\\resources\\com\\stickhero\\stickhero\" />\n    </key>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"1f8d3197-9abd-4249-9eb0-21fbff063383\" name=\"Changes\" comment=\"\" />\n      <created>1699383289127</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1699383289127</updated>\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1699387156682</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1699387156682</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1699438957427</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1699438957428</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1699615461900</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1699615461900</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1699615478244</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1699615478244</updated>\n    </task>\n    <task id=\"LOCAL-00005\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1699617577984</created>\n      <option name=\"number\" value=\"00005\" />\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1699617577984</updated>\n    </task>\n    <task id=\"LOCAL-00006\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1699708090795</created>\n      <option name=\"number\" value=\"00006\" />\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1699708090795</updated>\n    </task>\n    <task id=\"LOCAL-00007\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1699708932025</created>\n      <option name=\"number\" value=\"00007\" />\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1699708932025</updated>\n    </task>\n    <task id=\"LOCAL-00008\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1699714052383</created>\n      <option name=\"number\" value=\"00008\" />\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1699714052383</updated>\n    </task>\n    <task id=\"LOCAL-00009\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1699786839422</created>\n      <option name=\"number\" value=\"00009\" />\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1699786839423</updated>\n    </task>\n    <task id=\"LOCAL-00010\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1699787046734</created>\n      <option name=\"number\" value=\"00010\" />\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1699787046734</updated>\n    </task>\n    <task id=\"LOCAL-00011\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1699787443703</created>\n      <option name=\"number\" value=\"00011\" />\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1699787443703</updated>\n    </task>\n    <task id=\"LOCAL-00012\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1699787803278</created>\n      <option name=\"number\" value=\"00012\" />\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1699787803278</updated>\n    </task>\n    <task id=\"LOCAL-00013\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1699788300836</created>\n      <option name=\"number\" value=\"00013\" />\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1699788300836</updated>\n    </task>\n    <task id=\"LOCAL-00014\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1699788413974</created>\n      <option name=\"number\" value=\"00014\" />\n      <option name=\"presentableId\" value=\"LOCAL-00014\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1699788413974</updated>\n    </task>\n    <task id=\"LOCAL-00015\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1699788464259</created>\n      <option name=\"number\" value=\"00015\" />\n      <option name=\"presentableId\" value=\"LOCAL-00015\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1699788464259</updated>\n    </task>\n    <task id=\"LOCAL-00016\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1699788868434</created>\n      <option name=\"number\" value=\"00016\" />\n      <option name=\"presentableId\" value=\"LOCAL-00016\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1699788868434</updated>\n    </task>\n    <task id=\"LOCAL-00017\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1699878018418</created>\n      <option name=\"number\" value=\"00017\" />\n      <option name=\"presentableId\" value=\"LOCAL-00017\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1699878018418</updated>\n    </task>\n    <task id=\"LOCAL-00018\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1699880530800</created>\n      <option name=\"number\" value=\"00018\" />\n      <option name=\"presentableId\" value=\"LOCAL-00018\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1699880530800</updated>\n    </task>\n    <task id=\"LOCAL-00019\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1699901478823</created>\n      <option name=\"number\" value=\"00019\" />\n      <option name=\"presentableId\" value=\"LOCAL-00019\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1699901478823</updated>\n    </task>\n    <task id=\"LOCAL-00020\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1699936003570</created>\n      <option name=\"number\" value=\"00020\" />\n      <option name=\"presentableId\" value=\"LOCAL-00020\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1699936003570</updated>\n    </task>\n    <task id=\"LOCAL-00021\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1699938738927</created>\n      <option name=\"number\" value=\"00021\" />\n      <option name=\"presentableId\" value=\"LOCAL-00021\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1699938738927</updated>\n    </task>\n    <task id=\"LOCAL-00022\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1700009761207</created>\n      <option name=\"number\" value=\"00022\" />\n      <option name=\"presentableId\" value=\"LOCAL-00022\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1700009761207</updated>\n    </task>\n    <task id=\"LOCAL-00023\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1700029274761</created>\n      <option name=\"number\" value=\"00023\" />\n      <option name=\"presentableId\" value=\"LOCAL-00023\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1700029274761</updated>\n    </task>\n    <task id=\"LOCAL-00024\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1700032755482</created>\n      <option name=\"number\" value=\"00024\" />\n      <option name=\"presentableId\" value=\"LOCAL-00024\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1700032755482</updated>\n    </task>\n    <task id=\"LOCAL-00025\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1700032782089</created>\n      <option name=\"number\" value=\"00025\" />\n      <option name=\"presentableId\" value=\"LOCAL-00025\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1700032782089</updated>\n    </task>\n    <task id=\"LOCAL-00026\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1700035867300</created>\n      <option name=\"number\" value=\"00026\" />\n      <option name=\"presentableId\" value=\"LOCAL-00026\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1700035867300</updated>\n    </task>\n    <task id=\"LOCAL-00027\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1700037643859</created>\n      <option name=\"number\" value=\"00027\" />\n      <option name=\"presentableId\" value=\"LOCAL-00027\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1700037643859</updated>\n    </task>\n    <task id=\"LOCAL-00028\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1700052431223</created>\n      <option name=\"number\" value=\"00028\" />\n      <option name=\"presentableId\" value=\"LOCAL-00028\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1700052431223</updated>\n    </task>\n    <task id=\"LOCAL-00029\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1700059273904</created>\n      <option name=\"number\" value=\"00029\" />\n      <option name=\"presentableId\" value=\"LOCAL-00029\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1700059273904</updated>\n    </task>\n    <task id=\"LOCAL-00030\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1700060386816</created>\n      <option name=\"number\" value=\"00030\" />\n      <option name=\"presentableId\" value=\"LOCAL-00030\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1700060386816</updated>\n    </task>\n    <task id=\"LOCAL-00031\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1700061260367</created>\n      <option name=\"number\" value=\"00031\" />\n      <option name=\"presentableId\" value=\"LOCAL-00031\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1700061260367</updated>\n    </task>\n    <task id=\"LOCAL-00032\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1700065468991</created>\n      <option name=\"number\" value=\"00032\" />\n      <option name=\"presentableId\" value=\"LOCAL-00032\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1700065468991</updated>\n    </task>\n    <task id=\"LOCAL-00033\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1700067149854</created>\n      <option name=\"number\" value=\"00033\" />\n      <option name=\"presentableId\" value=\"LOCAL-00033\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1700067149854</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"34\" />\n    <servers />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State>\n              <option name=\"FILTERS\">\n                <map>\n                  <entry key=\"branch\">\n                    <value>\n                      <list>\n                        <option value=\"origin/master\" />\n                      </list>\n                    </value>\n                  </entry>\n                </map>\n              </option>\n            </State>\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"Changes\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Changes\" />\n  </component>\n</project>
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+---- a/.idea/workspace.xml	(revision 5a838460c63d65350bd70e546e014cb9e564a3a6)
+-+++ b/.idea/workspace.xml	(date 1700115292515)
+-@@ -5,7 +5,7 @@
+-   </component>
+-   <component name="ChangeListManager">
+-     <list default="true" id="1f8d3197-9abd-4249-9eb0-21fbff063383" name="Changes" comment="Changes">
+--      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
+-+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-     </list>
+-     <option name="SHOW_DIALOG" value="false" />
+-     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+-@@ -28,12 +28,12 @@
+-     </option>
+-     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+-   </component>
+--  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+--  "lastFilter": {
+--    "state": "OPEN",
+--    "assignee": "AbhirupDas04"
+-+  <component name="GitHubPullRequestSearchHistory">{
+-+  &quot;lastFilter&quot;: {
+-+    &quot;state&quot;: &quot;OPEN&quot;,
+-+    &quot;assignee&quot;: &quot;AbhirupDas04&quot;
+-   }
+--}]]></component>
+-+}</component>
+-   <component name="GithubPullRequestsUISettings">
+-     <option name="selectedUrlAndAccountId">
+-       <UrlAndAccount>
+-@@ -67,12 +67,14 @@
+-     "RunOnceActivity.OpenProjectViewOnStart": "true",
+-     "RunOnceActivity.ShowReadmeOnStart": "true",
+-     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+--    "git-widget-placeholder": "Abhirup",
+-+    "WebServerToolWindowFactoryState": "false",
+-+    "git-widget-placeholder": "Het",
+-     "last_opened_file_path": "C:/Users/ABHIRUP-ACER/Downloads/openjfx-21.0.1_windows-x64_bin-sdk/javafx-sdk-21.0.1/lib",
+--    "project.structure.last.edited": "Modules",
+-+    "project.structure.last.edited": "Project",
+-     "project.structure.proportion": "0.15",
+-     "project.structure.side.proportion": "0.2",
+--    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
+-+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
+-+    "vue.rearranger.settings.migration": "true"
+-   }
+- }]]></component>
+-   <component name="RecentsManager">
+-@@ -88,6 +90,7 @@
+-       <option name="number" value="Default" />
+-       <option name="presentableId" value="Default" />
+-       <updated>1699383289127</updated>
+-+      <workItem from="1700113826772" duration="190000" />
+-     </task>
+-     <task id="LOCAL-00001" summary="Changes">
+-       <option name="closed" value="true" />
+-@@ -337,24 +340,11 @@
+-       <option name="project" value="LOCAL" />
+-       <updated>1700061260367</updated>
+-     </task>
+--    <task id="LOCAL-00032" summary="Changes">
+--      <option name="closed" value="true" />
+--      <created>1700065468991</created>
+--      <option name="number" value="00032" />
+--      <option name="presentableId" value="LOCAL-00032" />
+--      <option name="project" value="LOCAL" />
+--      <updated>1700065468991</updated>
+--    </task>
+--    <task id="LOCAL-00033" summary="Changes">
+--      <option name="closed" value="true" />
+--      <created>1700067149854</created>
+--      <option name="number" value="00033" />
+--      <option name="presentableId" value="LOCAL-00033" />
+--      <option name="project" value="LOCAL" />
+--      <updated>1700067149854</updated>
+--    </task>
+--    <option name="localTasksCounter" value="34" />
+-+    <option name="localTasksCounter" value="32" />
+-     <servers />
+-+  </component>
+-+  <component name="TypeScriptGeneratedFilesManager">
+-+    <option name="version" value="3" />
+-   </component>
+-   <component name="Vcs.Log.Tabs.Properties">
+-     <option name="TAB_STATES">
+Index: .idea/shelf/Uncommitted_changes_before_Merge_at_18_11_23__3_19pm__Changes_.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Merge_at_18_11_23__3_19pm__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Merge_at_18_11_23__3_19pm__Changes_.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Merge_at_18_11_23__3_19pm__Changes_.xml	(revision 269a05d6b5e5c5a0ddb33af00fd02327d0a2a8d5)
++++ /dev/null	(revision 269a05d6b5e5c5a0ddb33af00fd02327d0a2a8d5)
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Merge_at_18_11_23,_3_19 pm_[Changes]" date="1700300972232" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_18_11_23,_3_19 pm_[Changes]/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Merge at 18/11/23, 3:19 pm [Changes]" />
+-</changelist>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"1f8d3197-9abd-4249-9eb0-21fbff063383\" name=\"Changes\" comment=\"Changes:&#10;changed the reload saved game button\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/HomeScreen.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/HomeScreen.java\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"JavaFXApplication\" />\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\n      <map>\n        <entry key=\"$PROJECT_DIR$\" value=\"Abhirup\" />\n      </map>\n    </option>\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"GitHubPullRequestSearchHistory\">{\n  &quot;lastFilter&quot;: {\n    &quot;state&quot;: &quot;OPEN&quot;,\n    &quot;assignee&quot;: &quot;AbhirupDas04&quot;\n  }\n}</component>\n  <component name=\"GithubPullRequestsUISettings\">\n    <option name=\"selectedUrlAndAccountId\">\n      <UrlAndAccount>\n        <option name=\"accountId\" value=\"04e6c538-132f-4b73-827d-69079b77be97\" />\n        <option name=\"url\" value=\"https://github.com/AbhirupDas04/StickHero.git\" />\n      </UrlAndAccount>\n    </option>\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"MavenImportPreferences\">\n    <option name=\"generalSettings\">\n      <MavenGeneralSettings>\n        <option name=\"mavenHome\" value=\"Use Maven wrapper\" />\n      </MavenGeneralSettings>\n    </option>\n  </component>\n  <component name=\"ProjectColorInfo\">{\n  &quot;associatedIndex&quot;: 1\n}</component>\n  <component name=\"ProjectId\" id=\"2XrNYj2DbYGZ2HxGudb3VQaFYH6\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n    <option name=\"showMembers\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">{\n  &quot;keyToString&quot;: {\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\n    &quot;git-widget-placeholder&quot;: &quot;Het&quot;,\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/ABHIRUP-ACER/Downloads/openjfx-21.0.1_windows-x64_bin-sdk/javafx-sdk-21.0.1/lib&quot;,\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\n    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\n    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,\n    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;\n  }\n}</component>\n  <component name=\"RecentsManager\">\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/src/main/resources/com/stickhero/stickhero\" />\n      <recent name=\"C:\\Users\\ABHIRUP-ACER\\Downloads\\CodeTesting\\Java\\StickHero\\src\\main\\resources\\com\\stickhero\\stickhero\" />\n    </key>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"1f8d3197-9abd-4249-9eb0-21fbff063383\" name=\"Changes\" comment=\"\" />\n      <created>1699383289127</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1699383289127</updated>\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1699387156682</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1699387156682</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1699438957427</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1699438957428</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1699615461900</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1699615461900</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1699615478244</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1699615478244</updated>\n    </task>\n    <task id=\"LOCAL-00005\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1699617577984</created>\n      <option name=\"number\" value=\"00005\" />\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1699617577984</updated>\n    </task>\n    <task id=\"LOCAL-00006\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1699708090795</created>\n      <option name=\"number\" value=\"00006\" />\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1699708090795</updated>\n    </task>\n    <task id=\"LOCAL-00007\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1699708932025</created>\n      <option name=\"number\" value=\"00007\" />\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1699708932025</updated>\n    </task>\n    <task id=\"LOCAL-00008\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1699714052383</created>\n      <option name=\"number\" value=\"00008\" />\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1699714052383</updated>\n    </task>\n    <task id=\"LOCAL-00009\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1699786839422</created>\n      <option name=\"number\" value=\"00009\" />\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1699786839423</updated>\n    </task>\n    <task id=\"LOCAL-00010\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1699787046734</created>\n      <option name=\"number\" value=\"00010\" />\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1699787046734</updated>\n    </task>\n    <task id=\"LOCAL-00011\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1699787443703</created>\n      <option name=\"number\" value=\"00011\" />\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1699787443703</updated>\n    </task>\n    <task id=\"LOCAL-00012\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1699787803278</created>\n      <option name=\"number\" value=\"00012\" />\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1699787803278</updated>\n    </task>\n    <task id=\"LOCAL-00013\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1699788300836</created>\n      <option name=\"number\" value=\"00013\" />\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1699788300836</updated>\n    </task>\n    <task id=\"LOCAL-00014\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1699788413974</created>\n      <option name=\"number\" value=\"00014\" />\n      <option name=\"presentableId\" value=\"LOCAL-00014\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1699788413974</updated>\n    </task>\n    <task id=\"LOCAL-00015\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1699788464259</created>\n      <option name=\"number\" value=\"00015\" />\n      <option name=\"presentableId\" value=\"LOCAL-00015\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1699788464259</updated>\n    </task>\n    <task id=\"LOCAL-00016\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1699788868434</created>\n      <option name=\"number\" value=\"00016\" />\n      <option name=\"presentableId\" value=\"LOCAL-00016\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1699788868434</updated>\n    </task>\n    <task id=\"LOCAL-00017\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1699878018418</created>\n      <option name=\"number\" value=\"00017\" />\n      <option name=\"presentableId\" value=\"LOCAL-00017\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1699878018418</updated>\n    </task>\n    <task id=\"LOCAL-00018\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1699880530800</created>\n      <option name=\"number\" value=\"00018\" />\n      <option name=\"presentableId\" value=\"LOCAL-00018\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1699880530800</updated>\n    </task>\n    <task id=\"LOCAL-00019\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1699901478823</created>\n      <option name=\"number\" value=\"00019\" />\n      <option name=\"presentableId\" value=\"LOCAL-00019\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1699901478823</updated>\n    </task>\n    <task id=\"LOCAL-00020\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1699936003570</created>\n      <option name=\"number\" value=\"00020\" />\n      <option name=\"presentableId\" value=\"LOCAL-00020\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1699936003570</updated>\n    </task>\n    <task id=\"LOCAL-00021\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1699938738927</created>\n      <option name=\"number\" value=\"00021\" />\n      <option name=\"presentableId\" value=\"LOCAL-00021\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1699938738927</updated>\n    </task>\n    <task id=\"LOCAL-00022\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1700009761207</created>\n      <option name=\"number\" value=\"00022\" />\n      <option name=\"presentableId\" value=\"LOCAL-00022\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1700009761207</updated>\n    </task>\n    <task id=\"LOCAL-00023\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1700029274761</created>\n      <option name=\"number\" value=\"00023\" />\n      <option name=\"presentableId\" value=\"LOCAL-00023\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1700029274761</updated>\n    </task>\n    <task id=\"LOCAL-00024\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1700032755482</created>\n      <option name=\"number\" value=\"00024\" />\n      <option name=\"presentableId\" value=\"LOCAL-00024\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1700032755482</updated>\n    </task>\n    <task id=\"LOCAL-00025\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1700032782089</created>\n      <option name=\"number\" value=\"00025\" />\n      <option name=\"presentableId\" value=\"LOCAL-00025\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1700032782089</updated>\n    </task>\n    <task id=\"LOCAL-00026\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1700035867300</created>\n      <option name=\"number\" value=\"00026\" />\n      <option name=\"presentableId\" value=\"LOCAL-00026\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1700035867300</updated>\n    </task>\n    <task id=\"LOCAL-00027\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1700037643859</created>\n      <option name=\"number\" value=\"00027\" />\n      <option name=\"presentableId\" value=\"LOCAL-00027\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1700037643859</updated>\n    </task>\n    <task id=\"LOCAL-00028\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1700052431223</created>\n      <option name=\"number\" value=\"00028\" />\n      <option name=\"presentableId\" value=\"LOCAL-00028\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1700052431223</updated>\n    </task>\n    <task id=\"LOCAL-00029\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1700059273904</created>\n      <option name=\"number\" value=\"00029\" />\n      <option name=\"presentableId\" value=\"LOCAL-00029\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1700059273904</updated>\n    </task>\n    <task id=\"LOCAL-00030\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1700060386816</created>\n      <option name=\"number\" value=\"00030\" />\n      <option name=\"presentableId\" value=\"LOCAL-00030\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1700060386816</updated>\n    </task>\n    <task id=\"LOCAL-00031\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1700061260367</created>\n      <option name=\"number\" value=\"00031\" />\n      <option name=\"presentableId\" value=\"LOCAL-00031\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1700061260367</updated>\n    </task>\n    <task id=\"LOCAL-00032\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1700065468991</created>\n      <option name=\"number\" value=\"00032\" />\n      <option name=\"presentableId\" value=\"LOCAL-00032\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1700065468991</updated>\n    </task>\n    <task id=\"LOCAL-00033\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1700067149854</created>\n      <option name=\"number\" value=\"00033\" />\n      <option name=\"presentableId\" value=\"LOCAL-00033\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1700067149854</updated>\n    </task>\n    <task id=\"LOCAL-00034\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1700067575415</created>\n      <option name=\"number\" value=\"00034\" />\n      <option name=\"presentableId\" value=\"LOCAL-00034\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1700067575415</updated>\n    </task>\n    <task id=\"LOCAL-00035\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1700067713924</created>\n      <option name=\"number\" value=\"00035\" />\n      <option name=\"presentableId\" value=\"LOCAL-00035\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1700067713924</updated>\n    </task>\n    <task id=\"LOCAL-00036\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1700300025081</created>\n      <option name=\"number\" value=\"00036\" />\n      <option name=\"presentableId\" value=\"LOCAL-00036\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1700300025081</updated>\n    </task>\n    <task id=\"LOCAL-00037\" summary=\"Changes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1700809795488</created>\n      <option name=\"number\" value=\"00037\" />\n      <option name=\"presentableId\" value=\"LOCAL-00037\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1700809795488</updated>\n    </task>\n    <task id=\"LOCAL-00038\" summary=\"Changes:&#10;1)added settings button to HomeScreen&#10;2)added reload saved game button to HomeScreen\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1700918277337</created>\n      <option name=\"number\" value=\"00038\" />\n      <option name=\"presentableId\" value=\"LOCAL-00038\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1700918277337</updated>\n    </task>\n    <task id=\"LOCAL-00039\" summary=\"Changes:&#10;1)added settings button to HomeScreen&#10;2)added reload saved game button to HomeScreen\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1700920931827</created>\n      <option name=\"number\" value=\"00039\" />\n      <option name=\"presentableId\" value=\"LOCAL-00039\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1700920931827</updated>\n    </task>\n    <task id=\"LOCAL-00040\" summary=\"Changes:&#10;1)added settings button to HomeScreen&#10;2)added reload saved game button to HomeScreen\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1700921404671</created>\n      <option name=\"number\" value=\"00040\" />\n      <option name=\"presentableId\" value=\"LOCAL-00040\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1700921404671</updated>\n    </task>\n    <task id=\"LOCAL-00041\" summary=\"Changes:&#10;1)added settings button to HomeScreen&#10;2)added reload saved game button to HomeScreen\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1700921934441</created>\n      <option name=\"number\" value=\"00041\" />\n      <option name=\"presentableId\" value=\"LOCAL-00041\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1700921934441</updated>\n    </task>\n    <task id=\"LOCAL-00042\" summary=\"Changes:&#10;1)added settings button to HomeScreen&#10;2)added reload saved game button to HomeScreen\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1700922214450</created>\n      <option name=\"number\" value=\"00042\" />\n      <option name=\"presentableId\" value=\"LOCAL-00042\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1700922214450</updated>\n    </task>\n    <task id=\"LOCAL-00043\" summary=\"Changes:&#10;aligned settings text\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1700922696384</created>\n      <option name=\"number\" value=\"00043\" />\n      <option name=\"presentableId\" value=\"LOCAL-00043\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1700922696384</updated>\n    </task>\n    <task id=\"LOCAL-00044\" summary=\"Changes:&#10;changed the reload saved game button\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1700923205792</created>\n      <option name=\"number\" value=\"00044\" />\n      <option name=\"presentableId\" value=\"LOCAL-00044\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1700923205792</updated>\n    </task>\n    <task id=\"LOCAL-00045\" summary=\"Changes:&#10;changed the reload saved game button\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1700923801909</created>\n      <option name=\"number\" value=\"00045\" />\n      <option name=\"presentableId\" value=\"LOCAL-00045\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1700923801909</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"46\" />\n    <servers />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State>\n              <option name=\"FILTERS\">\n                <map>\n                  <entry key=\"branch\">\n                    <value>\n                      <list>\n                        <option value=\"origin/master\" />\n                      </list>\n                    </value>\n                  </entry>\n                </map>\n              </option>\n            </State>\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"Changes\" />\n    <MESSAGE value=\"Changes:&#10;1)added settings button to HomeScreen&#10;2)added reload saved game button to HomeScreen\" />\n    <MESSAGE value=\"Changes:&#10;aligned settings text\" />\n    <MESSAGE value=\"Changes:&#10;changed the reload saved game button\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Changes:&#10;changed the reload saved game button\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 269a05d6b5e5c5a0ddb33af00fd02327d0a2a8d5)
++++ b/.idea/workspace.xml	(date 1700930967164)
+@@ -6,7 +6,6 @@
+   <component name="ChangeListManager">
+     <list default="true" id="1f8d3197-9abd-4249-9eb0-21fbff063383" name="Changes" comment="Changes:&#10;changed the reload saved game button">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/HomeScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/HomeScreen.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -452,7 +451,15 @@
+       <option name="project" value="LOCAL" />
+       <updated>1700923801909</updated>
+     </task>
+-    <option name="localTasksCounter" value="46" />
++    <task id="LOCAL-00046" summary="Changes:&#10;changed the reload saved game button">
++      <option name="closed" value="true" />
++      <created>1700924435838</created>
++      <option name="number" value="00046" />
++      <option name="presentableId" value="LOCAL-00046" />
++      <option name="project" value="LOCAL" />
++      <updated>1700924435838</updated>
++    </task>
++    <option name="localTasksCounter" value="47" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
