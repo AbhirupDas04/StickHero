@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f8d3197-9abd-4249-9eb0-21fbff063383" name="Changes" comment="Changes:&#10;changed the reload saved game button">
+    <list default="true" id="1f8d3197-9abd-4249-9eb0-21fbff063383" name="Changes" comment="Changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/HomeScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/HomeScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/GameScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/GameScreen.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +24,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Abhirup" />
+        <entry key="$PROJECT_DIR$" value="Het" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -63,23 +63,22 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Het&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ABHIRUP-ACER/Downloads/openjfx-21.0.1_windows-x64_bin-sdk/javafx-sdk-21.0.1/lib&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "Abhirup",
+    "last_opened_file_path": "C:/Users/ABHIRUP-ACER/Downloads/openjfx-21.0.1_windows-x64_bin-sdk/javafx-sdk-21.0.1/lib",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources/com/stickhero/stickhero" />
       <recent name="C:\Users\ABHIRUP-ACER\Downloads\CodeTesting\Java\StickHero\src\main\resources\com\stickhero\stickhero" />
     </key>
   </component>
@@ -388,71 +387,47 @@
       <option name="project" value="LOCAL" />
       <updated>1700809795488</updated>
     </task>
-    <task id="LOCAL-00038" summary="Changes:&#10;1)added settings button to HomeScreen&#10;2)added reload saved game button to HomeScreen">
+    <task id="LOCAL-00038" summary="Changes">
       <option name="closed" value="true" />
-      <created>1700918277337</created>
+      <created>1700840409290</created>
       <option name="number" value="00038" />
       <option name="presentableId" value="LOCAL-00038" />
       <option name="project" value="LOCAL" />
-      <updated>1700918277337</updated>
+      <updated>1700840409290</updated>
     </task>
-    <task id="LOCAL-00039" summary="Changes:&#10;1)added settings button to HomeScreen&#10;2)added reload saved game button to HomeScreen">
+    <task id="LOCAL-00039" summary="Changes">
       <option name="closed" value="true" />
-      <created>1700920931827</created>
+      <created>1700844528776</created>
       <option name="number" value="00039" />
       <option name="presentableId" value="LOCAL-00039" />
       <option name="project" value="LOCAL" />
-      <updated>1700920931827</updated>
+      <updated>1700844528776</updated>
     </task>
-    <task id="LOCAL-00040" summary="Changes:&#10;1)added settings button to HomeScreen&#10;2)added reload saved game button to HomeScreen">
+    <task id="LOCAL-00040" summary="Changes">
       <option name="closed" value="true" />
-      <created>1700921404671</created>
+      <created>1700932642230</created>
       <option name="number" value="00040" />
       <option name="presentableId" value="LOCAL-00040" />
       <option name="project" value="LOCAL" />
-      <updated>1700921404671</updated>
+      <updated>1700932642230</updated>
     </task>
-    <task id="LOCAL-00041" summary="Changes:&#10;1)added settings button to HomeScreen&#10;2)added reload saved game button to HomeScreen">
+    <task id="LOCAL-00041" summary="Changes">
       <option name="closed" value="true" />
-      <created>1700921934441</created>
+      <created>1701021511709</created>
       <option name="number" value="00041" />
       <option name="presentableId" value="LOCAL-00041" />
       <option name="project" value="LOCAL" />
-      <updated>1700921934441</updated>
+      <updated>1701021511709</updated>
     </task>
-    <task id="LOCAL-00042" summary="Changes:&#10;1)added settings button to HomeScreen&#10;2)added reload saved game button to HomeScreen">
+    <task id="LOCAL-00042" summary="Changes">
       <option name="closed" value="true" />
-      <created>1700922214450</created>
+      <created>1701065238222</created>
       <option name="number" value="00042" />
       <option name="presentableId" value="LOCAL-00042" />
       <option name="project" value="LOCAL" />
-      <updated>1700922214450</updated>
+      <updated>1701065238222</updated>
     </task>
-    <task id="LOCAL-00043" summary="Changes:&#10;aligned settings text">
-      <option name="closed" value="true" />
-      <created>1700922696384</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1700922696384</updated>
-    </task>
-    <task id="LOCAL-00044" summary="Changes:&#10;changed the reload saved game button">
-      <option name="closed" value="true" />
-      <created>1700923205792</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1700923205792</updated>
-    </task>
-    <task id="LOCAL-00045" summary="Changes:&#10;changed the reload saved game button">
-      <option name="closed" value="true" />
-      <created>1700923801909</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1700923801909</updated>
-    </task>
-    <option name="localTasksCounter" value="46" />
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -480,9 +455,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Changes" />
-    <MESSAGE value="Changes:&#10;1)added settings button to HomeScreen&#10;2)added reload saved game button to HomeScreen" />
-    <MESSAGE value="Changes:&#10;aligned settings text" />
-    <MESSAGE value="Changes:&#10;changed the reload saved game button" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes:&#10;changed the reload saved game button" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes" />
   </component>
 </project>

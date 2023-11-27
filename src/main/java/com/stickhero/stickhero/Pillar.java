@@ -11,9 +11,32 @@ public class Pillar {
     private Rectangle rectangle;
     public Pillar(int width,int height, int x_pos, int y_pos){
         Rectangle rectangle = new Rectangle(width,height);
+        this.x_pos = x_pos;
+        this.y_pos = y_pos;
+        this.width = width;
         rectangle.setLayoutX(x_pos);
         rectangle.setLayoutY(y_pos);
         this.rectangle = rectangle;
+    }
+
+    public int getX_pos() {
+        return x_pos;
+    }
+
+    public int getY_pos() {
+        return y_pos;
+    }
+
+    public void setX_pos(int x_pos) {
+        this.x_pos = x_pos;
+    }
+
+    public void setY_pos(int y_pos) {
+        this.y_pos = y_pos;
+    }
+
+    public int getWidth() {
+        return width;
     }
 
     public Rectangle getRectangle() {
