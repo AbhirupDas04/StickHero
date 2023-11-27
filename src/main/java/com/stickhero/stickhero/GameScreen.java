@@ -37,6 +37,11 @@ public class GameScreen extends BackgroundHandler {
     private ImageView view;
     private Rectangle first_red_bar;
     private Rectangle old_stick;
+
+    private ImageView collectableCherryView;
+
+
+    Random random = new Random();
     public GameScreen(Stage stage, HistoryStorage storage){
         super(stage);
         this.hero = new Hero();
@@ -66,6 +71,18 @@ public class GameScreen extends BackgroundHandler {
         this.setBackground(new Background(backgroundimage));
         this.image = image;
     }
+
+    public ImageView generateCollectableCherry(int curr_pillar_width , int next_pillar_start){
+        //binary random generated number to decide if cherry will be generated or not(put his in play game)
+        //generate cherry in between two pillars, so input variable gap everytime
+//        int isCherryGenerated = random.nextInt(2);
+
+        Reward collectableCherry = new Reward();
+        int x_pos = random.nextInt(curr_pillar_width , next_pillar_start);
+        collectableCherryView = collectableCherry.generateReward(30 , 30 , x_pos , 490);
+        return collectableCherryView;
+    }
+
 
     public void startGame() throws InterruptedException {
         Pane game_pane = this.returnBackground();
@@ -150,8 +167,21 @@ public class GameScreen extends BackgroundHandler {
         this.playGame(rand_posX,rand_width,rect3);
     }
 
+    private void removeCherry(Pane pane) {
+        if (collectableCherryView != null) {
+            FadeTransition fadeOut = new FadeTransition(Duration.millis(500), collectableCherryView);
+            fadeOut.setFromValue(1.0);
+            fadeOut.setToValue(0.0);
+            fadeOut.setOnFinished(e -> pane.getChildren().remove(collectableCherryView));
+            fadeOut.play();
+        }
+    }
+
     public void playGame(int next_pillar_start,int next_pillar_width, Rectangle red_bar){
         GameScreen game = this;
+
+//        Reward collectableCherry = generateCollectableCherry(curr_pillar_width , next_pillar_start);
+
         Stick stick = new Stick(3, curr_pillar_width - 5, 490);
         Rectangle rectangle4 = stick.generateStick();
 
@@ -173,7 +203,16 @@ public class GameScreen extends BackgroundHandler {
         rect3.setLayoutX(rand_posX + rand_width / 2.0 - 5);
         rect3.setLayoutY(490);
 
-        pane.getChildren().addAll(rectangle2, rectangle4, rect3);
+        int isCherryGenerated = rand.nextInt(2);
+
+        if (isCherryGenerated == 1){
+            pane.getChildren().addAll(rectangle2, rectangle4, rect3, generateCollectableCherry(curr_pillar_width , next_pillar_start));        }
+        else{
+            collectableCherryView = null;
+            pane.getChildren().addAll(rectangle2, rectangle4, rect3);
+        }
+
+//        pane.getChildren().addAll(rectangle2, rectangle4, rect3);
 
         Timeline timeline = new Timeline();
 
@@ -203,6 +242,7 @@ public class GameScreen extends BackgroundHandler {
                 timeline.setOnFinished(new EventHandler<ActionEvent>() {
                     @Override
                     public void handle(ActionEvent actionEvent) {
+                        removeCherry(pane);
                         curr_pillar_width = next_pillar_width;
                         pillar1 = pillar2;
                         pillar1_rect = pillar2_rect;
