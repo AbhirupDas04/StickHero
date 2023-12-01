@@ -10,6 +10,7 @@ public class Hero {
     private int level;
     private int cherriesCollected;
     private ImageView view;
+    private boolean isUpsideDown;
 
     public ImageView getView() {
         return view;
@@ -24,9 +25,19 @@ public class Hero {
         view.setFitWidth(width);
         view.setLayoutX(x_pos);
         view.setLayoutY(y_pos);
+        this.isUpsideDown = false;
 
         return view;
     }
+
+    public boolean isUpsideDown() {
+        return isUpsideDown;
+    }
+
+    public void setUpsideDown(boolean upsideDown) {
+        isUpsideDown = upsideDown;
+    }
+
     public void moveToSide(){}
     public void moveUp(){}
     public void moveDown(){}

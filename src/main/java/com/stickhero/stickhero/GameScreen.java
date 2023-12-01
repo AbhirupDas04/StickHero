@@ -18,6 +18,7 @@ import javafx.scene.transform.Rotate;
 import javafx.scene.transform.Translate;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import org.controlsfx.control.tableview2.filter.filtereditor.SouthFilter;
 
 import java.util.Random;
 
@@ -38,6 +39,7 @@ public class GameScreen extends BackgroundHandler {
     private Rectangle first_red_bar;
     private Rectangle old_stick;
     private InGameMusic inGameMusic;
+    private Thread t1;
 
     public GameScreen(Stage stage, HistoryStorage storage){
         super(stage);
@@ -212,6 +214,7 @@ public class GameScreen extends BackgroundHandler {
                 timeline.setOnFinished(new EventHandler<ActionEvent>() {
                     @Override
                     public void handle(ActionEvent actionEvent) {
+                        t1.interrupt();
                         curr_pillar_width = next_pillar_width;
                         pillar1 = pillar2;
                         pillar1_rect = pillar2_rect;
@@ -234,7 +237,6 @@ public class GameScreen extends BackgroundHandler {
                         game.playGame(gap + 30 + pillar1.getWidth(),pillar3.getWidth(),rect3);
                     }
                 });
-
                 flag = true;
                 Image image1 = new Image(this.getClass().getResourceAsStream("Standing_Hero.png"));
                 Image image2 = new Image(this.getClass().getResourceAsStream("Side_On.png"));
@@ -266,6 +268,24 @@ public class GameScreen extends BackgroundHandler {
                     timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + k * 10), new KeyValue(rectangle2.translateXProperty(), -(1 + (k - distance)))));
                     timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + k * 10), new KeyValue(rect3.translateXProperty(), -(1 + (k - distance)))));
                 }
+                class Test extends Thread{
+                    int a = 1;
+                    @Override
+                    public void run() {
+                        while(true){
+                            if(timeline.getStatus() == Animation.Status.RUNNING){
+                                if(view.getTranslateX() >= (pillar2.getX_pos() - pillar1.getX_pos() + 10 - pillar1.getWidth()) && hero.isUpsideDown()){
+                                    timeline.stop();
+                                }
+                            }
+                        }
+                    }
+                }
+
+                Test t = new Test();
+                t1= new Thread(t);
+                t1.start();
+
                 timeline.play();
             }
         };
@@ -291,6 +311,12 @@ public class GameScreen extends BackgroundHandler {
             if(timeline.getStatus() == Animation.Status.RUNNING){
                 Rotate flipRotation = new Rotate(180,0,35,0,Rotate.X_AXIS);
                 view.getTransforms().addAll(flipRotation);
+                if(hero.isUpsideDown()){
+                    hero.setUpsideDown(false);
+                }
+                else{
+                    hero.setUpsideDown(true);
+                }
             }
         });
     }
