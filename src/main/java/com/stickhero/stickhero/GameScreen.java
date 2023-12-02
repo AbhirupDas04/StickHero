@@ -1,6 +1,7 @@
 package com.stickhero.stickhero;
 
 import javafx.animation.*;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
@@ -15,10 +16,8 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.Text;
 import javafx.scene.transform.Rotate;
-import javafx.scene.transform.Translate;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-import org.controlsfx.control.tableview2.filter.filtereditor.SouthFilter;
 
 import java.util.Random;
 
@@ -39,8 +38,15 @@ public class GameScreen extends BackgroundHandler {
     private Rectangle first_red_bar;
     private Rectangle old_stick;
     private InGameMusic inGameMusic;
-    private Thread t1;
+    private Thread thread;
 
+
+
+
+    private Text text_score;
+    private Text text_rewards;
+    private ImageView cherry_pic;
+    private Rectangle score_background;
     public GameScreen(Stage stage, HistoryStorage storage){
         super(stage);
         this.hero = new Hero();
@@ -76,7 +82,7 @@ public class GameScreen extends BackgroundHandler {
         try {
             inGameMusic.start(super.getStage());
         } catch (Exception e) {
-            e.printStackTrace();  // Handle the exception according to your application's needs
+            e.printStackTrace();
         }
         Pane game_pane = this.returnBackground();
         Pillar pillar = new Pillar(100,160,0,490);
@@ -108,6 +114,7 @@ public class GameScreen extends BackgroundHandler {
         rectangle1.setArcHeight(15);
         rectangle1.setArcWidth(15);
         rectangle1.setOpacity(0.4);
+        this.score_background = rectangle1;
 
         Text text = new Text();
         text.setFont(Font.font("verdana", FontPosture.REGULAR, 36));
@@ -115,9 +122,11 @@ public class GameScreen extends BackgroundHandler {
         text.setLayoutX(239);
         text.setLayoutY(84);
         text.setText("0");
+        this.text_score = text;
 
         Reward cherry = new Reward();
         ImageView view1 = cherry.generateReward(30,30,467,35);
+        this.cherry_pic = view1;
 
         Text text1 = new Text();
         text1.setFont(Font.font("verdana", FontPosture.REGULAR, 16));
@@ -125,6 +134,7 @@ public class GameScreen extends BackgroundHandler {
         text1.setLayoutX(450);
         text1.setLayoutY(56);
         text1.setText("0");
+        this.text_rewards = text1;
 
         Button bt = new Button("EXIT");
         bt.setMinSize(50,30);
@@ -194,6 +204,8 @@ public class GameScreen extends BackgroundHandler {
                 stick.extendLength();
             }
         };
+        Scene scene2 = super.getScene();
+        Stage stage = super.getStage();
         AnimationTimer timer1 = new AnimationTimer() {
             int deg = 0;
             boolean flag = false;
@@ -214,7 +226,7 @@ public class GameScreen extends BackgroundHandler {
                 timeline.setOnFinished(new EventHandler<ActionEvent>() {
                     @Override
                     public void handle(ActionEvent actionEvent) {
-                        t1.interrupt();
+                        thread.interrupt();
                         curr_pillar_width = next_pillar_width;
                         pillar1 = pillar2;
                         pillar1_rect = pillar2_rect;
@@ -276,6 +288,15 @@ public class GameScreen extends BackgroundHandler {
                             if(timeline.getStatus() == Animation.Status.RUNNING){
                                 if(view.getTranslateX() >= (pillar2.getX_pos() - pillar1.getX_pos() + 10 - pillar1.getWidth()) && hero.isUpsideDown()){
                                     timeline.stop();
+//                                    inGameMusic.stop();
+//                                    text_rewards.setVisible(false);
+//                                    text_score.setVisible(false);
+//                                    cherry_pic.setVisible(false);
+//                                    view.setVisible(false);
+//                                    score_background.setVisible(false);
+//
+//                                    EndScreen endScreen = new EndScreen(stage,new Hero(),game,game.image,storage);
+//                                    endScreen.endGame(pane,scene2);
                                 }
                             }
                         }
@@ -283,8 +304,8 @@ public class GameScreen extends BackgroundHandler {
                 }
 
                 Test t = new Test();
-                t1= new Thread(t);
-                t1.start();
+                thread = new Thread(t);
+                thread.start();
 
                 timeline.play();
             }
