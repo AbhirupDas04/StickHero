@@ -39,7 +39,7 @@ public class GameScreen extends BackgroundHandler {
     private Rectangle old_stick;
     private InGameMusic inGameMusic;
     private Thread thread;
-
+    private boolean Thread_flag = false;
 
 
 
@@ -226,7 +226,7 @@ public class GameScreen extends BackgroundHandler {
                 timeline.setOnFinished(new EventHandler<ActionEvent>() {
                     @Override
                     public void handle(ActionEvent actionEvent) {
-                        thread.interrupt();
+                        Thread_flag = true;
                         curr_pillar_width = next_pillar_width;
                         pillar1 = pillar2;
                         pillar1_rect = pillar2_rect;
@@ -285,18 +285,28 @@ public class GameScreen extends BackgroundHandler {
                     @Override
                     public void run() {
                         while(true){
+                            if(Thread_flag){
+                                Thread_flag = false;
+                                break;
+                            }
                             if(timeline.getStatus() == Animation.Status.RUNNING){
                                 if(view.getTranslateX() >= (pillar2.getX_pos() - pillar1.getX_pos() + 10 - pillar1.getWidth()) && hero.isUpsideDown()){
                                     timeline.stop();
-//                                    inGameMusic.stop();
-//                                    text_rewards.setVisible(false);
-//                                    text_score.setVisible(false);
-//                                    cherry_pic.setVisible(false);
-//                                    view.setVisible(false);
-//                                    score_background.setVisible(false);
-//
-//                                    EndScreen endScreen = new EndScreen(stage,new Hero(),game,game.image,storage);
-//                                    endScreen.endGame(pane,scene2);
+                                    Platform.runLater(new Runnable() {
+                                        @Override
+                                        public void run() {
+                                            inGameMusic.stop();
+                                            text_rewards.setVisible(false);
+                                            text_score.setVisible(false);
+                                            cherry_pic.setVisible(false);
+                                            view.setVisible(false);
+                                            score_background.setVisible(false);
+
+                                            EndScreen endScreen = new EndScreen(stage,new Hero(),game,game.image,storage);
+                                            endScreen.endGame(pane,scene2);
+                                        }
+                                    });
+                                    break;
                                 }
                             }
                         }
