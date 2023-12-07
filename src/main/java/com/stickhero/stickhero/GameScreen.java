@@ -78,7 +78,7 @@ public class GameScreen extends BackgroundHandler {
         this.image = image;
     }
 
-    private void animateFallingHero(int distance, double duration) {
+    private Timeline animateFallingHero(int distance, double duration) {
         Timeline timeline = new Timeline();
 
         double rotation = view.getRotate();
@@ -96,6 +96,7 @@ public class GameScreen extends BackgroundHandler {
                 new KeyValue(view.rotateProperty(), rotation + 360)));
 
         timeline.play();
+        return timeline;
     }
 
     public void startGame(HomeScreen home_screen){
@@ -298,7 +299,6 @@ public class GameScreen extends BackgroundHandler {
                     if(first_red_bar != null){
                         timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + j * 10), new KeyValue(first_red_bar.translateXProperty(), -(1 + (j - distance)))));
                     }
-                    animateFallingHero(distance , 15);
                     if(old_stick != null){
                         old_stick.setVisible(false);
                     }
@@ -319,19 +319,24 @@ public class GameScreen extends BackgroundHandler {
                             if(timeline.getStatus() == Animation.Status.RUNNING){
                                 if(view.getTranslateX() >= (pillar2.getX_pos() - pillar1.getX_pos() + 10 - pillar1.getWidth()) && hero.isUpsideDown()){
                                     timeline.stop();
-
                                     Platform.runLater(new Runnable() {
                                         @Override
                                         public void run() {
-                                            inGameMusic.stop();
-                                            text_rewards.setVisible(false);
-                                            text_score.setVisible(false);
-                                            cherry_pic.setVisible(false);
-                                            view.setVisible(false);
-                                            score_background.setVisible(false);
+                                            Timeline timeline1 = animateFallingHero(distance , 3);
+                                            timeline1.setOnFinished(new EventHandler<ActionEvent>() {
+                                                @Override
+                                                public void handle(ActionEvent actionEvent) {
+                                                    inGameMusic.stop();
+                                                    text_rewards.setVisible(false);
+                                                    text_score.setVisible(false);
+                                                    cherry_pic.setVisible(false);
+                                                    view.setVisible(false);
+                                                    score_background.setVisible(false);
 
-                                            EndScreen endScreen = new EndScreen(stage,new Hero(),game,game.image,storage);
-                                            endScreen.endGame(pane,scene2,home_screen);
+                                                    EndScreen endScreen = new EndScreen(stage,new Hero(),game,game.image,storage);
+                                                    endScreen.endGame(pane,scene2,home_screen);
+                                                }
+                                            });
                                         }
                                     });
                                     break;
