@@ -298,6 +298,7 @@ public class GameScreen extends BackgroundHandler {
                     if(first_red_bar != null){
                         timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + j * 10), new KeyValue(first_red_bar.translateXProperty(), -(1 + (j - distance)))));
                     }
+                    animateFallingHero(distance , 15);
                     if(old_stick != null){
                         old_stick.setVisible(false);
                     }
@@ -318,7 +319,7 @@ public class GameScreen extends BackgroundHandler {
                             if(timeline.getStatus() == Animation.Status.RUNNING){
                                 if(view.getTranslateX() >= (pillar2.getX_pos() - pillar1.getX_pos() + 10 - pillar1.getWidth()) && hero.isUpsideDown()){
                                     timeline.stop();
-                                    animateFallingHero(distance , 15);
+
                                     Platform.runLater(new Runnable() {
                                         @Override
                                         public void run() {
