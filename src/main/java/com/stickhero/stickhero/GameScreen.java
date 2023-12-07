@@ -78,6 +78,26 @@ public class GameScreen extends BackgroundHandler {
         this.image = image;
     }
 
+    private void animateFallingHero(int distance, double duration) {
+        Timeline timeline = new Timeline();
+
+        double rotation = view.getRotate();
+
+        Image heroImage = new Image(getClass().getResourceAsStream("Standing_Hero.png"));
+        Image sideOnImage = new Image(getClass().getResourceAsStream("Side_On.png"));
+
+        timeline.getKeyFrames().add(new KeyFrame(Duration.ZERO,
+                new KeyValue(view.imageProperty(), heroImage),
+                new KeyValue(view.rotateProperty(), rotation)));
+
+        timeline.getKeyFrames().add(new KeyFrame(Duration.seconds(duration),
+                new KeyValue(view.translateYProperty(), distance * 3),
+                new KeyValue(view.imageProperty(), sideOnImage),
+                new KeyValue(view.rotateProperty(), rotation + 360)));
+
+        timeline.play();
+    }
+
     public void startGame(HomeScreen home_screen){
         try {
             inGameMusic.start(super.getStage());
@@ -298,6 +318,7 @@ public class GameScreen extends BackgroundHandler {
                             if(timeline.getStatus() == Animation.Status.RUNNING){
                                 if(view.getTranslateX() >= (pillar2.getX_pos() - pillar1.getX_pos() + 10 - pillar1.getWidth()) && hero.isUpsideDown()){
                                     timeline.stop();
+                                    animateFallingHero(distance , 15);
                                     Platform.runLater(new Runnable() {
                                         @Override
                                         public void run() {
