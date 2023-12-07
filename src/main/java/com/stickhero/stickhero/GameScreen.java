@@ -78,7 +78,7 @@ public class GameScreen extends BackgroundHandler {
         this.image = image;
     }
 
-    public void startGame(Scene home_screen){
+    public void startGame(HomeScreen home_screen){
         try {
             inGameMusic.start(super.getStage());
         } catch (Exception e) {
@@ -171,7 +171,7 @@ public class GameScreen extends BackgroundHandler {
         this.playGame(rand_posX,rand_width,rect3, home_screen);
     }
 
-    public void playGame(int next_pillar_start,int next_pillar_width, Rectangle red_bar, Scene home_screen){
+    public void playGame(int next_pillar_start,int next_pillar_width, Rectangle red_bar, HomeScreen home_screen){
         GameScreen game = this;
         Stick stick = new Stick(3, curr_pillar_width - 5, 490);
         Rectangle rectangle4 = stick.generateStick();

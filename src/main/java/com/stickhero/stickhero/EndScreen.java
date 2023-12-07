@@ -33,7 +33,7 @@ public class EndScreen extends BackgroundHandler {
         super.setMusic(new EndingMusic());
         this.storage = storage;
     }
-    public void endGame(Pane pane, Scene scene1, Scene home_scene){
+    public void endGame(Pane pane, Scene scene1, HomeScreen home_scene){
         try {
             endingMusic.start(super.getStage());
         } catch (Exception e) {
@@ -120,7 +120,7 @@ public class EndScreen extends BackgroundHandler {
         view.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
-                stage.setScene(home_scene);
+                home_scene.openHome();
             }
         });
     }

@@ -162,12 +162,14 @@ public class HomeScreen extends BackgroundHandler {
         super.getStage().setResizable(false);
         super.getStage().show();
 
+        HomeScreen homeScreen = this;
+
         bt.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
                 try {
                     introMusic.stop();
-                    game.startGame(scene1);
+                    game.startGame(homeScreen);
 
                 } catch (Exception e){
                     throw new RuntimeException(e);
