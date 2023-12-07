@@ -78,7 +78,7 @@ public class GameScreen extends BackgroundHandler {
         this.image = image;
     }
 
-    public void startGame() throws InterruptedException {
+    public void startGame(Scene home_screen){
         try {
             inGameMusic.start(super.getStage());
         } catch (Exception e) {
@@ -164,14 +164,14 @@ public class GameScreen extends BackgroundHandler {
                 view1.setVisible(false);
                 view.setVisible(false);
                 rectangle1.setVisible(false);
-                endScreen.endGame(game_pane,scene1);
+                endScreen.endGame(game_pane,scene1,home_screen);
             }
         });
 
-        this.playGame(rand_posX,rand_width,rect3);
+        this.playGame(rand_posX,rand_width,rect3, home_screen);
     }
 
-    public void playGame(int next_pillar_start,int next_pillar_width, Rectangle red_bar){
+    public void playGame(int next_pillar_start,int next_pillar_width, Rectangle red_bar, Scene home_screen){
         GameScreen game = this;
         Stick stick = new Stick(3, curr_pillar_width - 5, 490);
         Rectangle rectangle4 = stick.generateStick();
@@ -246,7 +246,7 @@ public class GameScreen extends BackgroundHandler {
                         view.setTranslateX(0);
                         view.setLayoutX(pillar1.getWidth() - 43);
                         old_stick = rectangle4;
-                        game.playGame(gap + 30 + pillar1.getWidth(),pillar3.getWidth(),rect3);
+                        game.playGame(gap + 30 + pillar1.getWidth(),pillar3.getWidth(),rect3,home_screen);
                     }
                 });
                 flag = true;
@@ -303,7 +303,7 @@ public class GameScreen extends BackgroundHandler {
                                             score_background.setVisible(false);
 
                                             EndScreen endScreen = new EndScreen(stage,new Hero(),game,game.image,storage);
-                                            endScreen.endGame(pane,scene2);
+                                            endScreen.endGame(pane,scene2,home_screen);
                                         }
                                     });
                                     break;

@@ -36,7 +36,7 @@ public class HomeScreen extends BackgroundHandler {
         this.introMusic = new IntroMusic();
         super.setMusic(new IntroMusic());
     }
-    public void openHome() throws InterruptedException{
+    public void openHome(){
         try {
             introMusic.start(super.getStage());
         } catch (Exception e) {
@@ -167,10 +167,8 @@ public class HomeScreen extends BackgroundHandler {
             public void handle(ActionEvent actionEvent) {
                 try {
                     introMusic.stop();
-                    game.startGame();
+                    game.startGame(scene1);
 
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
                 } catch (Exception e){
                     throw new RuntimeException(e);
                 }

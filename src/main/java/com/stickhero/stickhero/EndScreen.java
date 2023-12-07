@@ -1,8 +1,12 @@
 package com.stickhero.stickhero;
 
+import javafx.event.ActionEvent;
+import javafx.event.Event;
+import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
@@ -29,7 +33,7 @@ public class EndScreen extends BackgroundHandler {
         super.setMusic(new EndingMusic());
         this.storage = storage;
     }
-    public void endGame(Pane pane, Scene scene1){
+    public void endGame(Pane pane, Scene scene1, Scene home_scene){
         try {
             endingMusic.start(super.getStage());
         } catch (Exception e) {
@@ -110,5 +114,14 @@ public class EndScreen extends BackgroundHandler {
 
         super.getStage().setScene(scene1);
         super.getStage().show();
+
+        Stage stage = super.getStage();
+
+        view.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                stage.setScene(home_scene);
+            }
+        });
     }
 }
