@@ -209,15 +209,22 @@ public class GameScreen extends BackgroundHandler {
         AnimationTimer timer1 = new AnimationTimer() {
             int deg = 0;
             boolean flag = false;
+            AnimationTimer timer2 = this;
 
             @Override
             public void handle(long l) {
                 if (flag == false) {
-                    rectangle4.getTransforms().add(new Rotate(1, 3, stick.getHeight()));
-                    deg++;
                     if (deg == 90) {
                         stop();
                         fn();
+                    }
+                    else{
+                        rectangle4.getTransforms().add(new Rotate(1, 3, stick.getHeight()));
+                        deg++;
+                        if(deg == 89){
+                            rectangle4.getTransforms().add(new Rotate(1, 3, stick.getHeight()));
+                            deg++;
+                        }
                     }
                 }
             }
@@ -281,7 +288,6 @@ public class GameScreen extends BackgroundHandler {
                     timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + k * 10), new KeyValue(rect3.translateXProperty(), -(1 + (k - distance)))));
                 }
                 class Test extends Thread{
-                    int a = 1;
                     @Override
                     public void run() {
                         while(true){
