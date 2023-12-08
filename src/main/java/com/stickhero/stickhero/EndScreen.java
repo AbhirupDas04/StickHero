@@ -108,18 +108,6 @@ public class EndScreen extends BackgroundHandler {
             throw new RuntimeException(e);
         }
 
-        ObjectOutputStream outputStream = null;
-        try {
-            outputStream = new ObjectOutputStream(new FileOutputStream("Game_Records.txt"));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        try {
-            outputStream.close();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-
         try {
             FileOutputStream fileOutputStream;
             fileOutputStream = new FileOutputStream("Best_Score.txt");

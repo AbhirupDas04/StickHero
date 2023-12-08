@@ -1,8 +1,5 @@
 package com.stickhero.stickhero;
 
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
@@ -178,16 +175,59 @@ public class HomeScreen extends BackgroundHandler {
 
         HomeScreen homeScreen = this;
 
-        bt.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                try {
-                    introMusic.stop();
-                    game.startGame(homeScreen, mode);
+        ReloadButton.setOnMouseClicked(actionEvent -> {
+            Pane reload_pane = new Pane();
+            reload_pane.setBackground(homeScreen.getBackground());
 
-                } catch (Exception e){
-                    throw new RuntimeException(e);
-                }
+            Rectangle shade = new Rectangle(500,650);
+            shade.setFill(Color.BLACK);
+            shade.setOpacity(0.7);
+
+            Image scroll_image = new Image(this.getClass().getResourceAsStream("Scroll.png"));
+            ImageView ScrollView = new ImageView(scroll_image);
+            ScrollView.setPreserveRatio(true);
+            ScrollView.setFitHeight(525);
+            ScrollView.setFitWidth(420);
+            ScrollView.setLayoutX(40);
+            ScrollView.setLayoutY(62.5);
+
+            reload_pane.getChildren().addAll(shade,ScrollView);
+
+            Scene load_scene = new Scene(reload_pane,500, 650);
+            homeScreen.getStage().setScene(load_scene);
+            homeScreen.getStage().show();
+        });
+
+        reload_text.setOnMouseClicked(actionEvent -> {
+            Pane reload_pane = new Pane();
+            reload_pane.setBackground(homeScreen.getBackground());
+
+            Rectangle shade = new Rectangle(500,650);
+            shade.setFill(Color.BLACK);
+            shade.setOpacity(0.7);
+
+            Image scroll_image = new Image(this.getClass().getResourceAsStream("Scroll.png"));
+            ImageView ScrollView = new ImageView(scroll_image);
+            ScrollView.setPreserveRatio(true);
+            ScrollView.setFitHeight(525);
+            ScrollView.setFitWidth(420);
+            ScrollView.setLayoutX(40);
+            ScrollView.setLayoutY(62.5);
+
+            reload_pane.getChildren().addAll(shade,ScrollView);
+
+            Scene load_scene = new Scene(reload_pane,500, 650);
+            homeScreen.getStage().setScene(load_scene);
+            homeScreen.getStage().show();
+        });
+
+        bt.setOnAction(actionEvent -> {
+            try {
+                introMusic.stop();
+                game.startGame(homeScreen, mode);
+
+            } catch (Exception e){
+                throw new RuntimeException(e);
             }
         });
     }

@@ -49,6 +49,10 @@ public abstract class BackgroundHandler {
         this.background = background;
     }
 
+    public Background getBackground() {
+        return background;
+    }
+
     public Pane returnBackground(){
         Pane pane = new Pane();
         pane.setBackground(this.background);
