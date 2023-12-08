@@ -14,10 +14,8 @@ import javafx.util.Duration;
 public class IntroMusic extends MusicHandler
 {
     private MediaPlayer mediaPlayer;
-    public void start (Stage primaryStage) throws Exception {
-        String musicPath = "src/main/resources/com/stickhero/stickhero/entry_page_music.mp3";
-
-        Media media = new Media(new File(musicPath).toURI().toString());
+    public void start (Stage primaryStage) {
+        Media media = new Media(getClass().getResource("entry_page_music.mp3").toString());
 
         mediaPlayer = new MediaPlayer(media);
 
