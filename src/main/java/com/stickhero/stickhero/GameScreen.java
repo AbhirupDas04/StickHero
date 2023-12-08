@@ -338,6 +338,13 @@ public class GameScreen extends BackgroundHandler {
                         view.setTranslateX(0);
                         view.setLayoutX(pillar1.getWidth() - 44);
                         old_stick = rectangle4;
+
+                        collectableCherryView = generateCollectableCherry(curr_pillar_width , next_pillar_start);
+                        if (isCherryGenerated == 1){
+                            collectableCherryView.setTranslateX(0);
+                            collectableCherryView.setLayoutX(gap + 30 + pillar1.getWidth());
+                        }
+
                         game.playGame(gap + 30 + pillar1.getWidth(),pillar3.getWidth(),rect3,home_screen,0);
                     }
                 });
