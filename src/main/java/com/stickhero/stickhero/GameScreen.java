@@ -265,7 +265,7 @@ public class GameScreen extends BackgroundHandler {
                         first_red_bar.setTranslateX(0);
                         first_red_bar.setLayoutX(pillar1.getWidth()/2.0 - 5);
                         view.setTranslateX(0);
-                        view.setLayoutX(pillar1.getWidth() - 43);
+                        view.setLayoutX(pillar1.getWidth() - 44);
                         old_stick = rectangle4;
                         game.playGame(gap + 30 + pillar1.getWidth(),pillar3.getWidth(),rect3,home_screen);
                     }
@@ -301,6 +301,7 @@ public class GameScreen extends BackgroundHandler {
                     end_timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + k * 10), new KeyValue(rectangle2.translateXProperty(), -(1 + (k - distance)))));
                     end_timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + k * 10), new KeyValue(rect3.translateXProperty(), -(1 + (k - distance)))));
                 }
+
                 class Test extends Thread{
                     @Override
                     public void run() {
