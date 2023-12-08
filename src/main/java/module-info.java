@@ -10,6 +10,7 @@ module com.stickhero.stickhero {
     requires org.kordamp.bootstrapfx.core;
     requires com.almasb.fxgl.all;
     requires javafx.media;
+    requires junit;
 
     opens com.stickhero.stickhero to javafx.fxml;
     exports com.stickhero.stickhero;

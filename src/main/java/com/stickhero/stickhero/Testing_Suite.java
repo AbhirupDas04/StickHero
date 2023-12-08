@@ -1,0 +1,56 @@
+package com.stickhero.stickhero;
+
+import org.junit.Test;
+import org.junit.runner.JUnitCore;
+import org.junit.runner.Result;
+import org.junit.runner.notification.Failure;
+import static org.junit.Assert.*;
+
+import java.io.*;
+import java.util.ArrayList;
+
+public class Testing_Suite {
+    @Test
+    public void Game_Test(){
+        BufferedReader fileInputStream;
+        try {
+            fileInputStream = new BufferedReader(new FileReader("Game_Details.txt"));
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+        int n_entries = -1;
+        try {
+            n_entries = Integer.parseInt(fileInputStream.readLine());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        ArrayList<HistoryUnit> list;
+
+        if(n_entries != 0){
+            ObjectInputStream in;
+            try {
+                in = new ObjectInputStream(new FileInputStream("Game_Records.txt"));
+                try {
+                    list = (ArrayList<HistoryUnit>) in.readObject();
+                } catch (IOException | ClassNotFoundException e) {
+                    throw new RuntimeException(e);
+                }
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+
+            for(HistoryUnit unit : list){
+                assertNotNull(unit);
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        Result result = JUnitCore.runClasses(Testing_Suite.class);
+        for(Failure failure : result.getFailures()){
+            System.out.println(failure.toString());
+        }
+        System.out.println("Result -> " + result.wasSuccessful());
+    }
+}

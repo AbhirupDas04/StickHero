@@ -405,7 +405,7 @@ public class GameScreen extends BackgroundHandler {
 
         int finalRand_posX = rand_posX;
         this.save_button.setOnAction(actionEvent -> {
-            BufferedReader fileInputStream = null;
+            BufferedReader fileInputStream;
             try {
                 fileInputStream = new BufferedReader(new FileReader("Game_Details.txt"));
             } catch (FileNotFoundException e) {
@@ -417,8 +417,6 @@ public class GameScreen extends BackgroundHandler {
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-
-            System.out.println(n_entries);
 
             ArrayList<HistoryUnit> list;
 
