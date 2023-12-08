@@ -110,7 +110,7 @@ public class GameScreen extends BackgroundHandler {
                 new KeyValue(view.translateYProperty(), distance * 3),
                 new KeyValue(view.imageProperty(), sideOnImage),
                 new KeyValue(view.rotateProperty(), rotation + 360),
-                new KeyValue(view.translateXProperty(), 10))); // Add a slight displacement along the x-direction
+                new KeyValue(view.translateXProperty(), 5)));
 
         timeline.play();
     }
@@ -138,6 +138,7 @@ public class GameScreen extends BackgroundHandler {
     }
     private void removeCherry(Pane pane) {          //function to remove cherry
         if (collectableCherryView_curr != null) {
+            isCherryGenerated = 0;
             FadeTransition fadeOut = new FadeTransition(Duration.millis(500), collectableCherryView_curr);
             fadeOut.setFromValue(1.0);
             fadeOut.setToValue(0.0);
@@ -207,18 +208,19 @@ public class GameScreen extends BackgroundHandler {
         bt.setLayoutY(25);
         bt.setStyle("-fx-background-color:rgb(255, 0, 0);-fx-border-radius: 150;-fx-font-size:15;-fx-text-fill:white");
 
-        ImageView collectableCherry = generateCollectableCherry(pillar1.getWidth() , pillar2.getX_pos());
+//        ImageView collectableCherry = generateCollectableCherry(pillar1.getWidth() , pillar2.getX_pos());
+//
+//        if (isCherryGenerated == 1){        //adding cherry to pane if it was generated
+//            game_pane.getChildren().addAll(rectangle,bt,rectangle2,rect3,rectangle1,view,view1,text,text1 , collectableCherry);
+//            this.setPane(game_pane);
+//        }
+//        else{
+//            game_pane.getChildren().addAll(rectangle,bt,rectangle2,rect3,rectangle1,view,view1,text,text1);
+//            this.setPane(game_pane);
+//        }
 
-        if (isCherryGenerated == 1){        //adding cherry to pane if it was generated
-            game_pane.getChildren().addAll(rectangle,bt,rectangle2,rect3,rectangle1,view,view1,text,text1 , collectableCherry);
-            this.setPane(game_pane);
-        }
-        else{
-            game_pane.getChildren().addAll(rectangle,bt,rectangle2,rect3,rectangle1,view,view1,text,text1);
-            this.setPane(game_pane);
-        }
-
-//        game_pane.getChildren().addAll(rectangle,bt,rectangle2,rect3,rectangle1,view,view1,text,text1 , collectableCherry);
+        game_pane.getChildren().addAll(rectangle,bt,rectangle2,rect3,rectangle1,view,view1,text,text1);
+        this.setPane(game_pane);
 
         Scene scene1 = new Scene(game_pane, 500, 650);
         super.setScene(scene1);
