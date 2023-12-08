@@ -5,24 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f8d3197-9abd-4249-9eb0-21fbff063383" name="Changes" comment="changes">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/Testing_Suite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_24-11-2023_14_10__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_24-11-2023_20_21_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_24-11-2023_20_21__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_24-11-2023_22_24_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_24-11-2023_22_24__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24-11-2023_17_41_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24-11-2023_17_41__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24-11-2023_18_24_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24-11-2023_18_24__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24-11-2023_18_49_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24-11-2023_18_49__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game_Records.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game_Details.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Details.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game_Records.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Records.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/GameScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/GameScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/Testing_Suite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/Testing_Suite.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,13 +90,13 @@
       <recent name="C:\Users\ABHIRUP-ACER\Downloads\CodeTesting\Java\StickHero\src\main\resources\com\stickhero\stickhero" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Testing_Suite.Game_Test">
+  <component name="RunManager">
     <configuration name="Testing_Suite" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.stickhero.stickhero.Testing_Suite" />
       <module name="StickHero" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.stickhero.stickhero.*" />
+          <option name="PATTERN" value="com.stickhero.stickhero.Testing_Suite" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -121,7 +108,7 @@
       <module name="StickHero" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.stickhero.stickhero.*" />
+          <option name="PATTERN" value="com.stickhero.stickhero.Testing_Suite" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -533,7 +520,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702035419629</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="changes">
+      <option name="closed" value="true" />
+      <created>1702038344997</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1702038344997</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

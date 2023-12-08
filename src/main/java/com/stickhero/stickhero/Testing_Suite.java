@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 public class Testing_Suite {
     @Test
-    public void Game_Test(){
+    public void Database_Test(){
         BufferedReader fileInputStream;
         try {
             fileInputStream = new BufferedReader(new FileReader("Game_Details.txt"));
@@ -44,6 +44,11 @@ public class Testing_Suite {
                 assertNotNull(unit);
             }
         }
+    }
+
+    @Test
+    public void Test2(){
+        //Testing design pattern like flyweight and whatnot
     }
 
     public static void main(String[] args) {
