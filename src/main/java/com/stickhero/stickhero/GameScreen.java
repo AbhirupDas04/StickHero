@@ -122,13 +122,12 @@ public class GameScreen extends BackgroundHandler {
         timeline.getKeyFrames().add(new KeyFrame(Duration.seconds(duration),
                 new KeyValue(view.translateYProperty(), distance * 3),
                 new KeyValue(view.imageProperty(), sideOnImage),
-                new KeyValue(view.rotateProperty(), rotation + 360),
-                new KeyValue(view.translateXProperty(), 5)));
-
+                new KeyValue(view.rotateProperty(), rotation - 360),
+                new KeyValue(view.translateXProperty(), distance)));
         timeline.play();
-
         return timeline;
     }
+
 
     public void startGame(HomeScreen home_screen){
         try {
@@ -345,7 +344,7 @@ public class GameScreen extends BackgroundHandler {
                                     Platform.runLater(new Runnable() {
                                         @Override
                                         public void run() {
-                                            Timeline timeline1 = animateFallingHeroAfterHit(distance , 3);
+                                            Timeline timeline1 = animateHeroFallingAfterMiss(distance , 7);
                                             timeline1.setOnFinished(new EventHandler<ActionEvent>() {
                                                 @Override
                                                 public void handle(ActionEvent actionEvent) {
