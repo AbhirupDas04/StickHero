@@ -121,8 +121,8 @@ public class GameScreen extends BackgroundHandler {
         timeline.getKeyFrames().add(new KeyFrame(Duration.seconds(duration),
                 new KeyValue(view.translateYProperty(), distance * 3),
                 new KeyValue(view.imageProperty(), sideOnImage),
-                new KeyValue(view.rotateProperty(), rotation - 360),
-                new KeyValue(view.translateXProperty(), distance)));
+                new KeyValue(view.rotateProperty(), rotation - 360)));
+//                new KeyValue(view.translateXProperty(), distance)));
         timeline.play();
         return timeline;
     }
