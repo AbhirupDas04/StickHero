@@ -47,6 +47,8 @@ public class GameScreen extends BackgroundHandler {
     private Text text_rewards;
     private ImageView cherry_pic;
     private Rectangle score_background;
+    private Button save_button;
+
     public GameScreen(Stage stage, HistoryStorage storage){
         super(stage);
         this.hero = new Hero();
@@ -157,12 +159,13 @@ public class GameScreen extends BackgroundHandler {
         text1.setText("0");
         this.text_rewards = text1;
 
-        Button bt = new Button("EXIT");
+        Button bt = new Button("SAVE");
         bt.setMinSize(50,30);
         bt.setMaxSize(100,60);
         bt.setLayoutX(25);
         bt.setLayoutY(25);
         bt.setStyle("-fx-background-color:rgb(255, 0, 0);-fx-border-radius: 150;-fx-font-size:15;-fx-text-fill:white");
+        this.save_button = bt;
 
         game_pane.getChildren().addAll(rectangle,bt,rectangle2,rect3,rectangle1,view,view1,text,text1);
         this.setPane(game_pane);
@@ -174,20 +177,6 @@ public class GameScreen extends BackgroundHandler {
         super.getStage().show();
 
         EndScreen endScreen = new EndScreen(super.getStage(),new Hero(),this,this.image,storage);
-
-        bt.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                inGameMusic.stop();
-                bt.setVisible(false);
-                text1.setVisible(false);
-                text.setVisible(false);
-                view1.setVisible(false);
-                view.setVisible(false);
-                rectangle1.setVisible(false);
-                endScreen.endGame(game_pane,scene1,home_screen);
-            }
-        });
 
         this.playGame(rand_posX,rand_width,rect3, home_screen);
     }
@@ -225,6 +214,7 @@ public class GameScreen extends BackgroundHandler {
                 stick.extendLength();
             }
         };
+
         Scene scene2 = super.getScene();
         Stage stage = super.getStage();
         AnimationTimer timer1 = new AnimationTimer() {
@@ -332,6 +322,7 @@ public class GameScreen extends BackgroundHandler {
                                                     cherry_pic.setVisible(false);
                                                     view.setVisible(false);
                                                     score_background.setVisible(false);
+                                                    save_button.setVisible(false);
 
                                                     EndScreen endScreen = new EndScreen(stage,new Hero(),game,game.image,storage);
                                                     endScreen.endGame(pane,scene2,home_screen);
@@ -359,7 +350,7 @@ public class GameScreen extends BackgroundHandler {
 
             @Override
             public void handle(MouseEvent mouseEvent) {
-                if (!flag) {
+                if (!flag && timeline.getStatus() == Animation.Status.STOPPED) {
                     timer.start();
                     flag = true;
                 }

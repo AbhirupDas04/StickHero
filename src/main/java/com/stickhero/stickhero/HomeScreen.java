@@ -110,18 +110,18 @@ public class HomeScreen extends BackgroundHandler {
 //        reloadSavedGameButton.setTranslateY(403);
 //        reloadSavedGameButton.setGraphic(reloadSavedGameButtonText);
 
-        Rectangle reloadSavedGameButtonBackground = new Rectangle(170 , 32);
-        reloadSavedGameButtonBackground.setFill(Color.DARKOLIVEGREEN);
-        reloadSavedGameButtonBackground.setArcWidth(20);
-        reloadSavedGameButtonBackground.setArcHeight(20);
-        reloadSavedGameButtonBackground.setTranslateX(14);
-        reloadSavedGameButtonBackground.setTranslateY(450);
+//        Rectangle reloadSavedGameButtonBackground = new Rectangle(170 , 32);
+//        reloadSavedGameButtonBackground.setFill(Color.DARKOLIVEGREEN);
+//        reloadSavedGameButtonBackground.setArcWidth(20);
+//        reloadSavedGameButtonBackground.setArcHeight(20);
+//        reloadSavedGameButtonBackground.setTranslateX(14);
+//        reloadSavedGameButtonBackground.setTranslateY(450);
 
 
-        Image reloadSavedGameButtonImage = new Image(getClass().getResourceAsStream("reload_saved_game_button.png"));
-        ImageView reloadSavedGameButtonImageView = new ImageView(settingsButtonImage);
-        settingsButtonImageView.setFitWidth(50);
-        settingsButtonImageView.setFitHeight(50);
+//        Image reloadSavedGameButtonImage = new Image(getClass().getResourceAsStream("reload_saved_game_button.png"));
+//        ImageView reloadSavedGameButtonImageView = new ImageView(settingsButtonImage);
+//        settingsButtonImageView.setFitWidth(50);
+//        settingsButtonImageView.setFitHeight(50);
 
         Text reloadSavedGameButtonText = new Text("RELOAD SAVED GAME");
         reloadSavedGameButtonText.setFont(Font.font("verdana", FontWeight.BOLD, FontPosture.REGULAR, 13)); // Adjust the font size
@@ -155,7 +155,7 @@ public class HomeScreen extends BackgroundHandler {
         Hero hero = new Hero();
         ImageView view = hero.generateStandingHero(35,35,230,495);
 
-        pane.getChildren().addAll(bt , reloadSavedGameButtonBackground , reloadSavedGameButton , settingsButtonBackground,settingsButton,text,text2,rectangle,view);
+        pane.getChildren().addAll(bt ,text,text2,rectangle,view);
 
         Scene scene1 = new Scene(pane, 500, 650);
         super.getStage().setScene(scene1);
