@@ -340,25 +340,22 @@ public class GameScreen extends BackgroundHandler {
                                 if(view.getTranslateX() >= (pillar2.getX_pos() - pillar1.getX_pos() + 10 - pillar1.getWidth()) && hero.isUpsideDown()){
                                     timeline.stop();
                                     end_timeline.stop();
-                                    Platform.runLater(new Runnable() {
-                                        @Override
-                                        public void run() {
-                                            Timeline timeline1 = animateHeroFallingAfterMiss(distance , 7);
-                                            timeline1.setOnFinished(actionEvent -> {
-                                                inGameMusic.stop();
-                                                text_rewards.setVisible(false);
-                                                text_score.setVisible(false);
-                                                cherry_pic.setVisible(false);
-                                                view.setVisible(false);
-                                                score_background.setVisible(false);
-                                                save_button.setVisible(false);
+                                    Platform.runLater(() -> {
+                                        Timeline timeline1 = animateHeroFallingAfterMiss(distance , 7);
+                                        timeline1.setOnFinished(actionEvent -> {
+                                            inGameMusic.stop();
+                                            text_rewards.setVisible(false);
+                                            text_score.setVisible(false);
+                                            cherry_pic.setVisible(false);
+                                            view.setVisible(false);
+                                            score_background.setVisible(false);
+                                            save_button.setVisible(false);
 
-                                                game_over_flag = true;
+                                            game_over_flag = true;
 
-                                                EndScreen endScreen = new EndScreen(stage,new Hero(),game,game.image,storage);
-                                                endScreen.endGame(pane,scene2,home_screen);
-                                            });
-                                        }
+                                            EndScreen endScreen = new EndScreen(stage,new Hero(),game,game.image,storage);
+                                            endScreen.endGame(pane,scene2,home_screen);
+                                        });
                                     });
                                     break;
                                 }
@@ -408,9 +405,24 @@ public class GameScreen extends BackgroundHandler {
 
         int finalRand_posX = rand_posX;
         this.save_button.setOnAction(actionEvent -> {
+            BufferedReader fileInputStream = null;
+            try {
+                fileInputStream = new BufferedReader(new FileReader("Game_Details.txt"));
+            } catch (FileNotFoundException e) {
+                throw new RuntimeException(e);
+            }
+            int n_entries = -1;
+            try {
+                n_entries = Integer.parseInt(fileInputStream.readLine());
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+
+            System.out.println(n_entries);
+
             ArrayList<HistoryUnit> list;
 
-            if(HistoryStorage.getN_entries() == 0){
+            if(n_entries == 0){
                 list = new ArrayList<>();
             }
             else{
@@ -429,9 +441,6 @@ public class GameScreen extends BackgroundHandler {
 
             HistoryUnit historyUnit = new HistoryUnit(score, pillar1.getWidth(), pillar2.getWidth(), finalRand_posX, image_link);
             list.add(historyUnit);
-            for(HistoryUnit h1 : list){
-                System.out.println(h1);
-            }
 
             ObjectOutputStream outputStream = null;
             try {
@@ -442,7 +451,13 @@ public class GameScreen extends BackgroundHandler {
 
             try {
                 outputStream.writeObject(list);
-                HistoryStorage.setN_entries(HistoryStorage.getN_entries() + 1);
+                n_entries+=1;
+
+                FileOutputStream fileOutputStream;
+                fileOutputStream = new FileOutputStream("Game_Details.txt");
+                Integer i1 = n_entries;
+
+                fileOutputStream.write(i1.toString().getBytes());
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
