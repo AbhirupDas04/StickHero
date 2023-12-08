@@ -16,9 +16,7 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
+import java.io.*;
 import java.util.ArrayList;
 
 public class EndScreen extends BackgroundHandler {
@@ -85,18 +83,49 @@ public class EndScreen extends BackgroundHandler {
         text4.setLayoutY(280);
         text4.setText("BEST");
 
-        ArrayList<HistoryUnit> list;
-        ObjectInputStream in;
+
+        BufferedReader fileInputStream;
         try {
-            in = new ObjectInputStream(new FileInputStream("Game_Records.txt"));
-            try {
-                list = (ArrayList<HistoryUnit>) in.readObject();
-                for(HistoryUnit unit : list){
-                    System.out.println(unit.getScore());
-                }
-            } catch (IOException | ClassNotFoundException e) {
-                throw new RuntimeException(e);
+            fileInputStream = new BufferedReader(new FileReader("Best_Score.txt"));
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+
+        int best = score;
+
+        try {
+            best = Integer.parseInt(fileInputStream.readLine());
+            if(best < score){
+                best = score;
             }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        try {
+            fileInputStream.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        ObjectOutputStream outputStream = null;
+        try {
+            outputStream = new ObjectOutputStream(new FileOutputStream("Game_Records.txt"));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        try {
+            outputStream.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        try {
+            FileOutputStream fileOutputStream;
+            fileOutputStream = new FileOutputStream("Best_Score.txt");
+
+            fileOutputStream.write(Integer.toString(best).getBytes());
+            fileOutputStream.close();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -106,7 +135,7 @@ public class EndScreen extends BackgroundHandler {
         text5.setFill(Color.BLACK);
         text5.setLayoutX(229);
         text5.setLayoutY(333);
-        text5.setText("0");
+        text5.setText(((Integer)best).toString());
 
         Rectangle rectangle3 = new Rectangle(200,80 );
         rectangle3.setFill(Color.GRAY);

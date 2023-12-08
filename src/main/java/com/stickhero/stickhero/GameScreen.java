@@ -459,6 +459,11 @@ public class GameScreen extends BackgroundHandler {
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
+            try {
+                fileInputStream.close();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
 
             ArrayList<HistoryUnit> list;
 
@@ -474,6 +479,11 @@ public class GameScreen extends BackgroundHandler {
                     } catch (IOException | ClassNotFoundException e) {
                         throw new RuntimeException(e);
                     }
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+                try {
+                    in.close();
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
@@ -498,6 +508,13 @@ public class GameScreen extends BackgroundHandler {
                 Integer i1 = n_entries;
 
                 fileOutputStream.write(i1.toString().getBytes());
+                fileOutputStream.close();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+
+            try {
+                outputStream.close();
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
