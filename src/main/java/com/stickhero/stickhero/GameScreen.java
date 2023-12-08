@@ -267,7 +267,17 @@ public class GameScreen extends BackgroundHandler {
         rect3.setLayoutX(rand_posX + rand_width / 2.0 - 5);
         rect3.setLayoutY(490);
 
-        pane.getChildren().addAll(rectangle2, rectangle4, rect3);
+        collectableCherryView = generateCollectableCherry(curr_pillar_width , next_pillar_start);
+
+        if (isCherryGenerated != 0){
+            pane.getChildren().addAll(rectangle2, rectangle4, rect3, collectableCherryView);
+        }
+        else{
+            collectableCherryView = null;
+            pane.getChildren().addAll(rectangle2, rectangle4, rect3);
+        }
+
+//        pane.getChildren().addAll(rectangle2, rectangle4, rect3);
 
         Timeline timeline = new Timeline();
         Timeline end_timeline = new Timeline();
