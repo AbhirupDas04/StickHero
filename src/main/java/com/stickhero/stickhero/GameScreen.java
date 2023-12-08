@@ -209,6 +209,7 @@ public class GameScreen extends BackgroundHandler {
         pane.getChildren().addAll(rectangle2, rectangle4, rect3);
 
         Timeline timeline = new Timeline();
+        Timeline end_timeline = new Timeline();
 
         AnimationTimer timer = new AnimationTimer() {
             @Override
@@ -243,7 +244,7 @@ public class GameScreen extends BackgroundHandler {
             }
 
             public void fn(){
-                timeline.setOnFinished(new EventHandler<ActionEvent>() {
+                end_timeline.setOnFinished(new EventHandler<ActionEvent>() {
                     @Override
                     public void handle(ActionEvent actionEvent) {
                         Thread_flag = true;
@@ -283,13 +284,13 @@ public class GameScreen extends BackgroundHandler {
                 }
                 int temp_cur = distance;
                 for (int j = distance; j < distance + pillar2.getX_pos(); j++) {
-                    timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + j * 10), new KeyValue(pillar2_rect.translateXProperty(), -(1 + (j - distance)))));
-                    timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + j * 10), new KeyValue(pillar1_rect.translateXProperty(), -(1 + (j - distance)))));
-                    timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + j * 10), new KeyValue(rectangle4.translateXProperty(), -(1 + (j - distance)))));
-                    timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + j * 10), new KeyValue(red_bar.translateXProperty(), -(1 + (j - distance)))));
-                    timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + j * 10), new KeyValue(view.translateXProperty(), temp_cur)));
+                    end_timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + j * 10), new KeyValue(pillar2_rect.translateXProperty(), -(1 + (j - distance)))));
+                    end_timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + j * 10), new KeyValue(pillar1_rect.translateXProperty(), -(1 + (j - distance)))));
+                    end_timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + j * 10), new KeyValue(rectangle4.translateXProperty(), -(1 + (j - distance)))));
+                    end_timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + j * 10), new KeyValue(red_bar.translateXProperty(), -(1 + (j - distance)))));
+                    end_timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + j * 10), new KeyValue(view.translateXProperty(), temp_cur)));
                     if(first_red_bar != null){
-                        timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + j * 10), new KeyValue(first_red_bar.translateXProperty(), -(1 + (j - distance)))));
+                        end_timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + j * 10), new KeyValue(first_red_bar.translateXProperty(), -(1 + (j - distance)))));
                     }
                     if(old_stick != null){
                         old_stick.setVisible(false);
@@ -297,8 +298,8 @@ public class GameScreen extends BackgroundHandler {
                     temp_cur -= 1;
                 }
                 for (int k = distance; k < distance + pillar3.getX_pos() - (pillar2.getWidth() + gap + 30); k++) {
-                    timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + k * 10), new KeyValue(rectangle2.translateXProperty(), -(1 + (k - distance)))));
-                    timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + k * 10), new KeyValue(rect3.translateXProperty(), -(1 + (k - distance)))));
+                    end_timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + k * 10), new KeyValue(rectangle2.translateXProperty(), -(1 + (k - distance)))));
+                    end_timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + k * 10), new KeyValue(rect3.translateXProperty(), -(1 + (k - distance)))));
                 }
                 class Test extends Thread{
                     @Override
@@ -311,6 +312,7 @@ public class GameScreen extends BackgroundHandler {
                             if(timeline.getStatus() == Animation.Status.RUNNING){
                                 if(view.getTranslateX() >= (pillar2.getX_pos() - pillar1.getX_pos() + 10 - pillar1.getWidth()) && hero.isUpsideDown()){
                                     timeline.stop();
+                                    end_timeline.stop();
                                     Platform.runLater(new Runnable() {
                                         @Override
                                         public void run() {
@@ -346,6 +348,7 @@ public class GameScreen extends BackgroundHandler {
                 thread.start();
 
                 timeline.play();
+                end_timeline.play();
             }
         };
 
@@ -354,7 +357,7 @@ public class GameScreen extends BackgroundHandler {
 
             @Override
             public void handle(MouseEvent mouseEvent) {
-                if (!flag && timeline.getStatus() == Animation.Status.STOPPED && !game_over_flag) {
+                if (!flag && timeline.getStatus() == Animation.Status.STOPPED && !game_over_flag && end_timeline.getStatus() == Animation.Status.STOPPED) {
                     timer.start();
                     flag = true;
                 }
