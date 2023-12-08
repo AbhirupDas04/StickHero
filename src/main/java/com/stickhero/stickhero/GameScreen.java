@@ -19,6 +19,9 @@ import javafx.scene.transform.Rotate;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.util.Random;
 
 public class GameScreen extends BackgroundHandler {
@@ -26,8 +29,9 @@ public class GameScreen extends BackgroundHandler {
     private int gamespeed;
     private int n_cherries;
     private Image image;
+    private String image_link;
     private HistoryStorage storage;
-    private Score score;
+    private int score;
     private int level;
     private Rectangle pillar1_rect;
     private Rectangle pillar2_rect;
@@ -55,7 +59,7 @@ public class GameScreen extends BackgroundHandler {
         this.hero = new Hero();
         this.selectRandomImage();
         this.gamespeed = 1;
-        this.score = new Score();
+        this.score = 0;
         this.n_cherries = 0;
         this.storage = storage;
         this.level = 0;
@@ -79,9 +83,10 @@ public class GameScreen extends BackgroundHandler {
         BackgroundImage backgroundimage = new BackgroundImage(image, BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT, backgroundSize);
         this.setBackground(new Background(backgroundimage));
         this.image = image;
+        this.image_link = randomImage;
     }
 
-    private void animateFallingHeroAfterHit(int distance, double duration) {
+    private Timeline animateFallingHeroAfterHit(int distance, double duration) {
         Timeline timeline = new Timeline();
 
         double rotation = view.getRotate();
@@ -99,9 +104,10 @@ public class GameScreen extends BackgroundHandler {
                 new KeyValue(view.rotateProperty(), rotation + 360)));
 
         timeline.play();
+        return timeline;
     }
 
-    private void animateHeroFallingAfterMiss(int distance, double duration) {
+    private Timeline animateHeroFallingAfterMiss(int distance, double duration) {
         Timeline timeline = new Timeline();
 
         double rotation = view.getRotate();
@@ -120,6 +126,8 @@ public class GameScreen extends BackgroundHandler {
                 new KeyValue(view.translateXProperty(), 5)));
 
         timeline.play();
+
+        return timeline;
     }
 
     public void startGame(HomeScreen home_screen){
@@ -337,7 +345,7 @@ public class GameScreen extends BackgroundHandler {
                                     Platform.runLater(new Runnable() {
                                         @Override
                                         public void run() {
-                                            Timeline timeline1 = animateFallingHero(distance , 3);
+                                            Timeline timeline1 = animateFallingHeroAfterHit(distance , 3);
                                             timeline1.setOnFinished(new EventHandler<ActionEvent>() {
                                                 @Override
                                                 public void handle(ActionEvent actionEvent) {
@@ -399,6 +407,27 @@ public class GameScreen extends BackgroundHandler {
                 }
                 else{
                     hero.setUpsideDown(true);
+                }
+            }
+        });
+
+        int finalRand_posX = rand_posX;
+        this.save_button.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                ObjectOutputStream outputStream = null;
+                try {
+                    outputStream = new ObjectOutputStream(new FileOutputStream("Game_Records.txt",true));
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+
+                HistoryUnit historyUnit = new HistoryUnit(score, pillar1.getWidth(), pillar2.getWidth(), finalRand_posX, image_link);
+
+                try {
+                    outputStream.writeObject(historyUnit);
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
                 }
             }
         });
