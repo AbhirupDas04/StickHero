@@ -40,6 +40,7 @@ public class GameScreen extends BackgroundHandler {
     private InGameMusic inGameMusic;
     private Thread thread;
     private boolean Thread_flag = false;
+    private boolean game_over_flag = false;
 
 
 
@@ -183,6 +184,7 @@ public class GameScreen extends BackgroundHandler {
 
     public void playGame(int next_pillar_start,int next_pillar_width, Rectangle red_bar, HomeScreen home_screen){
         GameScreen game = this;
+        game_over_flag = false;
         Stick stick = new Stick(3, curr_pillar_width - 5, 490);
         Rectangle rectangle4 = stick.generateStick();
 
@@ -324,6 +326,8 @@ public class GameScreen extends BackgroundHandler {
                                                     score_background.setVisible(false);
                                                     save_button.setVisible(false);
 
+                                                    game_over_flag = true;
+
                                                     EndScreen endScreen = new EndScreen(stage,new Hero(),game,game.image,storage);
                                                     endScreen.endGame(pane,scene2,home_screen);
                                                 }
@@ -350,7 +354,7 @@ public class GameScreen extends BackgroundHandler {
 
             @Override
             public void handle(MouseEvent mouseEvent) {
-                if (!flag && timeline.getStatus() == Animation.Status.STOPPED) {
+                if (!flag && timeline.getStatus() == Animation.Status.STOPPED && !game_over_flag) {
                     timer.start();
                     flag = true;
                 }
