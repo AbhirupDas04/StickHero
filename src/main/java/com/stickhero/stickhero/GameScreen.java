@@ -335,11 +335,11 @@ public class GameScreen extends BackgroundHandler {
                         view.setTranslateX(0);
                         view.setLayoutX(pillar1.getWidth() - 43);
                         old_stick = rectangle4;
-//                        collectableCherryView = collectableCherryView;
-//                        if (isCherryGenerated == 1){
-//                            collectableCherryView.setTranslateX(0);
-//                            collectableCherryView.setLayoutX(gap + 30 + pillar1.getWidth());
-//                        }
+                        collectableCherryView = generateCollectableCherry(curr_pillar_width , next_pillar_start);
+                        if (isCherryGenerated == 1){
+                            collectableCherryView.setTranslateX(0);
+                            collectableCherryView.setLayoutX(gap + 30 + pillar1.getWidth());
+                        }
 
 //                        collectableCherryView =
                         game.playGame(gap + 30 + pillar1.getWidth(),pillar3.getWidth(),rect3);
@@ -396,6 +396,7 @@ public class GameScreen extends BackgroundHandler {
                     if (collectableCherryView != null) {
                         timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + k * 10), new KeyValue(collectableCherryView.translateXProperty(), -(1 + (k - distance)))));
                     }
+
                 }
                 timeline.play();
             }
