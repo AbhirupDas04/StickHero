@@ -85,6 +85,38 @@ public class GameScreen extends BackgroundHandler {
         this.image_link = randomImage;
     }
 
+    public ImageView generateCollectableCherry(int curr_pillar_width , int next_pillar_start){      //generates cherry if random flag is 1 else no
+        //binary random generated number to decide if cherry will be generated or not(put his in play game)
+        //generate cherry in between two pillars, so input variable gap everytime
+//        int isCherryGenerated = random.nextInt(0,2);
+
+//        if (isCherryGenerated == 1){
+//            Reward collectableCherry = new Reward();
+//            int x_pos = random.nextInt(curr_pillar_width , next_pillar_start);
+//            collectableCherryView = collectableCherry.generateReward(30 , 30 , x_pos , 490);
+//            return collectableCherryView;
+//        }
+//        else{
+//            return null;
+//        }
+        Reward collectableCherry = new Reward();
+        int x_pos = random.nextInt(curr_pillar_width , next_pillar_start);
+        collectableCherryView = collectableCherry.generateReward(30 , 30 , x_pos , 490);
+        isCherryGenerated = 1;
+        return collectableCherryView;
+    }
+    private void removeCherry(Pane pane) {          //function to remove cherry
+        if (collectableCherryView != null) {
+            isCherryGenerated = 0;
+            FadeTransition fadeOut = new FadeTransition(Duration.millis(500), collectableCherryView);
+            fadeOut.setFromValue(1.0);
+            fadeOut.setToValue(0.0);
+            fadeOut.setOnFinished(e -> pane.getChildren().remove(collectableCherryView));
+            fadeOut.play();
+        }
+
+    }
+
     private Timeline animateFallingHeroAfterHit(int distance, double duration) {
         Timeline timeline = new Timeline();
 
