@@ -364,9 +364,6 @@ public class GameScreen extends BackgroundHandler {
                         } else if (i % 20 == 10) {
                             timeline.getKeyFrames().add(new KeyFrame(Duration.millis(5 + i * 10), new KeyValue(view.imageProperty(), image2)));
                         }
-                        if (collectableCherryView != null) {
-                            timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + j * 10), new KeyValue(collectableCherryView.translateXProperty(),-(1 + (j - distance)) )));
-                        }
                     }
 
                     timeline.play();
@@ -400,6 +397,9 @@ public class GameScreen extends BackgroundHandler {
                         } else if (i % 20 == 10) {
                             timeline.getKeyFrames().add(new KeyFrame(Duration.millis(5 + i * 10), new KeyValue(view.imageProperty(), image2)));
                         }
+                        if (collectableCherryView != null) {
+                            timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + j * 10), new KeyValue(collectableCherryView.translateXProperty(),-(1 + (j - distance)) )));
+                        }
                     }
                     int temp_cur = distance;
                     for (int j = distance; j < distance + pillar2.getX_pos(); j++) {
@@ -413,6 +413,9 @@ public class GameScreen extends BackgroundHandler {
                         }
                         if(old_stick != null){
                             old_stick.setVisible(false);
+                        }
+                        if (collectableCherryView != null) {
+                            timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + k * 10), new KeyValue(collectableCherryView.translateXProperty(), -(1 + (k - distance)))));
                         }
                         temp_cur -= 1;
                     }
