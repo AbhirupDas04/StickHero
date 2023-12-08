@@ -16,6 +16,11 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.util.ArrayList;
+
 public class EndScreen extends BackgroundHandler {
     private Hero hero;
     private GameScreen game;
@@ -79,6 +84,22 @@ public class EndScreen extends BackgroundHandler {
         text4.setLayoutX(206);
         text4.setLayoutY(280);
         text4.setText("BEST");
+
+        ArrayList<HistoryUnit> list;
+        ObjectInputStream in;
+        try {
+            in = new ObjectInputStream(new FileInputStream("Game_Records.txt"));
+            try {
+                list = (ArrayList<HistoryUnit>) in.readObject();
+                for(HistoryUnit unit : list){
+                    System.out.println(unit.getScore());
+                }
+            } catch (IOException | ClassNotFoundException e) {
+                throw new RuntimeException(e);
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
         Text text5 = new Text();
         text5.setFont(Font.font("verdana", FontWeight.BOLD, FontPosture.REGULAR, 55));
