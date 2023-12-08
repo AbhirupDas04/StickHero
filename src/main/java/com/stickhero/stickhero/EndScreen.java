@@ -33,7 +33,7 @@ public class EndScreen extends BackgroundHandler {
         super.setMusic(new EndingMusic());
         this.storage = storage;
     }
-    public void endGame(Pane pane, Scene scene1, HomeScreen home_scene){
+    public void endGame(Pane pane, Scene scene1, HomeScreen home_scene, int score){
         try {
             endingMusic.start(super.getStage());
         } catch (Exception e) {
@@ -71,7 +71,7 @@ public class EndScreen extends BackgroundHandler {
         text3.setFill(Color.BLACK);
         text3.setLayoutX(229);
         text3.setLayoutY(241);
-        text3.setText("0");
+        text3.setText(((Integer)score).toString());
 
         Text text4 = new Text();
         text4.setFont(Font.font("verdana", FontPosture.REGULAR, 30));
@@ -120,7 +120,7 @@ public class EndScreen extends BackgroundHandler {
         view.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
-                home_scene.openHome();
+                home_scene.openHome(1);
             }
         });
     }

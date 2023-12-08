@@ -128,7 +128,7 @@ public class GameScreen extends BackgroundHandler {
     }
 
 
-    public void startGame(HomeScreen home_screen){
+    public void startGame(HomeScreen home_screen, int mode){
         try {
             inGameMusic.start(super.getStage());
         } catch (Exception e) {
@@ -205,10 +205,13 @@ public class GameScreen extends BackgroundHandler {
 
         EndScreen endScreen = new EndScreen(super.getStage(),new Hero(),this,this.image,storage);
 
-        this.playGame(rand_posX,rand_width,rect3, home_screen);
+        this.playGame(rand_posX,rand_width,rect3, home_screen, mode);
     }
 
-    public void playGame(int next_pillar_start,int next_pillar_width, Rectangle red_bar, HomeScreen home_screen){
+    public void playGame(int next_pillar_start,int next_pillar_width, Rectangle red_bar, HomeScreen home_screen, int mode){
+        if(mode == 1){
+            score = 0;
+        }
         GameScreen game = this;
         game_over_flag = false;
         Stick stick = new Stick(3, curr_pillar_width - 5, 490);
@@ -293,7 +296,7 @@ public class GameScreen extends BackgroundHandler {
                         view.setTranslateX(0);
                         view.setLayoutX(pillar1.getWidth() - 44);
                         old_stick = rectangle4;
-                        game.playGame(gap + 30 + pillar1.getWidth(),pillar3.getWidth(),rect3,home_screen);
+                        game.playGame(gap + 30 + pillar1.getWidth(),pillar3.getWidth(),rect3,home_screen,0);
                     }
                 });
                 flag = true;
@@ -329,12 +332,14 @@ public class GameScreen extends BackgroundHandler {
                             game_over_flag = true;
 
                             EndScreen endScreen = new EndScreen(stage,new Hero(),game,game.image,storage);
-                            endScreen.endGame(pane,scene2,home_screen);
+                            endScreen.endGame(pane,scene2,home_screen,score);
                         });
                     });
                 }
 
                 else{
+                    score++;
+                    text_score.setText(((Integer)score).toString());
                     distance =  (pillar2.getX_pos() + pillar2.getWidth() - 45 - (int)view.getLayoutX());
                     for (int i = 0; i < distance; i++) {
                         timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + i * 10), new KeyValue(view.translateXProperty(), 1 + i * 1)));
@@ -390,7 +395,7 @@ public class GameScreen extends BackgroundHandler {
                                                 game_over_flag = true;
 
                                                 EndScreen endScreen = new EndScreen(stage,new Hero(),game,game.image,storage);
-                                                endScreen.endGame(pane,scene2,home_screen);
+                                                endScreen.endGame(pane,scene2,home_screen,score);
                                             });
                                         });
                                         break;
