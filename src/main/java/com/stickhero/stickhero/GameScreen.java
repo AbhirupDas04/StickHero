@@ -270,7 +270,7 @@ public class GameScreen extends BackgroundHandler {
         rect3.setLayoutX(rand_posX + rand_width / 2.0 - 5);
         rect3.setLayoutY(490);
 
-        collectableCherryView = generateCollectableCherry(curr_pillar_width , next_pillar_start);
+        collectableCherryView = generateCollectableCherry(curr_pillar_width , next_pillar_start - 10);
 
         if (isCherryGenerated != 0){
             pane.getChildren().addAll(rectangle2, rectangle4, rect3, collectableCherryView);

@@ -53,34 +53,48 @@ public class HomeScreen extends BackgroundHandler {
         bt.setMaxSize(125,125);
         bt.setText("PLAY");
         bt.setTranslateX(185);
-        bt.setTranslateY(260);
+        bt.setTranslateY(210);
 
-        Rectangle settingsButtonBackground = new Rectangle(85 , 32);
-        settingsButtonBackground.setFill(Color.DARKOLIVEGREEN);
-        settingsButtonBackground.setArcWidth(20);
-        settingsButtonBackground.setArcHeight(20);
-        settingsButtonBackground.setTranslateX(14.2);
-        settingsButtonBackground.setTranslateY(398);
+        Image image2 = new Image(this.getClass().getResourceAsStream("Yellow_Button.png"));
+        ImageView ReloadButton = new ImageView(image2);
+        ReloadButton.setPreserveRatio(true);
+        ReloadButton.setFitHeight(100);
+        ReloadButton.setFitWidth(200);
+        ReloadButton.setLayoutX(150);
+        ReloadButton.setLayoutY(350);
 
+        Text reload_text = new Text("Load Save");
+        reload_text.setLayoutY(404);
+        reload_text.setLayoutX(191);
+        reload_text.setFont(Font.font("verdana", FontWeight.EXTRA_BOLD, 21));
+        reload_text.setFill(Color.BLACK);
 
-        Image settingsButtonImage = new Image(getClass().getResourceAsStream("settings_button.png"));
-        ImageView settingsButtonImageView = new ImageView(settingsButtonImage);
-        settingsButtonImageView.setFitWidth(50);
-        settingsButtonImageView.setFitHeight(50);
+//        Rectangle settingsButtonBackground = new Rectangle(85 , 32);
+//        settingsButtonBackground.setFill(Color.DARKOLIVEGREEN);
+//        settingsButtonBackground.setArcWidth(20);
+//        settingsButtonBackground.setArcHeight(20);
+//        settingsButtonBackground.setTranslateX(14.2);
+//        settingsButtonBackground.setTranslateY(398);
+//
+//
+//        Image settingsButtonImage = new Image(getClass().getResourceAsStream("settings_button.png"));
+//        ImageView settingsButtonImageView = new ImageView(settingsButtonImage);
+//        settingsButtonImageView.setFitWidth(50);
+//        settingsButtonImageView.setFitHeight(50);
+//
+//        Text settingsButtonText = new Text("SETTINGS");
+//        settingsButtonText.setFont(Font.font("verdana", FontWeight.BOLD, FontPosture.REGULAR, 13)); // Adjust the font size
+//        settingsButtonText.setFill(Color.WHITE);
 
-        Text settingsButtonText = new Text("SETTINGS");
-        settingsButtonText.setFont(Font.font("verdana", FontWeight.BOLD, FontPosture.REGULAR, 13)); // Adjust the font size
-        settingsButtonText.setFill(Color.WHITE);
-
-        Button settingsButton = new Button();
-        settingsButton.setStyle("-fx-background-color:rgb(255, 0, 0);-fx-font-size:40;-fx-text-fill:white");
-        settingsButton.setGraphic(settingsButtonImageView);
-        settingsButton.setGraphicTextGap(60);
-        settingsButton.setStyle("-fx-background-color: transparent;");
-//        settingsButton.setText("SETTINGS");
-        settingsButton.setTranslateX(12);
-        settingsButton.setTranslateY(402);
-        settingsButton.setGraphic(settingsButtonText);
+//        Button settingsButton = new Button();
+//        settingsButton.setStyle("-fx-background-color:rgb(255, 0, 0);-fx-font-size:40;-fx-text-fill:white");
+//        settingsButton.setGraphic(settingsButtonImageView);
+//        settingsButton.setGraphicTextGap(60);
+//        settingsButton.setStyle("-fx-background-color: transparent;");
+////        settingsButton.setText("SETTINGS");
+//        settingsButton.setTranslateX(12);
+//        settingsButton.setTranslateY(402);
+//        settingsButton.setGraphic(settingsButtonText);
 
 
 //        Rectangle reloadSavedGameButtonBackground = new Rectangle(200 , 32);
@@ -123,19 +137,19 @@ public class HomeScreen extends BackgroundHandler {
 //        settingsButtonImageView.setFitWidth(50);
 //        settingsButtonImageView.setFitHeight(50);
 
-        Text reloadSavedGameButtonText = new Text("RELOAD SAVED GAME");
-        reloadSavedGameButtonText.setFont(Font.font("verdana", FontWeight.BOLD, FontPosture.REGULAR, 13)); // Adjust the font size
-        reloadSavedGameButtonText.setFill(Color.WHITE);
-
-        Button reloadSavedGameButton = new Button();
-        reloadSavedGameButton.setStyle("-fx-background-color:rgb(255, 0, 0);-fx-font-size:40;-fx-text-fill:white");
-        reloadSavedGameButton.setGraphic(settingsButtonImageView);
-        reloadSavedGameButton.setGraphicTextGap(60);
-        reloadSavedGameButton.setStyle("-fx-background-color: transparent;");
-//        settingsButton.setText("SETTINGS");
-        reloadSavedGameButton.setTranslateX(10);
-        reloadSavedGameButton.setTranslateY(453);
-        reloadSavedGameButton.setGraphic(reloadSavedGameButtonText);
+//        Text reloadSavedGameButtonText = new Text("RELOAD SAVED GAME");
+//        reloadSavedGameButtonText.setFont(Font.font("verdana", FontWeight.BOLD, FontPosture.REGULAR, 13)); // Adjust the font size
+//        reloadSavedGameButtonText.setFill(Color.WHITE);
+//
+//        Button reloadSavedGameButton = new Button();
+//        reloadSavedGameButton.setStyle("-fx-background-color:rgb(255, 0, 0);-fx-font-size:40;-fx-text-fill:white");
+//        reloadSavedGameButton.setGraphic(settingsButtonImageView);
+//        reloadSavedGameButton.setGraphicTextGap(60);
+//        reloadSavedGameButton.setStyle("-fx-background-color: transparent;");
+////        settingsButton.setText("SETTINGS");
+//        reloadSavedGameButton.setTranslateX(10);
+//        reloadSavedGameButton.setTranslateY(453);
+//        reloadSavedGameButton.setGraphic(reloadSavedGameButtonText);
 
         Text text = new Text();
         text.setFont(Font.font("verdana", FontWeight.BOLD, FontPosture.REGULAR, 70));
@@ -155,7 +169,7 @@ public class HomeScreen extends BackgroundHandler {
         Hero hero = new Hero();
         ImageView view = hero.generateStandingHero(35,35,230,495);
 
-        pane.getChildren().addAll(bt ,text,text2,rectangle,view);
+        pane.getChildren().addAll(bt ,text,text2,rectangle,view,ReloadButton,reload_text);
 
         Scene scene1 = new Scene(pane, 500, 650);
         super.getStage().setScene(scene1);
