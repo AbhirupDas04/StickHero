@@ -19,9 +19,8 @@ import javafx.scene.transform.Rotate;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
+import java.io.*;
+import java.util.ArrayList;
 import java.util.Random;
 
 public class GameScreen extends BackgroundHandler {
@@ -345,22 +344,19 @@ public class GameScreen extends BackgroundHandler {
                                         @Override
                                         public void run() {
                                             Timeline timeline1 = animateHeroFallingAfterMiss(distance , 7);
-                                            timeline1.setOnFinished(new EventHandler<ActionEvent>() {
-                                                @Override
-                                                public void handle(ActionEvent actionEvent) {
-                                                    inGameMusic.stop();
-                                                    text_rewards.setVisible(false);
-                                                    text_score.setVisible(false);
-                                                    cherry_pic.setVisible(false);
-                                                    view.setVisible(false);
-                                                    score_background.setVisible(false);
-                                                    save_button.setVisible(false);
+                                            timeline1.setOnFinished(actionEvent -> {
+                                                inGameMusic.stop();
+                                                text_rewards.setVisible(false);
+                                                text_score.setVisible(false);
+                                                cherry_pic.setVisible(false);
+                                                view.setVisible(false);
+                                                score_background.setVisible(false);
+                                                save_button.setVisible(false);
 
-                                                    game_over_flag = true;
+                                                game_over_flag = true;
 
-                                                    EndScreen endScreen = new EndScreen(stage,new Hero(),game,game.image,storage);
-                                                    endScreen.endGame(pane,scene2,home_screen);
-                                                }
+                                                EndScreen endScreen = new EndScreen(stage,new Hero(),game,game.image,storage);
+                                                endScreen.endGame(pane,scene2,home_screen);
                                             });
                                         }
                                     });
@@ -380,7 +376,7 @@ public class GameScreen extends BackgroundHandler {
             }
         };
 
-        this.getScene().setOnMousePressed(new EventHandler<MouseEvent>() {
+        this.getScene().setOnMousePressed(new EventHandler<>() {
             boolean flag = false;
 
             @Override
@@ -411,23 +407,44 @@ public class GameScreen extends BackgroundHandler {
         });
 
         int finalRand_posX = rand_posX;
-        this.save_button.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                ObjectOutputStream outputStream = null;
+        this.save_button.setOnAction(actionEvent -> {
+            ArrayList<HistoryUnit> list;
+
+            if(HistoryStorage.getN_entries() == 0){
+                list = new ArrayList<>();
+            }
+            else{
+                ObjectInputStream in;
                 try {
-                    outputStream = new ObjectOutputStream(new FileOutputStream("Game_Records.txt",true));
+                    in = new ObjectInputStream(new FileInputStream("Game_Records.txt"));
+                    try {
+                        list = (ArrayList<HistoryUnit>) in.readObject();
+                    } catch (IOException | ClassNotFoundException e) {
+                        throw new RuntimeException(e);
+                    }
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
+            }
 
-                HistoryUnit historyUnit = new HistoryUnit(score, pillar1.getWidth(), pillar2.getWidth(), finalRand_posX, image_link);
+            HistoryUnit historyUnit = new HistoryUnit(score, pillar1.getWidth(), pillar2.getWidth(), finalRand_posX, image_link);
+            list.add(historyUnit);
+            for(HistoryUnit h1 : list){
+                System.out.println(h1);
+            }
 
-                try {
-                    outputStream.writeObject(historyUnit);
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
+            ObjectOutputStream outputStream = null;
+            try {
+                outputStream = new ObjectOutputStream(new FileOutputStream("Game_Records.txt"));
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+
+            try {
+                outputStream.writeObject(list);
+                HistoryStorage.setN_entries(HistoryStorage.getN_entries() + 1);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
             }
         });
     }
