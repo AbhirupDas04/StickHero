@@ -364,6 +364,9 @@ public class GameScreen extends BackgroundHandler {
                         } else if (i % 20 == 10) {
                             timeline.getKeyFrames().add(new KeyFrame(Duration.millis(5 + i * 10), new KeyValue(view.imageProperty(), image2)));
                         }
+                        if (collectableCherryView != null) {
+                            timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + j * 10), new KeyValue(collectableCherryView.translateXProperty(),-(1 + (j - distance)) )));
+                        }
                     }
 
                     timeline.play();
