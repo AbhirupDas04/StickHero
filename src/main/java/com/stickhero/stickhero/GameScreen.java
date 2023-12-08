@@ -45,7 +45,10 @@ public class GameScreen extends BackgroundHandler {
     private boolean Thread_flag = false;
     private boolean game_over_flag = false;
 
+    private ImageView collectableCherryView = null;
+    private int isCherryGenerated = 0;
 
+    Random random = new Random();
 
     private Text text_score;
     private Text text_rewards;
@@ -397,9 +400,7 @@ public class GameScreen extends BackgroundHandler {
                         } else if (i % 20 == 10) {
                             timeline.getKeyFrames().add(new KeyFrame(Duration.millis(5 + i * 10), new KeyValue(view.imageProperty(), image2)));
                         }
-                        if (collectableCherryView != null) {
-                            timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + j * 10), new KeyValue(collectableCherryView.translateXProperty(),-(1 + (j - distance)) )));
-                        }
+
                     }
                     int temp_cur = distance;
                     for (int j = distance; j < distance + pillar2.getX_pos(); j++) {
@@ -415,13 +416,17 @@ public class GameScreen extends BackgroundHandler {
                             old_stick.setVisible(false);
                         }
                         if (collectableCherryView != null) {
-                            timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + k * 10), new KeyValue(collectableCherryView.translateXProperty(), -(1 + (k - distance)))));
+                            timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + j * 10), new KeyValue(collectableCherryView.translateXProperty(),-(1 + (j - distance)) )));
                         }
+
                         temp_cur -= 1;
                     }
                     for (int k = distance; k < distance + pillar3.getX_pos() - (pillar2.getWidth() + gap + 30); k++) {
                         end_timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + k * 10), new KeyValue(rectangle2.translateXProperty(), -(1 + (k - distance)))));
                         end_timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + k * 10), new KeyValue(rect3.translateXProperty(), -(1 + (k - distance)))));
+                        if (collectableCherryView != null) {
+                            timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + k * 10), new KeyValue(collectableCherryView.translateXProperty(), -(1 + (k - distance)))));
+                        }
                     }
 
                     class Test extends Thread{
