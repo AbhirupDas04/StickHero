@@ -598,11 +598,11 @@ public class GameScreen extends BackgroundHandler {
                 if(stick.getHeight() - 2 < pillar2.getX_pos() - pillar1.getWidth() - pillar1.getX_pos() || stick.getHeight() - 2 > pillar2.getX_pos() + pillar2.getWidth() - pillar1.getWidth() -  pillar1.getX_pos() ){
                     distance =  stick.getHeight() + 30;
                     for (int i = 0; i < distance; i++) {
-                        timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + i * 10), new KeyValue(view.translateXProperty(), 1 + i * 1)));
+                        timeline.getKeyFrames().add(new KeyFrame(Duration.millis(0.7*(10 + i * 10)), new KeyValue(view.translateXProperty(), 1 + i * 1)));
                         if (i % 20 == 0) {
-                            timeline.getKeyFrames().add(new KeyFrame(Duration.millis(5 + i * 10), new KeyValue(view.imageProperty(), image1)));
+                            timeline.getKeyFrames().add(new KeyFrame(Duration.millis(0.7*(5 + i * 10)), new KeyValue(view.imageProperty(), image1)));
                         } else if (i % 20 == 10) {
-                            timeline.getKeyFrames().add(new KeyFrame(Duration.millis(5 + i * 10), new KeyValue(view.imageProperty(), image2)));
+                            timeline.getKeyFrames().add(new KeyFrame(Duration.millis(0.7*(5 + i * 10)), new KeyValue(view.imageProperty(), image2)));
                         }
                     }
 
@@ -697,38 +697,38 @@ public class GameScreen extends BackgroundHandler {
                     text_score.setText(((Integer)score).toString());
                     distance =  (pillar2.getX_pos() + pillar2.getWidth() - 45 - (int)view.getLayoutX());
                     for (int i = 0; i < distance; i++) {
-                        timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + i * 10), new KeyValue(view.translateXProperty(), 1 + i * 1)));
+                        timeline.getKeyFrames().add(new KeyFrame(Duration.millis(0.7*(10 + i * 10)), new KeyValue(view.translateXProperty(), 1 + i * 1)));
                         if (i % 20 == 0) {
-                            timeline.getKeyFrames().add(new KeyFrame(Duration.millis(5 + i * 10), new KeyValue(view.imageProperty(), image1)));
+                            timeline.getKeyFrames().add(new KeyFrame(Duration.millis(0.7*(5 + i * 10)), new KeyValue(view.imageProperty(), image1)));
                         } else if (i % 20 == 10) {
-                            timeline.getKeyFrames().add(new KeyFrame(Duration.millis(5 + i * 10), new KeyValue(view.imageProperty(), image2)));
+                            timeline.getKeyFrames().add(new KeyFrame(Duration.millis(0.7*(5 + i * 10)), new KeyValue(view.imageProperty(), image2)));
                         }
 
                     }
                     int temp_cur = distance;
                     for (int j = distance; j < distance + pillar2.getX_pos(); j++) {
-                        end_timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + j * 10), new KeyValue(pillar2_rect.translateXProperty(), -(1 + (j - distance)))));
-                        end_timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + j * 10), new KeyValue(pillar1_rect.translateXProperty(), -(1 + (j - distance)))));
-                        end_timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + j * 10), new KeyValue(rectangle4.translateXProperty(), -(1 + (j - distance)))));
-                        end_timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + j * 10), new KeyValue(red_bar.translateXProperty(), -(1 + (j - distance)))));
-                        end_timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + j * 10), new KeyValue(view.translateXProperty(), temp_cur)));
+                        end_timeline.getKeyFrames().add(new KeyFrame(Duration.millis(0.7*(10 + j * 10)), new KeyValue(pillar2_rect.translateXProperty(), -(1 + (j - distance)))));
+                        end_timeline.getKeyFrames().add(new KeyFrame(Duration.millis(0.7*(10 + j * 10)), new KeyValue(pillar1_rect.translateXProperty(), -(1 + (j - distance)))));
+                        end_timeline.getKeyFrames().add(new KeyFrame(Duration.millis(0.7*(10 + j * 10)), new KeyValue(rectangle4.translateXProperty(), -(1 + (j - distance)))));
+                        end_timeline.getKeyFrames().add(new KeyFrame(Duration.millis(0.7*(10 + j * 10)), new KeyValue(red_bar.translateXProperty(), -(1 + (j - distance)))));
+                        end_timeline.getKeyFrames().add(new KeyFrame(Duration.millis(0.7*(10 + j * 10)), new KeyValue(view.translateXProperty(), temp_cur)));
                         if(first_red_bar != null){
-                            end_timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + j * 10), new KeyValue(first_red_bar.translateXProperty(), -(1 + (j - distance)))));
+                            end_timeline.getKeyFrames().add(new KeyFrame(Duration.millis(0.7*(10 + j * 10)), new KeyValue(first_red_bar.translateXProperty(), -(1 + (j - distance)))));
                         }
                         if(old_stick != null){
                             old_stick.setVisible(false);
                         }
                         if (collectableCherryView != null) {
-                            end_timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + j * 10), new KeyValue(collectableCherryView.translateXProperty(),-(1 + (j - distance)) )));
+                            end_timeline.getKeyFrames().add(new KeyFrame(Duration.millis(0.7* (10 + j * 10)), new KeyValue(collectableCherryView.translateXProperty(),-(1 + (j - distance)) )));
                         }
 
                         temp_cur -= 1;
                     }
                     for (int k = distance; k < distance + pillar3.getX_pos() - (pillar2.getWidth() + gap + 30); k++) {
-                        end_timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + k * 10), new KeyValue(rectangle2.translateXProperty(), -(1 + (k - distance)))));
-                        end_timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + k * 10), new KeyValue(rect3.translateXProperty(), -(1 + (k - distance)))));
+                        end_timeline.getKeyFrames().add(new KeyFrame(Duration.millis(0.7*(10 + k * 10)), new KeyValue(rectangle2.translateXProperty(), -(1 + (k - distance)))));
+                        end_timeline.getKeyFrames().add(new KeyFrame(Duration.millis(0.7*(10 + k * 10)), new KeyValue(rect3.translateXProperty(), -(1 + (k - distance)))));
                         if (collectableCherryView != null) {
-                            end_timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + k * 10), new KeyValue(collectableCherryView.translateXProperty(), -(1 + (k - distance)))));
+                            end_timeline.getKeyFrames().add(new KeyFrame(Duration.millis(0.7*(10 + k * 10)), new KeyValue(collectableCherryView.translateXProperty(), -(1 + (k - distance)))));
                         }
                     }
 
