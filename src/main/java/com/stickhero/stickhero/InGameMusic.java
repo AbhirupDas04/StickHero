@@ -1,3 +1,8 @@
+/*
+* THIS CLASS HANDLES THE WORKING OF IN-GAME MUSIC
+* */
+
+
 package com.stickhero.stickhero;
 
 //public class InGameMusic extends MusicHandler {

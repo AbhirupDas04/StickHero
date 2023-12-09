@@ -1,3 +1,8 @@
+/*
+* THIS CLASS IS USED BY GAMESCREEN CLASS GENERATE PILLARS IN THE GAME.
+* */
+
+
 package com.stickhero.stickhero;
 
 import javafx.scene.image.Image;

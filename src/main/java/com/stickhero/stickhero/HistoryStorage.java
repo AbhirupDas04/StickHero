@@ -1,3 +1,7 @@
+/*
+* THIS CLASS IS USED TO STORE THE HISTORY UNITS WHICH ARE USED IN SAVING GAMES.
+* */
+
 package com.stickhero.stickhero;
 
 import java.util.ArrayList;

@@ -1,3 +1,7 @@
+/*
+* THIS CLASS HANDLES THE WORKING OF THE GAME SCREEN. ALL THE IN-GAME PLAY COMPONENTS ARE HANDLED FORM HERE.
+* */
+
 package com.stickhero.stickhero;
 
 import javafx.animation.*;

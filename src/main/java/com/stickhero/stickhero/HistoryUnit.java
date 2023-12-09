@@ -1,3 +1,7 @@
+/*
+* THIS CLASS IS USED TO STORE THE CURRENT GAME PROGRESS SO THAT IT CAN BE LOADED LATER.
+* */
+
 package com.stickhero.stickhero;
 
 import javafx.scene.image.Image;

@@ -1,3 +1,5 @@
+/*THIS CLASS HANDLES THE END SCREEN SHOWN AFTER THE HERO'S DEATH.*/
+
 package com.stickhero.stickhero;
 
 import javafx.event.ActionEvent;

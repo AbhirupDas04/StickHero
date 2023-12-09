@@ -1,3 +1,8 @@
+/*
+* THIS IS THE MAIN CLASS WHICH SETS UP THE INITIAL GAME.
+* */
+
+
 package com.stickhero.stickhero;
 
 import javafx.application.Application;

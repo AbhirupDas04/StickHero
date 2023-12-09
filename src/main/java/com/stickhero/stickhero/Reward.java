@@ -1,3 +1,9 @@
+/*
+* THIS CLASS IS USED TO CREATE REWARD INSTANCES. THE CHERRY GENERATED IN THE GAMESCREEN CLASS IS AN INSTANCE
+* OF THIS CLASS
+* */
+
+
 package com.stickhero.stickhero;
 
 import javafx.scene.image.Image;

@@ -1,3 +1,8 @@
+/*
+* THIS CLASS IS USED TO SETUP BACKGROUNDS AND IS INHERITED BY THE HOMESCREEN , GAMESCREEN AND ENDSCREEN CLASSES.
+* */
+
+
 package com.stickhero.stickhero;
 
 import javafx.scene.Scene;

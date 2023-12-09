@@ -1,7 +1,10 @@
+/*
+* THIS CLASS HANDLES THE MUSIC ON THE HOME PAGE OF THE GAME.
+* */
+
+
 package com.stickhero.stickhero;
 
-//public class InGameMusic extends MusicHandler {
-//}
 import java.io.File;
 
 import javafx.application.Application;

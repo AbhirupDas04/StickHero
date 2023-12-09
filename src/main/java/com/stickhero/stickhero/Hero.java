@@ -1,3 +1,8 @@
+/*
+* THIS IS THE HERO CLASS WHICH IS USED BY THE OTHER CLASSES. THERE IS ONLY ONE INSTANCE OF THE HERO
+* WHICH IS USED IN ALL THE OTHER CLASSES.
+* */
+
 package com.stickhero.stickhero;
 
 import javafx.scene.image.Image;

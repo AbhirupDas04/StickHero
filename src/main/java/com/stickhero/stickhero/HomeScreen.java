@@ -1,3 +1,8 @@
+/*
+* THIS CLASS HANDLES THE WORKING OF THE HOME SCREEN.
+* */
+
+
 package com.stickhero.stickhero;
 
 import javafx.event.ActionEvent;

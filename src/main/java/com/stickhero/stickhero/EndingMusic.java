@@ -1,7 +1,9 @@
+/*
+* THIS CLASS HANDLES THE WORKING OF THE END SCREEN MUSIC.
+* */
+
 package com.stickhero.stickhero;
 
-//public class InGameMusic extends MusicHandler {
-//}
 import java.io.File;
 
 import javafx.application.Application;

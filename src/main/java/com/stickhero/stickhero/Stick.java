@@ -1,3 +1,7 @@
+/*
+* THIS CLASS INSTANCE IS USED TO CREATE A STICK IN THE GAMESCREEN CLASS.
+* */
+
 package com.stickhero.stickhero;
 
 import javafx.scene.shape.Rectangle;
