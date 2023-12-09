@@ -667,7 +667,7 @@ public class GameScreen extends BackgroundHandler {
 
                     timeline.play();
                     timeline.setOnFinished(actionEvent -> {
-                        Timeline timeline1 = animateHeroFallingAfterMiss(distance , 7);
+                        Timeline timeline1 = animateHeroFallingAfterMiss(distance , 3);
                         timeline1.setOnFinished(actionEvent2 -> {
                             inGameMusic.stop();
                             text_rewards.setVisible(false);
