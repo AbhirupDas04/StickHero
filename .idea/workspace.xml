@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f8d3197-9abd-4249-9eb0-21fbff063383" name="Changes" comment="Finale">
+    <list default="true" id="1f8d3197-9abd-4249-9eb0-21fbff063383" name="Changes" comment="Sound effects">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Best_Score.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Best_Score.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/GameScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/GameScreen.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -237,14 +239,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1699383289127</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Changes">
-      <option name="closed" value="true" />
-      <created>1700029274761</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1700029274761</updated>
     </task>
     <task id="LOCAL-00024" summary="Changes">
       <option name="closed" value="true" />
@@ -630,7 +624,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702136702902</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="Sound effects">
+      <option name="closed" value="true" />
+      <created>1702139970498</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1702139970498</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -669,6 +671,7 @@
     <MESSAGE value="changes- added class descriptions" />
     <MESSAGE value="Resuming works" />
     <MESSAGE value="Finale" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finale" />
+    <MESSAGE value="Sound effects" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sound effects" />
   </component>
 </project>

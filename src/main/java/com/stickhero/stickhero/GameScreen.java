@@ -47,6 +47,7 @@ public class GameScreen extends BackgroundHandler {
     private InGameMusic inGameMusic;
     private StickFallingMusic stickFallingMusic;
     private CollectCherrySound collectCherrySound;
+    private HeroWalkingMusic heroWalkingMusic;
     private Thread thread;
     private boolean Thread_flag = false;
     private boolean game_over_flag = false;
@@ -204,6 +205,7 @@ public class GameScreen extends BackgroundHandler {
 
         this.stickFallingMusic = new StickFallingMusic();
         this.collectCherrySound = new CollectCherrySound();
+        this.heroWalkingMusic = new HeroWalkingMusic();
     }
     public void updateGameSpeed(int speed){
         this.gamespeed = speed;
@@ -655,13 +657,13 @@ public class GameScreen extends BackgroundHandler {
                         if(deg == 89){
                             rectangle4.getTransforms().add(new Rotate(1, 3, stick.getHeight()));
                             deg++;
+                            stickFallingMusic.start(stage);
                         }
                     }
                 }
             }
 
             public void fn(){
-                stickFallingMusic.start(stage);
                 end_timeline.setOnFinished(actionEvent -> {
                     Thread_flag = true;
                     curr_pillar_width = next_pillar_width;
@@ -770,9 +772,15 @@ public class GameScreen extends BackgroundHandler {
                     thread.start();
 
                     timeline.play();
+                    inGameMusic.stop();
+                    heroWalkingMusic.start(stage);
+
                     timeline.setOnFinished(actionEvent -> {
+                        heroWalkingMusic.stop();
+
                         Timeline timeline1 = animateHeroFallingAfterMiss(distance , 3);
                         Thread_flag = true;
+
                         timeline1.setOnFinished(actionEvent2 -> {
                             inGameMusic.stop();
                             text_rewards.setVisible(false);
@@ -900,7 +908,14 @@ public class GameScreen extends BackgroundHandler {
                     thread.start();
 
                     timeline.play();
+                    inGameMusic.stop();
+                    heroWalkingMusic.start(stage);
                     end_timeline.play();
+
+                    timeline.setOnFinished(actionEvent -> {
+                        heroWalkingMusic.stop();
+                        inGameMusic.start(stage);
+                    });
                 }
             }
         };
