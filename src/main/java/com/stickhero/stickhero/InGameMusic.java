@@ -15,6 +15,15 @@ import javafx.scene.media.MediaView;
 public class InGameMusic extends MusicHandler
 {
     private MediaPlayer mediaPlayer;
+
+    public void setMediaPlayer(MediaPlayer mediaPlayer){
+        this.mediaPlayer = mediaPlayer;
+    }
+
+    public MediaPlayer getMediaPlayer(){
+        return this.mediaPlayer;
+    }
+
     public void start (Stage primaryStage) {
         Media media = new Media(getClass().getResource("InGame_music.mp3").toString());
 

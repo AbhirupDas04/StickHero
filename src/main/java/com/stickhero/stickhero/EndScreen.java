@@ -26,6 +26,46 @@ public class EndScreen extends BackgroundHandler {
     private HistoryStorage storage;
     private EndingMusic endingMusic;
 
+    public void setHero(Hero hero){
+        this.hero = hero;
+    }
+
+    public void setGameScreen(GameScreen game){
+        this.game = game;
+    }
+
+    public void setImage(Image image){
+        this.image = image;
+    }
+
+    public void setHistoryStorage(HistoryStorage storage){
+        this.storage = storage;
+    }
+
+    public void setEndingMusic(EndingMusic endingMusic){
+        this.endingMusic = endingMusic;
+    }
+
+    public Hero getHero(){
+        return this.hero;
+    }
+
+    public GameScreen getGameScreen(){
+        return this.game;
+    }
+
+    public Image getImage(){
+        return this.image;
+    }
+
+    public HistoryStorage getStorage(){
+        return this.storage;
+    }
+
+    public EndingMusic getEndingMusic(){
+        return this.endingMusic;
+    }
+
     private Score score;
     public EndScreen(Stage stage, Hero hero, GameScreen game, Image image, HistoryStorage storage){
         super(stage);

@@ -56,6 +56,134 @@ public class GameScreen extends BackgroundHandler {
     private Rectangle score_background;
     private Button save_button;
 
+    public void setHero(Hero hero){
+        this.hero = hero;
+    }
+
+    public void setImage(Image image){
+        this.image = image;
+    }
+
+    public void setGamespeed(int gamespeed){
+        this.gamespeed = gamespeed;
+    }
+
+    public void setN_cherries(int n_cherries){
+        this.n_cherries = n_cherries;
+    }
+
+    public void setStorage(HistoryStorage storage){
+        this.storage = storage;
+    }
+
+    public void setImage_link(String image_link){
+        this.image_link = image_link;
+    }
+
+    public void setScore(int score){
+        this.score = score;
+    }
+
+    public void setLevel(int level){
+        this.level = level;
+    }
+
+    public void setPillar1_rect(Rectangle pillar1_rect){
+        this.pillar1_rect = pillar1_rect;
+    }
+
+    public void setPillar2_rect(Rectangle pillar2_rect){
+        this.pillar2_rect = pillar2_rect;
+    }
+
+    public void setPillar1(Pillar pillar1){
+        this.pillar1 = pillar1;
+    }
+
+    public void setPillar2(Pillar pillar2){
+        this.pillar2 = pillar2;
+    }
+
+    public void setView(ImageView view){
+        this.view = view;
+    }
+
+    public void setCurr_pillar_width(int curr_pillar_width){
+        this.curr_pillar_width = curr_pillar_width;
+    }
+
+    public void setFirst_red_bar(Rectangle first_red_bar){
+        this.first_red_bar = first_red_bar;
+    }
+
+    public void setOld_stick(Rectangle old_stick){
+        this.old_stick = old_stick;
+    }
+
+    public void setInGameMusic(InGameMusic inGameMusic){
+        this.inGameMusic = inGameMusic;
+    }
+
+    public void setGame_over_flag(boolean game_over_flag){
+        this.game_over_flag = game_over_flag;
+    }
+
+    public void setThread(Thread thread){
+        this.thread = thread;
+    }
+
+    public void setCollectableCherryView(ImageView collectableCherryView){
+        this.collectableCherryView = collectableCherryView;
+    }
+
+    public void setText_score(Text text_score){
+        this.text_score = text_score;
+    }
+
+    public void setIsCherryGenerated(int isCherryGenerated){
+        this.isCherryGenerated = isCherryGenerated;
+    }
+
+    public void setText_rewards(Text text_rewards){
+        this.text_rewards = text_rewards;
+    }
+
+    public void setCherry_pic(ImageView cherry_pic){
+        this.cherry_pic = cherry_pic;
+    }
+
+    public void setScore_background(Rectangle score_background){
+        this.score_background = score_background;
+    }
+
+    public void setSave_button(Button save_button){
+        this.save_button = save_button;
+    }
+
+    public Hero getHero(){
+        return this.hero;
+    }
+
+    public Image getImage(){
+        return this.image;
+    }
+
+    public int getGamespeed(){
+        return this.gamespeed;
+    }
+
+    public int getN_cherries(){
+        return this.n_cherries;
+    }
+
+    public int getScore(){
+        return this.score;
+    }
+
+    public int getLevel(int level){
+        return this.level;
+    }
+
     public GameScreen(Stage stage, HistoryStorage storage){
         super(stage);
         this.hero = Hero.getInstance();

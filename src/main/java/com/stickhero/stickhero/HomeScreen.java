@@ -24,6 +24,38 @@ public class HomeScreen extends BackgroundHandler {
     private HistoryStorage storage;
     private IntroMusic introMusic;
 
+    public void setGame(GameScreen game){
+        this.game = game;
+    }
+
+    public void setStorage(HistoryStorage storage){
+        this.storage = storage;
+    }
+
+    public void setPillar(Pillar pillar){
+        this.pillar = pillar;
+    }
+
+    public void setIntroMusic(IntroMusic introMusic){
+        this.introMusic = introMusic;
+    }
+
+    public GameScreen getGame(){
+        return this.game;
+    }
+
+    public Pillar getPillar(){
+        return this.pillar;
+    }
+
+    public HistoryStorage getStorage(){
+        return this.storage;
+    }
+
+    public IntroMusic getIntroMusic(){
+        return this.introMusic;
+    }
+
     public HomeScreen(Stage stage, GameScreen game, HistoryStorage storage){
         super(stage);
         this.game = game;

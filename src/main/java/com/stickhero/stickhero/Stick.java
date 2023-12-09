@@ -38,6 +38,40 @@ public class Stick {
         return height;
     }
 
+    public int getLength() {
+        return length;
+    }
+
+    public float getSpeed() {
+        return speed;
+    }
+
+    public void setRectangle(Rectangle rectangle) {
+        this.rectangle = rectangle;
+    }
+
+    public void setSpeed(float speed) {
+        this.speed = speed;
+    }
+
+    public void setX_pos(int x_pos) {
+        this.x_pos = x_pos;
+    }
+
+    public void setY_pos(int y_pos) {
+        this.y_pos = y_pos;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public void setLength(int length) {
+        this.length = length;
+    }
+
+
+
     public Rectangle generateStick(){
         return this.rectangle;
     }

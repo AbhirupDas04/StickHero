@@ -13,6 +13,47 @@ public class Pillar {
     private int y_pos;
     private Rectangle rectangle;
 
+    public void setHeight(int height){
+        this.height = height;
+    }
+
+    public void setWidth(int width){
+        this.width = width;
+    }
+
+    public void setRectangle(Rectangle rectangle){
+        this.rectangle = rectangle;
+    }
+
+    public int getHeight(){
+        return this.height;
+    }
+
+    public int getX_pos() {
+        return x_pos;
+    }
+
+    public int getY_pos() {
+        return y_pos;
+    }
+
+    public void setX_pos(int x_pos) {
+        this.x_pos = x_pos;
+    }
+
+    public void setY_pos(int y_pos) {
+        this.y_pos = y_pos;
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public Rectangle getRectangle() {
+        return rectangle;
+    }
+
+
     private static Map<String, Pillar> hashmap = new HashMap<String,Pillar>();
 
     private Pillar(int width,int height, int x_pos, int y_pos){
@@ -39,27 +80,5 @@ public class Pillar {
 
 
 
-    public int getX_pos() {
-        return x_pos;
-    }
 
-    public int getY_pos() {
-        return y_pos;
-    }
-
-    public void setX_pos(int x_pos) {
-        this.x_pos = x_pos;
-    }
-
-    public void setY_pos(int y_pos) {
-        this.y_pos = y_pos;
-    }
-
-    public int getWidth() {
-        return width;
-    }
-
-    public Rectangle getRectangle() {
-        return rectangle;
-    }
 }
