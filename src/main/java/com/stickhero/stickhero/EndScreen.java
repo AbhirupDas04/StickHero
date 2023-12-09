@@ -183,10 +183,10 @@ public class EndScreen extends BackgroundHandler {
         Image image3 = new Image(this.getClass().getResourceAsStream("reload.png"));
         ImageView view2 = new ImageView(image3);
         view2.setPreserveRatio(true);
-        view2.setFitHeight(50);
-        view2.setFitWidth(50);
-        view2.setLayoutX(266);
-        view2.setLayoutY(445);
+        view2.setFitHeight(67);
+        view2.setFitWidth(67);
+        view2.setLayoutX(250);
+        view2.setLayoutY(437);
 
         pane.getChildren().addAll(rectangle1,rectangle2,rectangle3,view2,view,text,text2,text3,text4,text5);
 
@@ -198,6 +198,12 @@ public class EndScreen extends BackgroundHandler {
         view.setOnMouseClicked(mouseEvent -> {
             endingMusic.stop();
             home_scene.openHome(1);
+        });
+
+        view2.setOnMouseClicked(mouseEvent -> {
+            endingMusic.stop();
+            GameScreen game = new GameScreen(home_scene.getStage());
+            game.startGame(home_scene,1);
         });
     }
 }

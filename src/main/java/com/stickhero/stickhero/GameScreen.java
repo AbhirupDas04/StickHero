@@ -184,14 +184,13 @@ public class GameScreen extends BackgroundHandler {
         return this.level;
     }
 
-    public GameScreen(Stage stage, HistoryStorage storage){
+    public GameScreen(Stage stage){
         super(stage);
         this.hero = Hero.getInstance();
         this.selectRandomImage();
         this.gamespeed = 1;
         this.score = 0;
         this.n_cherries = 0;
-        this.storage = storage;
         this.level = 0;
         this.inGameMusic = new InGameMusic();
         super.setMusic(new InGameMusic());
@@ -662,7 +661,9 @@ public class GameScreen extends BackgroundHandler {
                                         if(!cherry_flag){
                                             cherry_flag = true;
                                             n_cherries++;
+                                            score++;
                                             text_rewards.setText(Integer.toString(n_cherries));
+                                            text_score.setText(Integer.toString(score));
 
                                             collectableCherryView.setVisible(false);
                                         }
