@@ -728,6 +728,7 @@ public class GameScreen extends BackgroundHandler {
                                         Platform.runLater(() -> {
                                             Timeline timeline1 = animateFallingHeroAfterHit(distance , 7);
                                             timeline1.setOnFinished(actionEvent -> {
+                                                heroWalkingMusic.stop();
                                                 inGameMusic.stop();
                                                 text_rewards.setVisible(false);
                                                 text_score.setVisible(false);
@@ -861,6 +862,7 @@ public class GameScreen extends BackgroundHandler {
                                         Platform.runLater(() -> {
                                             Timeline timeline1 = animateFallingHeroAfterHit(distance , 7);
                                             timeline1.setOnFinished(actionEvent -> {
+                                                heroWalkingMusic.stop();
                                                 inGameMusic.stop();
                                                 text_rewards.setVisible(false);
                                                 text_score.setVisible(false);
