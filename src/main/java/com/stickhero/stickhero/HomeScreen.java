@@ -1,5 +1,6 @@
 package com.stickhero.stickhero;
 
+import javafx.event.ActionEvent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
@@ -13,6 +14,9 @@ import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+
+import java.io.*;
+import java.util.ArrayList;
 
 public class HomeScreen extends BackgroundHandler {
     private Pillar pillar;
@@ -163,7 +167,7 @@ public class HomeScreen extends BackgroundHandler {
         Pillar pillar = new Pillar(100,120,200,530);
         Rectangle rectangle = pillar.getRectangle();
 
-        Hero hero = new Hero();
+        Hero hero = Hero.getInstance();
         ImageView view = hero.generateStandingHero(35,35,230,495);
 
         pane.getChildren().addAll(bt ,text,text2,rectangle,view,ReloadButton,reload_text);
@@ -174,6 +178,48 @@ public class HomeScreen extends BackgroundHandler {
         super.getStage().show();
 
         HomeScreen homeScreen = this;
+
+
+        BufferedReader fileInputStream;
+        try {
+            fileInputStream = new BufferedReader(new FileReader("Game_Details.txt"));
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+        int n_entries = -1;
+        try {
+            n_entries = Integer.parseInt(fileInputStream.readLine());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        try {
+            fileInputStream.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        ArrayList<HistoryUnit> list;
+
+        if(n_entries > 0){
+            ObjectInputStream in;
+            try {
+                in = new ObjectInputStream(new FileInputStream("Game_Records.txt"));
+                try {
+                    list = (ArrayList<HistoryUnit>) in.readObject();
+                } catch (IOException | ClassNotFoundException e) {
+                    throw new RuntimeException(e);
+                }
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            try {
+                in.close();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+
+
 
         ReloadButton.setOnMouseClicked(actionEvent -> {
             Pane reload_pane = new Pane();
@@ -191,11 +237,23 @@ public class HomeScreen extends BackgroundHandler {
             ScrollView.setLayoutX(40);
             ScrollView.setLayoutY(62.5);
 
-            reload_pane.getChildren().addAll(shade,ScrollView);
+            Button returnButton = new Button("Return");
+            returnButton.setMinSize(50,30);
+            returnButton.setMaxSize(100,60);
+            returnButton.setLayoutX(205);
+            returnButton.setLayoutY(460);
+            returnButton.setStyle("-fx-background-color:rgb(197, 0, 0);-fx-border-radius: 150;-fx-font-size:15;-fx-text-fill:white");
+
+            reload_pane.getChildren().addAll(shade,ScrollView, returnButton);
 
             Scene load_scene = new Scene(reload_pane,500, 650);
             homeScreen.getStage().setScene(load_scene);
             homeScreen.getStage().show();
+
+            returnButton.setOnAction(ActionEvent -> {
+                homeScreen.getStage().setScene(scene1);
+                homeScreen.getStage().show();
+            });
         });
 
         reload_text.setOnMouseClicked(actionEvent -> {
@@ -214,11 +272,23 @@ public class HomeScreen extends BackgroundHandler {
             ScrollView.setLayoutX(40);
             ScrollView.setLayoutY(62.5);
 
-            reload_pane.getChildren().addAll(shade,ScrollView);
+            Button returnButton = new Button("Return");
+            returnButton.setMinSize(50,30);
+            returnButton.setMaxSize(100,60);
+            returnButton.setLayoutX(205);
+            returnButton.setLayoutY(460);
+            returnButton.setStyle("-fx-background-color:rgb(197, 0, 0);-fx-border-radius: 150;-fx-font-size:15;-fx-text-fill:white");
+
+            reload_pane.getChildren().addAll(shade,ScrollView, returnButton);
 
             Scene load_scene = new Scene(reload_pane,500, 650);
             homeScreen.getStage().setScene(load_scene);
             homeScreen.getStage().show();
+
+            returnButton.setOnAction(ActionEvent -> {
+                homeScreen.getStage().setScene(scene1);
+                homeScreen.getStage().show();
+            });
         });
 
         bt.setOnAction(actionEvent -> {

@@ -58,7 +58,7 @@ public class GameScreen extends BackgroundHandler {
 
     public GameScreen(Stage stage, HistoryStorage storage){
         super(stage);
-        this.hero = new Hero();
+        this.hero = Hero.getInstance();
         this.selectRandomImage();
         this.gamespeed = 1;
         this.score = 0;
@@ -238,7 +238,7 @@ public class GameScreen extends BackgroundHandler {
         super.getStage().setResizable(false);
         super.getStage().show();
 
-        EndScreen endScreen = new EndScreen(super.getStage(),new Hero(),this,this.image,storage);
+        EndScreen endScreen = new EndScreen(super.getStage(),Hero.getInstance(),this,this.image,storage);
 
         this.playGame(rand_posX,rand_width,rect3, home_screen, mode);
     }
@@ -383,7 +383,7 @@ public class GameScreen extends BackgroundHandler {
 
                             game_over_flag = true;
 
-                            EndScreen endScreen = new EndScreen(stage,new Hero(),game,game.image,storage);
+                            EndScreen endScreen = new EndScreen(stage,Hero.getInstance(),game,game.image,storage);
                             endScreen.endGame(pane,scene2,home_screen,score);
                         });
                     });
@@ -454,7 +454,7 @@ public class GameScreen extends BackgroundHandler {
 
                                                 game_over_flag = true;
 
-                                                EndScreen endScreen = new EndScreen(stage,new Hero(),game,game.image,storage);
+                                                EndScreen endScreen = new EndScreen(stage,Hero.getInstance(),game,game.image,storage);
                                                 endScreen.endGame(pane,scene2,home_screen,score);
                                             });
                                         });
