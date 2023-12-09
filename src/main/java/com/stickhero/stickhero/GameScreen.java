@@ -48,6 +48,7 @@ public class GameScreen extends BackgroundHandler {
     private StickFallingMusic stickFallingMusic;
     private CollectCherrySound collectCherrySound;
     private HeroWalkingMusic heroWalkingMusic;
+    private RewardMusic rewardMusic;
     private Thread thread;
     private boolean Thread_flag = false;
     private boolean game_over_flag = false;
@@ -206,6 +207,7 @@ public class GameScreen extends BackgroundHandler {
         this.stickFallingMusic = new StickFallingMusic();
         this.collectCherrySound = new CollectCherrySound();
         this.heroWalkingMusic = new HeroWalkingMusic();
+        this.rewardMusic = new RewardMusic();
     }
     public void updateGameSpeed(int speed){
         this.gamespeed = speed;
@@ -802,6 +804,7 @@ public class GameScreen extends BackgroundHandler {
 
                 else{
                     if(stick.getHeight() - 2 >= pillar2.getX_pos() - pillar1.getWidth() - pillar1.getX_pos() + pillar2.getWidth()/2.0 - 5 && stick.getHeight() - 2 <= pillar2.getX_pos() - pillar1.getWidth() - pillar1.getX_pos() + pillar2.getWidth()/2.0 + 5){
+                        rewardMusic.start(stage);
                         score+=2;
                     }else{
                         score++;

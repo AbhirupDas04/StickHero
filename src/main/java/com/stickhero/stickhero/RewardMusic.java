@@ -29,9 +29,6 @@ public class RewardMusic extends MusicHandler
         mediaPlayer.setAutoPlay(true);
 
         primaryStage.show();
-        mediaPlayer.setOnEndOfMedia(() -> {
-            mediaPlayer.seek(Duration.ZERO);
-        });
 
         mediaPlayer.play();
     }
