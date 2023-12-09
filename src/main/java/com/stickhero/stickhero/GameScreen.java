@@ -772,7 +772,6 @@ public class GameScreen extends BackgroundHandler {
                     thread.start();
 
                     timeline.play();
-                    inGameMusic.stop();
                     heroWalkingMusic.start(stage);
 
                     timeline.setOnFinished(actionEvent -> {
@@ -908,13 +907,11 @@ public class GameScreen extends BackgroundHandler {
                     thread.start();
 
                     timeline.play();
-                    inGameMusic.stop();
                     heroWalkingMusic.start(stage);
                     end_timeline.play();
 
                     timeline.setOnFinished(actionEvent -> {
                         heroWalkingMusic.stop();
-                        inGameMusic.start(stage);
                     });
                 }
             }

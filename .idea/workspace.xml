@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1f8d3197-9abd-4249-9eb0-21fbff063383" name="Changes" comment="Sound effects">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Best_Score.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Best_Score.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/GameScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/GameScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/HeroWalkingMusic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/HeroWalkingMusic.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,10 +223,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Testing_Suite" />
         <item itemvalue="JUnit.Testing_Suite.Game_Test" />
         <item itemvalue="JUnit.Testing_Suite.FlyweightTest" />
         <item itemvalue="JUnit.Testing_Suite.Database_Test" />
-        <item itemvalue="Application.Testing_Suite" />
         <item itemvalue="Application.Testing_Suite" />
       </list>
     </recent_temporary>

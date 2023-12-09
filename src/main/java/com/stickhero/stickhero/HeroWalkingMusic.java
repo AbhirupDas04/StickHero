@@ -23,7 +23,7 @@ public class HeroWalkingMusic extends MusicHandler
     }
 
     public void start (Stage primaryStage) {
-        Media media = new Media(getClass().getResource("hero_walking_sound.mp3").toString());
+        Media media = new Media(getClass().getResource("hero_running_sound.mp3").toString());
 
         mediaPlayer = new MediaPlayer(media);
         mediaPlayer.setAutoPlay(true);
