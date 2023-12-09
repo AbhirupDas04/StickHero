@@ -139,7 +139,7 @@ public class HomeScreen extends BackgroundHandler {
 
         BufferedReader fileInputStream;
         try {
-            fileInputStream = new BufferedReader(new FileReader("StickHero\\Game_Details.txt"));
+            fileInputStream = new BufferedReader(new FileReader("Game_Details.txt"));
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
@@ -160,7 +160,7 @@ public class HomeScreen extends BackgroundHandler {
         if(n_entries > 0){
             ObjectInputStream in;
             try {
-                in = new ObjectInputStream(new FileInputStream("StickHero\\Game_Records.txt"));
+                in = new ObjectInputStream(new FileInputStream("Game_Records.txt"));
                 try {
                     list = (ArrayList<HistoryUnit>) in.readObject();
                 } catch (IOException | ClassNotFoundException e) {

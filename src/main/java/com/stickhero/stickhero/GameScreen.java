@@ -961,7 +961,7 @@ public class GameScreen extends BackgroundHandler {
         this.save_button.setOnAction(actionEvent -> {
             BufferedReader fileInputStream;
             try {
-                fileInputStream = new BufferedReader(new FileReader("StickHero\\Game_Details.txt"));
+                fileInputStream = new BufferedReader(new FileReader("Game_Details.txt"));
             } catch (FileNotFoundException e) {
                 throw new RuntimeException(e);
             }
@@ -985,7 +985,7 @@ public class GameScreen extends BackgroundHandler {
             else{
                 ObjectInputStream in;
                 try {
-                    in = new ObjectInputStream(new FileInputStream("StickHero\\Game_Records.txt"));
+                    in = new ObjectInputStream(new FileInputStream("Game_Records.txt"));
                     try {
                         list = (ArrayList<HistoryUnit>) in.readObject();
                     } catch (IOException | ClassNotFoundException e) {
@@ -1006,7 +1006,7 @@ public class GameScreen extends BackgroundHandler {
 
             ObjectOutputStream outputStream;
             try {
-                outputStream = new ObjectOutputStream(new FileOutputStream("StickHero\\Game_Records.txt"));
+                outputStream = new ObjectOutputStream(new FileOutputStream("Game_Records.txt"));
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
@@ -1016,7 +1016,7 @@ public class GameScreen extends BackgroundHandler {
                 n_entries+=1;
 
                 FileOutputStream fileOutputStream;
-                fileOutputStream = new FileOutputStream("StickHero\\Game_Details.txt");
+                fileOutputStream = new FileOutputStream("Game_Details.txt");
                 int i1 = n_entries;
 
                 fileOutputStream.write(Integer.toString(i1).getBytes());

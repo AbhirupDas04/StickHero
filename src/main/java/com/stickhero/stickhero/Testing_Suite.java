@@ -14,7 +14,7 @@ public class Testing_Suite {
     public void Database_Test(){
         BufferedReader fileInputStream;
         try {
-            fileInputStream = new BufferedReader(new FileReader("StickHero\\Game_Details.txt"));
+            fileInputStream = new BufferedReader(new FileReader("Game_Details.txt"));
         } catch (FileNotFoundException e) {
             System.out.println("File Not Present");
             return;
@@ -31,7 +31,7 @@ public class Testing_Suite {
         if(n_entries != 0){
             ObjectInputStream in;
             try {
-                in = new ObjectInputStream(new FileInputStream("StickHero\\Game_Records.txt"));
+                in = new ObjectInputStream(new FileInputStream("Game_Records.txt"));
                 try {
                     list = (ArrayList<HistoryUnit>) in.readObject();
                 } catch (IOException | ClassNotFoundException e) {

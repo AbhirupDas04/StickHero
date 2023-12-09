@@ -126,7 +126,7 @@ public class EndScreen extends BackgroundHandler {
 
         BufferedReader fileInputStream;
         try {
-            fileInputStream = new BufferedReader(new FileReader("StickHero\\Best_Score.txt"));
+            fileInputStream = new BufferedReader(new FileReader("Best_Score.txt"));
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
@@ -150,7 +150,7 @@ public class EndScreen extends BackgroundHandler {
 
         try {
             FileOutputStream fileOutputStream;
-            fileOutputStream = new FileOutputStream("StickHero\\Best_Score.txt");
+            fileOutputStream = new FileOutputStream("Best_Score.txt");
 
             fileOutputStream.write(Integer.toString(best).getBytes());
             fileOutputStream.close();
