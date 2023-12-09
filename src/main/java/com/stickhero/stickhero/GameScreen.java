@@ -188,14 +188,13 @@ public class GameScreen extends BackgroundHandler {
         return this.level;
     }
 
-    public GameScreen(Stage stage, HistoryStorage storage){
+    public GameScreen(Stage stage){
         super(stage);
         this.hero = Hero.getInstance();
         this.selectRandomImage();
         this.gamespeed = 1;
         this.score = 0;
         this.n_cherries = 0;
-        this.storage = storage;
         this.level = 0;
         this.inGameMusic = new InGameMusic();
         super.setMusic(new InGameMusic());
@@ -305,12 +304,20 @@ public class GameScreen extends BackgroundHandler {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
         Pane game_pane = this.returnBackground();
         Pillar pillar = Pillar.getInstance(100,160,0,490);
         Rectangle rectangle = pillar.getRectangle();
         this.pillar1_rect = rectangle;
         this.curr_pillar_width = 100;
         this.pillar1 = pillar;
+
+        if(pillar.isPrev_used()){
+            if(game_pane.getChildren().contains(rectangle)){
+                game_pane.getChildren().remove(rectangle);
+            }
+        }
+        game_pane.getChildren().add(rectangle);
 
         Random rand = new Random();
         int rand_width = rand.nextInt(70) + 30;
@@ -365,7 +372,7 @@ public class GameScreen extends BackgroundHandler {
         bt.setStyle("-fx-background-color:rgb(255, 0, 0);-fx-border-radius: 150;-fx-font-size:15;-fx-text-fill:white");
         this.save_button = bt;
 
-        game_pane.getChildren().addAll(rectangle,bt,rectangle2,rect3,rectangle1,view,view1,text,text1);
+        game_pane.getChildren().addAll(bt,rectangle2,rect3,rectangle1,view,view1,text,text1);
         this.setPane(game_pane);
 
         Scene scene1 = new Scene(game_pane, 500, 650);
@@ -374,10 +381,10 @@ public class GameScreen extends BackgroundHandler {
         super.getStage().setResizable(false);
         super.getStage().show();
 
-        this.playGame(rand_posX,rand_width,rect3, home_screen, mode);
+        this.playGame(rand_posX,rand_width,rect3, home_screen, mode, 0);
     }
 
-    public void playGame(int next_pillar_start,int next_pillar_width, Rectangle red_bar, HomeScreen home_screen, int mode){
+    public void playGame(int next_pillar_start,int next_pillar_width, Rectangle red_bar, HomeScreen home_screen, int mode, int reload_score){
         if(mode == 1){
             score = 0;
         }
@@ -396,8 +403,14 @@ public class GameScreen extends BackgroundHandler {
         if (rand_posX <= 500) {
             rand_posX = 500;
         }
-        Pillar pillar3 = Pillar.getInstance(rand_width, 160, rand_posX, 490);
+        Pillar pillar3 = Pillar.getInstance(rand_width, 160, rand_posX, 490, pillar1_rect.getWidth(), pillar1_rect.getLayoutX());
         Rectangle rectangle2 = pillar3.getRectangle();
+        if(pillar3.isPrev_used()){
+            if(pane.getChildren().contains(rectangle2)){
+                pane.getChildren().remove(rectangle2);
+            }
+        }
+        pane.getChildren().add(rectangle2);
 
         Rectangle rect3 = new Rectangle(10, 5);
         rect3.setFill(Color.RED);
@@ -407,11 +420,11 @@ public class GameScreen extends BackgroundHandler {
         collectableCherryView = generateCollectableCherry(pillar1.getWidth() , next_pillar_start - 30);
 
         if (isCherryGenerated != 0){
-            pane.getChildren().addAll(rectangle2, rectangle4, rect3, collectableCherryView);
+            pane.getChildren().addAll(rectangle4, rect3, collectableCherryView);
         }
         else{
             collectableCherryView = null;
-            pane.getChildren().addAll(rectangle2, rectangle4, rect3);
+            pane.getChildren().addAll(rectangle4, rect3);
         }
 
         Timeline timeline = new Timeline();
@@ -478,7 +491,7 @@ public class GameScreen extends BackgroundHandler {
                         collectableCherryView.setLayoutX(gap + 30 + pillar1.getWidth());
                     }
 
-                    game.playGame(gap + 30 + pillar1.getWidth(), pillar3.getWidth(), rect3, home_screen, 0);
+                    game.playGame(gap + 30 + pillar1.getWidth(), pillar3.getWidth(), rect3, home_screen, 0,0);
                 });
                 flag = true;
                 Image image1 = new Image(this.getClass().getResourceAsStream("Standing_Hero.png"));
@@ -486,8 +499,7 @@ public class GameScreen extends BackgroundHandler {
 
                 int distance;
 
-                if(stick.getHeight() < pillar2.getX_pos() - pillar1.getWidth() - pillar1.getX_pos() || stick.getHeight() > pillar2.getX_pos() + pillar2.getWidth() - pillar1.getWidth() -  pillar1.getX_pos() ){
-                    Thread_flag = true;
+                if(stick.getHeight() - 2 < pillar2.getX_pos() - pillar1.getWidth() - pillar1.getX_pos() || stick.getHeight() - 2 > pillar2.getX_pos() + pillar2.getWidth() - pillar1.getWidth() -  pillar1.getX_pos() ){
                     distance =  stick.getHeight() + 30;
                     for (int i = 0; i < distance; i++) {
                         timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + i * 10), new KeyValue(view.translateXProperty(), 1 + i * 1)));
@@ -503,7 +515,7 @@ public class GameScreen extends BackgroundHandler {
                         @Override
                         public void run() {
                             while(true){
-                                System.out.println();
+                                System.out.print("");
                                 if(Thread_flag){
                                     Thread_flag = false;
                                     break;
@@ -525,8 +537,10 @@ public class GameScreen extends BackgroundHandler {
 
                                                 game_over_flag = true;
 
+                                                HistoryStorage.StoreData(pillar1.getWidth(),next_pillar_start,next_pillar_width,red_bar,home_screen,2,score);
+
                                                 EndScreen endScreen = new EndScreen(stage,Hero.getInstance(),game,game.image,storage);
-                                                endScreen.endGame(pane,scene2,home_screen,score);
+                                                endScreen.endGame(pane,scene2,home_screen,score,game);
                                             });
                                         });
                                         break;
@@ -537,7 +551,13 @@ public class GameScreen extends BackgroundHandler {
                                     if(hero.isUpsideDown() && curr_pos >= collectableCherryView.getLayoutX() && curr_pos <= collectableCherryView.getLayoutX() + 30){
                                         if(!cherry_flag){
                                             cherry_flag = true;
-                                            collectableCherryView.setVisible(false);
+
+                                            Platform.runLater(new Runnable() {
+                                                @Override
+                                                public void run() {
+                                                    collectableCherryView.setVisible(false);
+                                                }
+                                            });
                                         }
                                     }
                                 }
@@ -564,13 +584,13 @@ public class GameScreen extends BackgroundHandler {
                             game_over_flag = true;
 
                             EndScreen endScreen = new EndScreen(stage,Hero.getInstance(),game,game.image,storage);
-                            endScreen.endGame(pane,scene2,home_screen,score);
+                            endScreen.endGame(pane,scene2,home_screen,score,game);
                         });
                     });
                 }
 
                 else{
-                    if(stick.getHeight() >= pillar2.getX_pos() - pillar1.getWidth() - pillar1.getX_pos() + pillar2.getWidth()/2.0 - 5 && stick.getHeight() <= pillar2.getX_pos() - pillar1.getWidth() - pillar1.getX_pos() + pillar2.getWidth()/2.0 + 5){
+                    if(stick.getHeight() - 2 >= pillar2.getX_pos() - pillar1.getWidth() - pillar1.getX_pos() + pillar2.getWidth()/2.0 - 5 && stick.getHeight() - 2 <= pillar2.getX_pos() - pillar1.getWidth() - pillar1.getX_pos() + pillar2.getWidth()/2.0 + 5){
                         score+=2;
                     }else{
                         score++;
@@ -619,7 +639,7 @@ public class GameScreen extends BackgroundHandler {
                         @Override
                         public void run() {
                             while(true){
-                                System.out.println();
+                                System.out.print("");
                                 if(Thread_flag){
                                     Thread_flag = false;
                                     break;
@@ -641,8 +661,10 @@ public class GameScreen extends BackgroundHandler {
 
                                                 game_over_flag = true;
 
+                                                HistoryStorage.StoreData(pillar1.getWidth(),next_pillar_start,next_pillar_width,red_bar,home_screen,2,score);
+
                                                 EndScreen endScreen = new EndScreen(stage,Hero.getInstance(),game,game.image,storage);
-                                                endScreen.endGame(pane,scene2,home_screen,score);
+                                                endScreen.endGame(pane,scene2,home_screen,score,game);
                                             });
                                         });
                                         break;
@@ -654,9 +676,17 @@ public class GameScreen extends BackgroundHandler {
                                         if(!cherry_flag){
                                             cherry_flag = true;
                                             n_cherries++;
-                                            text_rewards.setText(Integer.toString(n_cherries));
+                                            score++;
 
-                                            collectableCherryView.setVisible(false);
+                                            Platform.runLater(new Runnable() {
+                                                @Override
+                                                public void run() {
+                                                    text_rewards.setText(Integer.toString(n_cherries));
+                                                    text_score.setText(Integer.toString(score));
+
+                                                    collectableCherryView.setVisible(false);
+                                                }
+                                            });
                                         }
                                     }
                                 }

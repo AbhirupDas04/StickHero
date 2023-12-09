@@ -61,11 +61,10 @@ public class HomeScreen extends BackgroundHandler {
         return this.introMusic;
     }
 
-    public HomeScreen(Stage stage, GameScreen game, HistoryStorage storage){
+    public HomeScreen(Stage stage, GameScreen game){
         super(stage);
         this.game = game;
         super.setMusic(new IntroMusic());
-        this.storage = storage;
 
         Image image = new Image(getClass().getResourceAsStream("Pic_10.jpg"));
         BackgroundSize backgroundSize = new BackgroundSize(1000,650,false,false,true,true);

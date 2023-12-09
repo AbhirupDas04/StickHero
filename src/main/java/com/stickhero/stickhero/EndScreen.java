@@ -6,16 +6,15 @@ import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
-import javafx.scene.text.Font;
-import javafx.scene.text.FontPosture;
-import javafx.scene.text.FontWeight;
-import javafx.scene.text.Text;
+import javafx.scene.text.*;
 import javafx.stage.Stage;
 
 import java.io.*;
@@ -78,7 +77,7 @@ public class EndScreen extends BackgroundHandler {
         super.setMusic(new EndingMusic());
         this.storage = storage;
     }
-    public void endGame(Pane pane, Scene scene1, HomeScreen home_scene, int score){
+    public void endGame(Pane pane, Scene scene1, HomeScreen home_scene, int score, GameScreen game){
         try {
             endingMusic.start(super.getStage());
         } catch (Exception e) {
@@ -185,12 +184,21 @@ public class EndScreen extends BackgroundHandler {
         Image image3 = new Image(this.getClass().getResourceAsStream("reload.png"));
         ImageView view2 = new ImageView(image3);
         view2.setPreserveRatio(true);
-        view2.setFitHeight(50);
-        view2.setFitWidth(50);
-        view2.setLayoutX(266);
-        view2.setLayoutY(445);
+        view2.setFitHeight(67);
+        view2.setFitWidth(67);
+        view2.setLayoutX(250);
+        view2.setLayoutY(437);
 
-        pane.getChildren().addAll(rectangle1,rectangle2,rectangle3,view2,view,text,text2,text3,text4,text5);
+        Button Resume_Button = new Button();
+        Resume_Button.setStyle("-fx-background-color:rgb(0, 190, 0);-fx-border-radius: 150;-fx-font-size:15;-fx-text-fill:black;-fx-font-weight:bold");
+        Resume_Button.setMinSize(120,60);
+        Resume_Button.setMaxSize(120,60);
+        Resume_Button.setText("Resume!\n(-5 Cherries)");
+        Resume_Button.setLayoutX(190);
+        Resume_Button.setLayoutY(550);
+        Resume_Button.setTextAlignment(TextAlignment.CENTER);
+
+        pane.getChildren().addAll(rectangle1,rectangle2,rectangle3,view2,view,text,text2,text3,text4,text5, Resume_Button);
 
         super.getStage().setScene(scene1);
         super.getStage().show();
@@ -200,6 +208,17 @@ public class EndScreen extends BackgroundHandler {
         view.setOnMouseClicked(mouseEvent -> {
             endingMusic.stop();
             home_scene.openHome(1);
+        });
+
+        view2.setOnMouseClicked(mouseEvent -> {
+            endingMusic.stop();
+            GameScreen new_game = new GameScreen(home_scene.getStage());
+            new_game.startGame(home_scene,1);
+        });
+
+        Resume_Button.setOnMouseClicked(mouseEvent -> {
+            //game.playGame(HistoryStorage.getNext_pillar_start(),HistoryStorage.getNext_pillar_width(),HistoryStorage.getRed_bar(),HistoryStorage.getHomeScreen(),HistoryStorage.getMode(),HistoryStorage.getReload_score());
+            game.startGame(home_scene,2);
         });
     }
 }
