@@ -34,6 +34,11 @@ Sounds Effects/Animations:-
 - We also have put effects for the walking of the character as well as that of collecting the cherry.
 
 
+Running code Through IDE:
+
+- Go to the 'FlowControl' class which is the main class and simply run it.
+
+
 Instructions to run the code via cmd:
 
 1. Download the zip folder in GC and extract its contents.
