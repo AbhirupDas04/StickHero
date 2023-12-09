@@ -22,9 +22,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Best_Score.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Best_Score.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/GameScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/GameScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/Testing_Suite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/Testing_Suite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/stickhero/stickhero/Testing_Facility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/stickhero/stickhero/Testing_Facility.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,10 +42,11 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Het" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -239,11 +239,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Testing_Suite" />
+        <item itemvalue="JUnit.Testing_Suite.Game_Test" />
         <item itemvalue="JUnit.Testing_Suite.FlyweightTest" />
         <item itemvalue="JUnit.Testing_Suite.Database_Test" />
-        <item itemvalue="JUnit.Testing_Suite.Game_Test" />
-        <item itemvalue="JUnit.Testing_Suite.Game_Test" />
+        <item itemvalue="Application.Testing_Suite" />
+        <item itemvalue="Application.Testing_Suite" />
       </list>
     </recent_temporary>
   </component>

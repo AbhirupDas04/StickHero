@@ -48,3 +48,4 @@ Some Key Points about Our Game:-
 
 1. Our code displays the 'Best Score' achieved after one run of the game. This score is permanent even if you terminate the program and run it again as we wanted to make it feel like a game.
 2. In the home page, you would see a 'Load Save' icon. If you click it, it will display the 3 best scores that you have achieved till date. You can click on any one of them to continue playing from where you left off.
+3. In order to save a game, click the 'Save' icon during the game.
