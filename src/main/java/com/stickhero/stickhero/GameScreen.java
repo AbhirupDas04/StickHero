@@ -268,7 +268,7 @@ public class GameScreen extends BackgroundHandler {
         rect3.setLayoutX(rand_posX + rand_width / 2.0 - 5);
         rect3.setLayoutY(490);
 
-        collectableCherryView = generateCollectableCherry(curr_pillar_width , next_pillar_start - 10);
+        collectableCherryView = generateCollectableCherry(pillar1.getWidth() , next_pillar_start - 30);
 
         if (isCherryGenerated != 0){
             pane.getChildren().addAll(rectangle2, rectangle4, rect3, collectableCherryView);
@@ -416,7 +416,7 @@ public class GameScreen extends BackgroundHandler {
                             old_stick.setVisible(false);
                         }
                         if (collectableCherryView != null) {
-                            timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + j * 10), new KeyValue(collectableCherryView.translateXProperty(),-(1 + (j - distance)) )));
+                            end_timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + j * 10), new KeyValue(collectableCherryView.translateXProperty(),-(1 + (j - distance)) )));
                         }
 
                         temp_cur -= 1;
@@ -425,11 +425,12 @@ public class GameScreen extends BackgroundHandler {
                         end_timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + k * 10), new KeyValue(rectangle2.translateXProperty(), -(1 + (k - distance)))));
                         end_timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + k * 10), new KeyValue(rect3.translateXProperty(), -(1 + (k - distance)))));
                         if (collectableCherryView != null) {
-                            timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + k * 10), new KeyValue(collectableCherryView.translateXProperty(), -(1 + (k - distance)))));
+                            end_timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + k * 10), new KeyValue(collectableCherryView.translateXProperty(), -(1 + (k - distance)))));
                         }
                     }
 
                     class Test extends Thread{
+                        boolean cherry_flag = false;
                         @Override
                         public void run() {
                             while(true){
@@ -459,6 +460,18 @@ public class GameScreen extends BackgroundHandler {
                                             });
                                         });
                                         break;
+                                    }
+
+                                    if(hero.isUpsideDown() && view.getTranslateX() >= collectableCherryView.getLayoutX() && view.getTranslateX() <= collectableCherryView.getLayoutX() + 30){
+                                        if(!cherry_flag){
+                                            System.out.println(collectableCherryView.getLayoutX());
+                                            cherry_flag = true;
+                                            n_cherries++;
+                                            text_rewards.setText(Integer.toString(n_cherries));
+
+                                            FadeTransition transition = new FadeTransition(Duration.millis(200),collectableCherryView);
+                                            transition.play();
+                                        }
                                     }
                                 }
                             }
