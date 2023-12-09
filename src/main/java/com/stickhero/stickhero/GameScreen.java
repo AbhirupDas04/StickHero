@@ -48,6 +48,7 @@ public class GameScreen extends BackgroundHandler {
     private Thread thread;
     private boolean Thread_flag = false;
     private boolean game_over_flag = false;
+    private boolean stick_flag = false;
 
     private ImageView collectableCherryView = null;
     private int isCherryGenerated = 0;
@@ -637,8 +638,9 @@ public class GameScreen extends BackgroundHandler {
 
             @Override
             public void handle(long l) {
-                if (!flag) {
+                if (!flag && timeline.getStatus() == Animation.Status.STOPPED && end_timeline.getStatus() == Animation.Status.STOPPED) {
                     if (deg == 90) {
+                        stick_flag = false;
                         stop();
                         fn();
                     }
@@ -903,13 +905,18 @@ public class GameScreen extends BackgroundHandler {
                 if (!flag && timeline.getStatus() == Animation.Status.STOPPED && !game_over_flag && end_timeline.getStatus() == Animation.Status.STOPPED) {
                     timer.start();
                     flag = true;
+                    stick_flag = true;
                 }
             }
         });
 
         this.getScene().setOnMouseReleased(e -> {
-            timer.stop();
-            timer1.start();
+            if(timeline.getStatus() == Animation.Status.STOPPED && !game_over_flag && end_timeline.getStatus() == Animation.Status.STOPPED){
+                if(stick_flag){
+                    timer.stop();
+                    timer1.start();
+                }
+            }
         });
 
         this.getScene().setOnMouseClicked(e -> {
