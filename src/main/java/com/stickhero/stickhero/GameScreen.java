@@ -103,6 +103,10 @@ public class GameScreen extends BackgroundHandler {
 //            return null;
 //        }
         Reward collectableCherry = new Reward();
+        if(next_pillar_start <= curr_pillar_width){
+            next_pillar_start = curr_pillar_width + 1;
+        }
+
         int x_pos = random.nextInt(curr_pillar_width , next_pillar_start);
         collectableCherryView = collectableCherry.generateReward(30 , 30 , x_pos , 490);
         isCherryGenerated = 1;
@@ -350,8 +354,6 @@ public class GameScreen extends BackgroundHandler {
 
                 int distance;
 
-                System.out.println(pillar1.getX_pos() + " " + pillar2.getX_pos());
-
                 if(stick.getHeight() < pillar2.getX_pos() - pillar1.getWidth() - pillar1.getX_pos() || stick.getHeight() > pillar2.getX_pos() + pillar2.getWidth() - pillar1.getWidth() -  pillar1.getX_pos() ){
                     Thread_flag = true;
                     distance =  stick.getHeight() + 30;
@@ -363,6 +365,57 @@ public class GameScreen extends BackgroundHandler {
                             timeline.getKeyFrames().add(new KeyFrame(Duration.millis(5 + i * 10), new KeyValue(view.imageProperty(), image2)));
                         }
                     }
+
+                    class Test extends Thread{
+                        boolean cherry_flag = false;
+                        @Override
+                        public void run() {
+                            while(true){
+                                System.out.println();
+                                if(Thread_flag){
+                                    Thread_flag = false;
+                                    break;
+                                }
+                                if(timeline.getStatus() == Animation.Status.RUNNING){
+                                    if(view.getTranslateX() >= (pillar2.getX_pos() - pillar1.getX_pos() + 10 - pillar1.getWidth()) && hero.isUpsideDown()){
+                                        timeline.stop();
+                                        end_timeline.stop();
+                                        Platform.runLater(() -> {
+                                            Timeline timeline1 = animateFallingHeroAfterHit(distance , 7);
+                                            timeline1.setOnFinished(actionEvent -> {
+                                                inGameMusic.stop();
+                                                text_rewards.setVisible(false);
+                                                text_score.setVisible(false);
+                                                cherry_pic.setVisible(false);
+                                                view.setVisible(false);
+                                                score_background.setVisible(false);
+                                                save_button.setVisible(false);
+
+                                                game_over_flag = true;
+
+                                                EndScreen endScreen = new EndScreen(stage,Hero.getInstance(),game,game.image,storage);
+                                                endScreen.endGame(pane,scene2,home_screen,score);
+                                            });
+                                        });
+                                        break;
+                                    }
+
+                                    int curr_pos = (int) (view.getTranslateX() + view.getLayoutX());
+
+                                    if(hero.isUpsideDown() && curr_pos >= collectableCherryView.getLayoutX() && curr_pos <= collectableCherryView.getLayoutX() + 30){
+                                        if(!cherry_flag){
+                                            cherry_flag = true;
+                                            collectableCherryView.setVisible(false);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    Test t = new Test();
+                    thread = new Thread(t);
+                    thread.start();
 
                     timeline.play();
                     timeline.setOnFinished(actionEvent -> {
@@ -434,6 +487,7 @@ public class GameScreen extends BackgroundHandler {
                         @Override
                         public void run() {
                             while(true){
+                                System.out.println();
                                 if(Thread_flag){
                                     Thread_flag = false;
                                     break;
@@ -462,15 +516,15 @@ public class GameScreen extends BackgroundHandler {
                                         break;
                                     }
 
-                                    if(hero.isUpsideDown() && view.getTranslateX() >= collectableCherryView.getLayoutX() && view.getTranslateX() <= collectableCherryView.getLayoutX() + 30){
+                                    int curr_pos = (int) (view.getTranslateX() + view.getLayoutX());
+
+                                    if(hero.isUpsideDown() && curr_pos >= collectableCherryView.getLayoutX() && curr_pos <= collectableCherryView.getLayoutX() + 30){
                                         if(!cherry_flag){
-                                            System.out.println(collectableCherryView.getLayoutX());
                                             cherry_flag = true;
                                             n_cherries++;
                                             text_rewards.setText(Integer.toString(n_cherries));
 
-                                            FadeTransition transition = new FadeTransition(Duration.millis(200),collectableCherryView);
-                                            transition.play();
+                                            collectableCherryView.setVisible(false);
                                         }
                                     }
                                 }
