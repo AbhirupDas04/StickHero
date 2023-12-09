@@ -170,7 +170,7 @@ public class GameScreen extends BackgroundHandler {
             e.printStackTrace();
         }
         Pane game_pane = this.returnBackground();
-        Pillar pillar = new Pillar(100,160,0,490);
+        Pillar pillar = Pillar.getInstance(100,160,0,490);
         Rectangle rectangle = pillar.getRectangle();
         this.pillar1_rect = rectangle;
         this.curr_pillar_width = 100;
@@ -179,7 +179,7 @@ public class GameScreen extends BackgroundHandler {
         Random rand = new Random();
         int rand_width = rand.nextInt(70) + 30;
         int rand_posX = rand.nextInt(370 - rand_width) + 130;
-        Pillar pillar2 = new Pillar(rand_width,160,rand_posX,490);
+        Pillar pillar2 = Pillar.getInstance(rand_width,160,rand_posX,490);
         Rectangle rectangle2 = pillar2.getRectangle();
 
         this.pillar2_rect = rectangle2;
@@ -262,7 +262,7 @@ public class GameScreen extends BackgroundHandler {
         if (rand_posX <= 500) {
             rand_posX = 500;
         }
-        Pillar pillar3 = new Pillar(rand_width, 160, rand_posX, 490);
+        Pillar pillar3 = Pillar.getInstance(rand_width, 160, rand_posX, 490);
         Rectangle rectangle2 = pillar3.getRectangle();
 
         Rectangle rect3 = new Rectangle(10, 5);

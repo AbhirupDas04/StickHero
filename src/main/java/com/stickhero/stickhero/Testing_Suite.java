@@ -47,8 +47,21 @@ public class Testing_Suite {
     }
 
     @Test
-    public void Test2(){
-        //Testing design pattern like flyweight and whatnot
+    public void SingletonTest(){
+        Hero hero1 = Hero.getInstance();
+        Hero hero2 = Hero.getInstance();
+
+        assertEquals(hero1,hero2);
+    }
+
+    @Test
+    public void FlyweightTest(){
+        Pillar pillar1 = Pillar.getInstance(95, 200, 200, 540);
+        Pillar pillar2 = Pillar.getInstance(95, 250, 200, 590);
+        Pillar pillar3 = Pillar.getInstance(75, 200, 200, 540);
+
+        assertEquals(pillar1,pillar2);
+        assertNotEquals(pillar1,pillar3);
     }
 
     public static void main(String[] args) {
