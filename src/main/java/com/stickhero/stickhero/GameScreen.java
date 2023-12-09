@@ -376,12 +376,15 @@ public class GameScreen extends BackgroundHandler {
         super.getStage().setResizable(false);
         super.getStage().show();
 
-        this.playGame(rand_posX,rand_width,rect3, home_screen, mode);
+        this.playGame(rand_posX,rand_width,rect3, home_screen, mode, 0);
     }
 
-    public void playGame(int next_pillar_start,int next_pillar_width, Rectangle red_bar, HomeScreen home_screen, int mode){
+    public void playGame(int next_pillar_start,int next_pillar_width, Rectangle red_bar, HomeScreen home_screen, int mode, int reload_score){
         if(mode == 1){
             score = 0;
+        }
+        if(mode == 2){
+            score = reload_score;
         }
         GameScreen game = this;
         game_over_flag = false;
@@ -486,7 +489,7 @@ public class GameScreen extends BackgroundHandler {
                         collectableCherryView.setLayoutX(gap + 30 + pillar1.getWidth());
                     }
 
-                    game.playGame(gap + 30 + pillar1.getWidth(), pillar3.getWidth(), rect3, home_screen, 0);
+                    game.playGame(gap + 30 + pillar1.getWidth(), pillar3.getWidth(), rect3, home_screen, 0,0);
                 });
                 flag = true;
                 Image image1 = new Image(this.getClass().getResourceAsStream("Standing_Hero.png"));
@@ -544,7 +547,13 @@ public class GameScreen extends BackgroundHandler {
                                     if(hero.isUpsideDown() && curr_pos >= collectableCherryView.getLayoutX() && curr_pos <= collectableCherryView.getLayoutX() + 30){
                                         if(!cherry_flag){
                                             cherry_flag = true;
-                                            collectableCherryView.setVisible(false);
+
+                                            Platform.runLater(new Runnable() {
+                                                @Override
+                                                public void run() {
+                                                    collectableCherryView.setVisible(false);
+                                                }
+                                            });
                                         }
                                     }
                                 }
@@ -662,10 +671,16 @@ public class GameScreen extends BackgroundHandler {
                                             cherry_flag = true;
                                             n_cherries++;
                                             score++;
-                                            text_rewards.setText(Integer.toString(n_cherries));
-                                            text_score.setText(Integer.toString(score));
 
-                                            collectableCherryView.setVisible(false);
+                                            Platform.runLater(new Runnable() {
+                                                @Override
+                                                public void run() {
+                                                    text_rewards.setText(Integer.toString(n_cherries));
+                                                    text_score.setText(Integer.toString(score));
+
+                                                    collectableCherryView.setVisible(false);
+                                                }
+                                            });
                                         }
                                     }
                                 }

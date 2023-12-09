@@ -4,16 +4,15 @@ import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
-import javafx.scene.text.Font;
-import javafx.scene.text.FontPosture;
-import javafx.scene.text.FontWeight;
-import javafx.scene.text.Text;
+import javafx.scene.text.*;
 import javafx.stage.Stage;
 
 import java.io.*;
@@ -188,7 +187,16 @@ public class EndScreen extends BackgroundHandler {
         view2.setLayoutX(250);
         view2.setLayoutY(437);
 
-        pane.getChildren().addAll(rectangle1,rectangle2,rectangle3,view2,view,text,text2,text3,text4,text5);
+        Button Resume_Button = new Button();
+        Resume_Button.setStyle("-fx-background-color:rgb(0, 190, 0);-fx-border-radius: 150;-fx-font-size:15;-fx-text-fill:black;-fx-font-weight:bold");
+        Resume_Button.setMinSize(120,60);
+        Resume_Button.setMaxSize(120,60);
+        Resume_Button.setText("Resume!\n(-5 Cherries)");
+        Resume_Button.setLayoutX(190);
+        Resume_Button.setLayoutY(550);
+        Resume_Button.setTextAlignment(TextAlignment.CENTER);
+
+        pane.getChildren().addAll(rectangle1,rectangle2,rectangle3,view2,view,text,text2,text3,text4,text5, Resume_Button);
 
         super.getStage().setScene(scene1);
         super.getStage().show();
