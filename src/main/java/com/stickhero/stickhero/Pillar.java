@@ -31,6 +31,9 @@ public class Pillar {
             hashmap.put(key, new Pillar( width, height, x_pos, y_pos));
         }
 
+        hashmap.get(key).getRectangle().setVisible(true);
+        hashmap.get(key).getRectangle().setTranslateX(0);
+
         return hashmap.get(key);
     }
 
