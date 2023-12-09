@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f8d3197-9abd-4249-9eb0-21fbff063383" name="Changes" comment="Reverting to old code">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/EndScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/EndScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/GameScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/GameScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/HistoryStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/HistoryStorage.java" afterDir="false" />
-    </list>
+    <list default="true" id="1f8d3197-9abd-4249-9eb0-21fbff063383" name="Changes" comment="Reverting to old code" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,7 +22,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Het" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -223,11 +218,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Testing_Suite" />
+        <item itemvalue="JUnit.Testing_Suite.Game_Test" />
         <item itemvalue="JUnit.Testing_Suite.FlyweightTest" />
         <item itemvalue="JUnit.Testing_Suite.Database_Test" />
-        <item itemvalue="JUnit.Testing_Suite.Game_Test" />
-        <item itemvalue="JUnit.Testing_Suite.Game_Test" />
+        <item itemvalue="Application.Testing_Suite" />
+        <item itemvalue="Application.Testing_Suite" />
       </list>
     </recent_temporary>
   </component>
