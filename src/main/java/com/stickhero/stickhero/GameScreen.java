@@ -297,7 +297,7 @@ public class GameScreen extends BackgroundHandler {
 
             @Override
             public void handle(long l) {
-                if (flag == false) {
+                if (!flag) {
                     if (deg == 90) {
                         stop();
                         fn();

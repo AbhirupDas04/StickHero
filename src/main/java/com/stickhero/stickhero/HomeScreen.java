@@ -40,7 +40,8 @@ public class HomeScreen extends BackgroundHandler {
     public void openHome(int mode){
         try {
             introMusic.start(super.getStage());
-        } catch (Exception e) {
+        }
+        catch (Exception e) {
             e.printStackTrace();  // Handle the exception according to your application's needs
         }
 

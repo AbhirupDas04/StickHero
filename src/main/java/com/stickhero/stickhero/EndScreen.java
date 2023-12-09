@@ -155,11 +155,9 @@ public class EndScreen extends BackgroundHandler {
 
         Stage stage = super.getStage();
 
-        view.setOnMouseClicked(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent mouseEvent) {
-                home_scene.openHome(1);
-            }
+        view.setOnMouseClicked(mouseEvent -> {
+            endingMusic.stop();
+            home_scene.openHome(1);
         });
     }
 }
