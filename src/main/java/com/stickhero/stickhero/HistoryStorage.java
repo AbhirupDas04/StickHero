@@ -10,7 +10,11 @@ public class HistoryStorage {
     private static int mode;
     private static int reload_score;
     private static int curr_pillar_width;
-    public static void StoreData(int curr_pillar_width,int next_pillar_start, int next_pillar_width, Rectangle red_bar, HomeScreen home_screen, int mode, int reload_score){
+    private static int n_cherries;
+    private static String background;
+    public static void StoreData(int curr_pillar_width,int next_pillar_start, int next_pillar_width, Rectangle red_bar, HomeScreen home_screen, int mode, int reload_score, int n_cherries, String Background){
+        HistoryStorage.n_cherries = n_cherries;
+        HistoryStorage.background = Background;
         HistoryStorage.curr_pillar_width = curr_pillar_width;
         homeScreen = home_screen;
         HistoryStorage.mode = mode;
@@ -74,5 +78,21 @@ public class HistoryStorage {
 
     public static void setReload_score(int reload_score) {
         HistoryStorage.reload_score = reload_score;
+    }
+
+    public static void setBackground(String background) {
+        HistoryStorage.background = background;
+    }
+
+    public static int getN_cherries() {
+        return n_cherries;
+    }
+
+    public static String getBackground() {
+        return background;
+    }
+
+    public static void setN_cherries(int n_cherries) {
+        HistoryStorage.n_cherries = n_cherries;
     }
 }
