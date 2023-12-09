@@ -217,8 +217,10 @@ public class EndScreen extends BackgroundHandler {
         });
 
         Resume_Button.setOnMouseClicked(mouseEvent -> {
-            //game.playGame(HistoryStorage.getNext_pillar_start(),HistoryStorage.getNext_pillar_width(),HistoryStorage.getRed_bar(),HistoryStorage.getHomeScreen(),HistoryStorage.getMode(),HistoryStorage.getReload_score());
-            game.startGame(home_scene,2);
+            if(HistoryStorage.getN_cherries() >= 5){
+                GameScreen new_game = new GameScreen(home_scene.getStage());
+                new_game.restartGame(home_scene);
+            }
         });
     }
 }
