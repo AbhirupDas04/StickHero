@@ -6,7 +6,6 @@
 
 package com.stickhero.stickhero;
 
-import javafx.event.ActionEvent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
@@ -108,88 +107,6 @@ public class HomeScreen extends BackgroundHandler {
         reload_text.setFont(Font.font("verdana", FontWeight.EXTRA_BOLD, 21));
         reload_text.setFill(Color.BLACK);
 
-//        Rectangle settingsButtonBackground = new Rectangle(85 , 32);
-//        settingsButtonBackground.setFill(Color.DARKOLIVEGREEN);
-//        settingsButtonBackground.setArcWidth(20);
-//        settingsButtonBackground.setArcHeight(20);
-//        settingsButtonBackground.setTranslateX(14.2);
-//        settingsButtonBackground.setTranslateY(398);
-//
-//
-//        Image settingsButtonImage = new Image(getClass().getResourceAsStream("settings_button.png"));
-//        ImageView settingsButtonImageView = new ImageView(settingsButtonImage);
-//        settingsButtonImageView.setFitWidth(50);
-//        settingsButtonImageView.setFitHeight(50);
-//
-//        Text settingsButtonText = new Text("SETTINGS");
-//        settingsButtonText.setFont(Font.font("verdana", FontWeight.BOLD, FontPosture.REGULAR, 13)); // Adjust the font size
-//        settingsButtonText.setFill(Color.WHITE);
-
-//        Button settingsButton = new Button();
-//        settingsButton.setStyle("-fx-background-color:rgb(255, 0, 0);-fx-font-size:40;-fx-text-fill:white");
-//        settingsButton.setGraphic(settingsButtonImageView);
-//        settingsButton.setGraphicTextGap(60);
-//        settingsButton.setStyle("-fx-background-color: transparent;");
-////        settingsButton.setText("SETTINGS");
-//        settingsButton.setTranslateX(12);
-//        settingsButton.setTranslateY(402);
-//        settingsButton.setGraphic(settingsButtonText);
-
-
-//        Rectangle reloadSavedGameButtonBackground = new Rectangle(200 , 32);
-//        reloadSavedGameButtonBackground.setFill(Color.DARKOLIVEGREEN);
-//        reloadSavedGameButtonBackground.setArcWidth(20);
-//        reloadSavedGameButtonBackground.setArcHeight(20);
-//        reloadSavedGameButtonBackground.setTranslateX(155);
-//        reloadSavedGameButtonBackground.setTranslateY(400);
-//
-//
-//        Image reloadSavedGameButtonImage = new Image(getClass().getResourceAsStream("reload_saved_game_button.png"));
-//        ImageView reloadSavedGameButtonImageView = new ImageView(settingsButtonImage);
-//        settingsButtonImageView.setFitWidth(50);
-//        settingsButtonImageView.setFitHeight(50);
-//
-//        Text reloadSavedGameButtonText = new Text("RELOAD SAVED GAME");
-//        reloadSavedGameButtonText.setFont(Font.font("verdana", FontWeight.BOLD, FontPosture.REGULAR, 13)); // Adjust the font size
-//        reloadSavedGameButtonText.setFill(Color.WHITE);
-//
-//        Button reloadSavedGameButton = new Button();
-//        reloadSavedGameButton.setStyle("-fx-background-color:rgb(255, 0, 0);-fx-font-size:40;-fx-text-fill:white");
-//        reloadSavedGameButton.setGraphic(settingsButtonImageView);
-//        reloadSavedGameButton.setGraphicTextGap(60);
-//        reloadSavedGameButton.setStyle("-fx-background-color: transparent;");
-////        settingsButton.setText("SETTINGS");
-//        reloadSavedGameButton.setTranslateX(165);
-//        reloadSavedGameButton.setTranslateY(403);
-//        reloadSavedGameButton.setGraphic(reloadSavedGameButtonText);
-
-//        Rectangle reloadSavedGameButtonBackground = new Rectangle(170 , 32);
-//        reloadSavedGameButtonBackground.setFill(Color.DARKOLIVEGREEN);
-//        reloadSavedGameButtonBackground.setArcWidth(20);
-//        reloadSavedGameButtonBackground.setArcHeight(20);
-//        reloadSavedGameButtonBackground.setTranslateX(14);
-//        reloadSavedGameButtonBackground.setTranslateY(450);
-
-
-//        Image reloadSavedGameButtonImage = new Image(getClass().getResourceAsStream("reload_saved_game_button.png"));
-//        ImageView reloadSavedGameButtonImageView = new ImageView(settingsButtonImage);
-//        settingsButtonImageView.setFitWidth(50);
-//        settingsButtonImageView.setFitHeight(50);
-
-//        Text reloadSavedGameButtonText = new Text("RELOAD SAVED GAME");
-//        reloadSavedGameButtonText.setFont(Font.font("verdana", FontWeight.BOLD, FontPosture.REGULAR, 13)); // Adjust the font size
-//        reloadSavedGameButtonText.setFill(Color.WHITE);
-//
-//        Button reloadSavedGameButton = new Button();
-//        reloadSavedGameButton.setStyle("-fx-background-color:rgb(255, 0, 0);-fx-font-size:40;-fx-text-fill:white");
-//        reloadSavedGameButton.setGraphic(settingsButtonImageView);
-//        reloadSavedGameButton.setGraphicTextGap(60);
-//        reloadSavedGameButton.setStyle("-fx-background-color: transparent;");
-////        settingsButton.setText("SETTINGS");
-//        reloadSavedGameButton.setTranslateX(10);
-//        reloadSavedGameButton.setTranslateY(453);
-//        reloadSavedGameButton.setGraphic(reloadSavedGameButtonText);
-
         Text text = new Text();
         text.setFont(Font.font("verdana", FontWeight.BOLD, FontPosture.REGULAR, 70));
         text.setLayoutX(130);
@@ -236,7 +153,7 @@ public class HomeScreen extends BackgroundHandler {
             throw new RuntimeException(e);
         }
 
-        ArrayList<HistoryUnit> list;
+        ArrayList<HistoryUnit> list = null;
 
         if(n_entries > 0){
             ObjectInputStream in;
@@ -257,8 +174,23 @@ public class HomeScreen extends BackgroundHandler {
             }
         }
 
+        ArrayList<HistoryUnit> new_list = new ArrayList<>();
+        HistoryUnit unit2 = null;
+        if(n_entries >= 1){
+            for(int i = 0; i < n_entries; i++){
+                int max = 0;
+                for(HistoryUnit unit : list){
+                    if(unit.getScore() >= max){
+                        max = unit.getScore();
+                        unit2 = unit;
+                    }
+                }
+                new_list.add(unit2);
+                list.remove(unit2);
+            }
+        }
 
-
+        int finalN_entries = n_entries;
         ReloadButton.setOnMouseClicked(actionEvent -> {
             Pane reload_pane = new Pane();
             reload_pane.setBackground(homeScreen.getBackground());
@@ -278,11 +210,45 @@ public class HomeScreen extends BackgroundHandler {
             Button returnButton = new Button("Return");
             returnButton.setMinSize(50,30);
             returnButton.setMaxSize(100,60);
-            returnButton.setLayoutX(205);
-            returnButton.setLayoutY(460);
+            returnButton.setLayoutX(217);
+            returnButton.setLayoutY(430);
             returnButton.setStyle("-fx-background-color:rgb(197, 0, 0);-fx-border-radius: 150;-fx-font-size:15;-fx-text-fill:white");
 
-            reload_pane.getChildren().addAll(shade,ScrollView, returnButton);
+            Button GameFile1 = new Button("EMPTY");
+            GameFile1.setMinSize(200,50);
+            GameFile1.setMaxSize(200,50);
+            GameFile1.setLayoutY(175);
+            GameFile1.setLayoutX(150);
+            GameFile1.setStyle("-fx-background-color:rgb(197, 197, 197);-fx-border-radius: 145px;-fx-font-size:15;-fx-text-fill:black;-fx-font-weight:bold");
+
+            if(finalN_entries >= 1){
+                GameFile1.setText("GAME 1 - Score: " + new_list.get(0).getScore());
+            }
+
+            Button GameFile2 = new Button("EMPTY");
+            GameFile2.setMinSize(200,50);
+            GameFile2.setMaxSize(200,50);
+            GameFile2.setLayoutY(250);
+            GameFile2.setLayoutX(150);
+            GameFile2.setStyle("-fx-background-color:rgb(197, 197, 197);-fx-border-radius: 145px;-fx-font-size:15;-fx-text-fill:black;-fx-font-weight:bold");
+
+            if(finalN_entries >= 2){
+                GameFile2.setText("GAME 2 - Score: " + new_list.get(1).getScore());
+            }
+
+            Button GameFile3 = new Button("EMPTY");
+            GameFile3.setMinSize(200,50);
+            GameFile3.setMaxSize(200,50);
+            GameFile3.setLayoutY(325);
+            GameFile3.setLayoutX(150);
+            GameFile3.setStyle("-fx-background-color:rgb(197, 197, 197);-fx-border-radius: 145px;-fx-font-size:15;-fx-text-fill:black;-fx-font-weight:bold");
+
+            if(finalN_entries >= 3){
+                GameFile3.setText("GAME 1 - Score: " + new_list.get(2).getScore());
+            }
+
+
+            reload_pane.getChildren().addAll(shade,ScrollView, returnButton, GameFile1,GameFile2,GameFile3);
 
             Scene load_scene = new Scene(reload_pane,500, 650);
             homeScreen.getStage().setScene(load_scene);
