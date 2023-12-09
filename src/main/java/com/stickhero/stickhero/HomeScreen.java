@@ -227,6 +227,7 @@ public class HomeScreen extends BackgroundHandler {
                 GameFile1.setText("GAME 1 - Score: " + new_list.get(0).getScore());
                 GameFile1.setOnMouseClicked(mouseEvent -> {
                     HistoryUnit unit = new_list.get(0);
+                    introMusic.stop();
                     GameScreen new_game = new GameScreen(homeScreen.getStage());
                     new_game.loadGame(homeScreen,unit);
                 });
@@ -243,6 +244,7 @@ public class HomeScreen extends BackgroundHandler {
                 GameFile2.setText("GAME 2 - Score: " + new_list.get(1).getScore());
                 GameFile2.setOnMouseClicked(mouseEvent -> {
                     HistoryUnit unit = new_list.get(1);
+                    introMusic.stop();
                     GameScreen new_game = new GameScreen(homeScreen.getStage());
                     new_game.loadGame(homeScreen,unit);
                 });
@@ -259,6 +261,7 @@ public class HomeScreen extends BackgroundHandler {
                 GameFile3.setText("GAME 3 - Score: " + new_list.get(2).getScore());
                 GameFile3.setOnMouseClicked(mouseEvent -> {
                     HistoryUnit unit = new_list.get(2);
+                    introMusic.stop();
                     GameScreen new_game = new GameScreen(homeScreen.getStage());
                     new_game.loadGame(homeScreen,unit);
                 });
