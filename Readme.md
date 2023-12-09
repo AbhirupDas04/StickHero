@@ -1,50 +1,18 @@
-1) We have attached screenshots of 3 different screens of our UI. While these don't represent
-all the graphical elements that we have, they ought to represent most.
+Group no.: 140
+Members: Abhirup Das (Roll no: 2022019) , Het Riteshkumar Shah (Roll no: 2022213)
 
-
-2) Also, some classes do have code in them. They represent the code
-for the UI creation and nothing else.
-
-
-3) Most of our classes are self explanatory. That's why no comments have been
-added to them.
-
-
-4) All the java classes can be found in the .src folder.
-
-
-5) If you want to compile with maven that's also possible but please
-remember to add the javafx lib path to the module path while running
-if you want to run the pom.xml.
-
-1) We have attached screenshots of 3 different screens of our UI. While these don't represent
-all the graphical elements that we have, they ought to represent most.
-
-
-2) Also, some classes do have code in them. They represent the code
-for the UI creation and nothing else.
-
-
-3) Most of our classes are self explanatory. That's why no comments have been
-added to them.
-
-
-4) All the java classes can be found in the .src folder.
-
-
-5) If you want to compile with maven that's also possible but please
-remember to add the javafx lib path to the module path while running
-if you want to run the pom.xml.
 
 Flow of code:
 The code is run from the FlowControl class which sets up the game and home screens. Then we jump to the HomeScreen class which displays the features for playing the game or reloading the game. When the user clicks play button , we move to the GameScreen class. The GameScreen class handles the main gameplay. It allows the player to play the game (extend stick, move hero, etc.). When the hero dies, we move to the EndScreen class. The endscreen class displays the scores and gives the options to the player to either return to the home screen or restart the game.
 
 
 Threading:
-We have used threading in the GameScreen class to 
+We have used threading in the GameScreen class between lines 705 to 893. The main purpose of these threads was simply to be a constant checker for the character's position, and also, to collect cherries.
+
 
 Design Patterns used:
--Flyweight : We have used single instance of the Hero to demonstrate flyweight.
+-Singleton : We have used single instance of the Hero to demonstrate the singleton design pattern. You can see this in the 'Hero' class.
+-Flyweight : We have used it while generating pillars. You can also visit this in the 'Flyweight' class.
 
 
 Game Features:
@@ -58,7 +26,25 @@ Game Features:
 - There is a bonus score awarded if the stick hits the red region at the center of the pillar.
 
 
-Instructions to run the code in Maven:
+Instructions to run the code via cmd:
+
+1. Download the zip folder in GC and extract its contents.
+2. Open a command prompt of your choice and cd to the src folder.
+3. Do 'mvn clean', then 'mvn compile' and then 'mvn package'.
+4. Then cd to the 'target' folder.
+5. Then run the following command :-
+
+java --module-path <lib_folder of your java_fx installation> --add-modules javafx.media,javafx.controls -jar StickHero-1.0-SNAPSHOT.jar
+
+where the lib folder path has to be the path to the lib folder of wherever you have installed your javafx.
+
+For Example, here's my command :- java --module-path C:\Users\ABHIRUP-ACER\Downloads\openjfx-21.0.1_windows-x64_bin-sdk\javafx-sdk-21.0.1\lib --add-modules javafx.media,javafx.controls -jar StickHero-1.0-SNAPSHOT.jar
+
+6. Finally the game should run. If it doesn't, please contact us as this works every time we have downloaded from gc and ran it via cmd.
 
 
 
+Some Key Points about Our Game:-
+
+1. Our code displays the 'Best Score' achieved after one run of the game. This score is permanent even if you terminate the program and run it again as we wanted to make it feel like a game.
+2. In the home page, you would see a 'Load Save' icon. If you click it, it will display the 3 best scores that you have achieved till date. You can click on any one of them to continue playing from where you left off.
