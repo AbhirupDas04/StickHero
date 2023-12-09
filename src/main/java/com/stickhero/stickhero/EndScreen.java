@@ -75,7 +75,7 @@ public class EndScreen extends BackgroundHandler {
         super.setMusic(new EndingMusic());
         this.storage = storage;
     }
-    public void endGame(Pane pane, Scene scene1, HomeScreen home_scene, int score){
+    public void endGame(Pane pane, Scene scene1, HomeScreen home_scene, int score, GameScreen game){
         try {
             endingMusic.start(super.getStage());
         } catch (Exception e) {
@@ -210,8 +210,13 @@ public class EndScreen extends BackgroundHandler {
 
         view2.setOnMouseClicked(mouseEvent -> {
             endingMusic.stop();
-            GameScreen game = new GameScreen(home_scene.getStage());
-            game.startGame(home_scene,1);
+            GameScreen new_game = new GameScreen(home_scene.getStage());
+            new_game.startGame(home_scene,1);
+        });
+
+        Resume_Button.setOnMouseClicked(mouseEvent -> {
+            //game.playGame(HistoryStorage.getNext_pillar_start(),HistoryStorage.getNext_pillar_width(),HistoryStorage.getRed_bar(),HistoryStorage.getHomeScreen(),HistoryStorage.getMode(),HistoryStorage.getReload_score());
+            game.startGame(home_scene,2);
         });
     }
 }

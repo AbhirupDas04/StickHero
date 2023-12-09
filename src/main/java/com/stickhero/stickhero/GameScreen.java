@@ -300,6 +300,7 @@ public class GameScreen extends BackgroundHandler {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
         Pane game_pane = this.returnBackground();
         Pillar pillar = Pillar.getInstance(100,160,0,490);
         Rectangle rectangle = pillar.getRectangle();
@@ -382,9 +383,6 @@ public class GameScreen extends BackgroundHandler {
     public void playGame(int next_pillar_start,int next_pillar_width, Rectangle red_bar, HomeScreen home_screen, int mode, int reload_score){
         if(mode == 1){
             score = 0;
-        }
-        if(mode == 2){
-            score = reload_score;
         }
         GameScreen game = this;
         game_over_flag = false;
@@ -535,8 +533,10 @@ public class GameScreen extends BackgroundHandler {
 
                                                 game_over_flag = true;
 
+                                                HistoryStorage.StoreData(pillar1.getWidth(),next_pillar_start,next_pillar_width,red_bar,home_screen,2,score);
+
                                                 EndScreen endScreen = new EndScreen(stage,Hero.getInstance(),game,game.image,storage);
-                                                endScreen.endGame(pane,scene2,home_screen,score);
+                                                endScreen.endGame(pane,scene2,home_screen,score,game);
                                             });
                                         });
                                         break;
@@ -580,7 +580,7 @@ public class GameScreen extends BackgroundHandler {
                             game_over_flag = true;
 
                             EndScreen endScreen = new EndScreen(stage,Hero.getInstance(),game,game.image,storage);
-                            endScreen.endGame(pane,scene2,home_screen,score);
+                            endScreen.endGame(pane,scene2,home_screen,score,game);
                         });
                     });
                 }
@@ -657,8 +657,10 @@ public class GameScreen extends BackgroundHandler {
 
                                                 game_over_flag = true;
 
+                                                HistoryStorage.StoreData(pillar1.getWidth(),next_pillar_start,next_pillar_width,red_bar,home_screen,2,score);
+
                                                 EndScreen endScreen = new EndScreen(stage,Hero.getInstance(),game,game.image,storage);
-                                                endScreen.endGame(pane,scene2,home_screen,score);
+                                                endScreen.endGame(pane,scene2,home_screen,score,game);
                                             });
                                         });
                                         break;
