@@ -58,7 +58,7 @@ public class GameScreen extends BackgroundHandler {
 
     public GameScreen(Stage stage, HistoryStorage storage){
         super(stage);
-        this.hero = new Hero();
+        this.hero = Hero.getInstance();
         this.selectRandomImage();
         this.gamespeed = 1;
         this.score = 0;
@@ -170,7 +170,7 @@ public class GameScreen extends BackgroundHandler {
             e.printStackTrace();
         }
         Pane game_pane = this.returnBackground();
-        Pillar pillar = new Pillar(100,160,0,490);
+        Pillar pillar = Pillar.getInstance(100,160,0,490);
         Rectangle rectangle = pillar.getRectangle();
         this.pillar1_rect = rectangle;
         this.curr_pillar_width = 100;
@@ -179,7 +179,7 @@ public class GameScreen extends BackgroundHandler {
         Random rand = new Random();
         int rand_width = rand.nextInt(70) + 30;
         int rand_posX = rand.nextInt(370 - rand_width) + 130;
-        Pillar pillar2 = new Pillar(rand_width,160,rand_posX,490);
+        Pillar pillar2 = Pillar.getInstance(rand_width,160,rand_posX,490);
         Rectangle rectangle2 = pillar2.getRectangle();
 
         this.pillar2_rect = rectangle2;
@@ -238,8 +238,6 @@ public class GameScreen extends BackgroundHandler {
         super.getStage().setResizable(false);
         super.getStage().show();
 
-        EndScreen endScreen = new EndScreen(super.getStage(),new Hero(),this,this.image,storage);
-
         this.playGame(rand_posX,rand_width,rect3, home_screen, mode);
     }
 
@@ -262,7 +260,7 @@ public class GameScreen extends BackgroundHandler {
         if (rand_posX <= 500) {
             rand_posX = 500;
         }
-        Pillar pillar3 = new Pillar(rand_width, 160, rand_posX, 490);
+        Pillar pillar3 = Pillar.getInstance(rand_width, 160, rand_posX, 490);
         Rectangle rectangle2 = pillar3.getRectangle();
 
         Rectangle rect3 = new Rectangle(10, 5);
@@ -270,7 +268,7 @@ public class GameScreen extends BackgroundHandler {
         rect3.setLayoutX(rand_posX + rand_width / 2.0 - 5);
         rect3.setLayoutY(490);
 
-        collectableCherryView = generateCollectableCherry(curr_pillar_width , next_pillar_start);
+        collectableCherryView = generateCollectableCherry(curr_pillar_width , next_pillar_start - 10);
 
         if (isCherryGenerated != 0){
             pane.getChildren().addAll(rectangle2, rectangle4, rect3, collectableCherryView);
@@ -279,8 +277,6 @@ public class GameScreen extends BackgroundHandler {
             collectableCherryView = null;
             pane.getChildren().addAll(rectangle2, rectangle4, rect3);
         }
-
-//        pane.getChildren().addAll(rectangle2, rectangle4, rect3);
 
         Timeline timeline = new Timeline();
         Timeline end_timeline = new Timeline();
@@ -318,38 +314,35 @@ public class GameScreen extends BackgroundHandler {
             }
 
             public void fn(){
-                end_timeline.setOnFinished(new EventHandler<ActionEvent>() {
-                    @Override
-                    public void handle(ActionEvent actionEvent) {
-                        Thread_flag = true;
-                        curr_pillar_width = next_pillar_width;
-                        pillar1 = pillar2;
-                        pillar1_rect = pillar2_rect;
-                        pillar1_rect.setTranslateX(0);
-                        pillar1_rect.setLayoutX(0);
-                        pillar1.setX_pos(0);
-                        pillar2 = pillar3;
-                        pillar2_rect = rectangle2;
-                        pillar2_rect.setTranslateX(0);
-                        pillar2_rect.setLayoutX(gap + 30 + pillar1.getWidth());
-                        pillar2.setX_pos(gap + 30 + pillar1.getWidth());
-                        rect3.setTranslateX(0);
-                        rect3.setLayoutX(gap + 30 + pillar1.getWidth() + pillar3.getWidth()/2.0 - 5);
-                        first_red_bar = red_bar;
-                        first_red_bar.setTranslateX(0);
-                        first_red_bar.setLayoutX(pillar1.getWidth()/2.0 - 5);
-                        view.setTranslateX(0);
-                        view.setLayoutX(pillar1.getWidth() - 44);
-                        old_stick = rectangle4;
+                end_timeline.setOnFinished(actionEvent -> {
+                    Thread_flag = true;
+                    curr_pillar_width = next_pillar_width;
+                    pillar1 = pillar2;
+                    pillar1_rect = pillar2_rect;
+                    pillar1_rect.setTranslateX(0);
+                    pillar1_rect.setLayoutX(0);
+                    pillar1.setX_pos(0);
+                    pillar2 = pillar3;
+                    pillar2_rect = rectangle2;
+                    pillar2_rect.setTranslateX(0);
+                    pillar2_rect.setLayoutX(gap + 30 + pillar1.getWidth());
+                    pillar2.setX_pos(gap + 30 + pillar1.getWidth());
+                    rect3.setTranslateX(0);
+                    rect3.setLayoutX(gap + 30 + pillar1.getWidth() + pillar3.getWidth() / 2.0 - 5);
+                    first_red_bar = red_bar;
+                    first_red_bar.setTranslateX(0);
+                    first_red_bar.setLayoutX(pillar1.getWidth() / 2.0 - 5);
+                    view.setTranslateX(0);
+                    view.setLayoutX(pillar1.getWidth() - 44);
+                    old_stick = rectangle4;
 
-                        collectableCherryView = generateCollectableCherry(curr_pillar_width , next_pillar_start);
-                        if (isCherryGenerated == 1){
-                            collectableCherryView.setTranslateX(0);
-                            collectableCherryView.setLayoutX(gap + 30 + pillar1.getWidth());
-                        }
-
-                        game.playGame(gap + 30 + pillar1.getWidth(),pillar3.getWidth(),rect3,home_screen,0);
+                    collectableCherryView = generateCollectableCherry(curr_pillar_width, next_pillar_start);
+                    if (isCherryGenerated == 1) {
+                        collectableCherryView.setTranslateX(0);
+                        collectableCherryView.setLayoutX(gap + 30 + pillar1.getWidth());
                     }
+
+                    game.playGame(gap + 30 + pillar1.getWidth(), pillar3.getWidth(), rect3, home_screen, 0);
                 });
                 flag = true;
                 Image image1 = new Image(this.getClass().getResourceAsStream("Standing_Hero.png"));
@@ -357,7 +350,9 @@ public class GameScreen extends BackgroundHandler {
 
                 int distance;
 
-                if(stick.getHeight() < pillar2.getX_pos() - pillar1.getWidth() - pillar1.getX_pos() || stick.getHeight() > pillar2.getX_pos() -  pillar1.getX_pos() ){
+                System.out.println(pillar1.getX_pos() + " " + pillar2.getX_pos());
+
+                if(stick.getHeight() < pillar2.getX_pos() - pillar1.getWidth() - pillar1.getX_pos() || stick.getHeight() > pillar2.getX_pos() + pillar2.getWidth() - pillar1.getWidth() -  pillar1.getX_pos() ){
                     Thread_flag = true;
                     distance =  stick.getHeight() + 30;
                     for (int i = 0; i < distance; i++) {
@@ -383,14 +378,19 @@ public class GameScreen extends BackgroundHandler {
 
                             game_over_flag = true;
 
-                            EndScreen endScreen = new EndScreen(stage,new Hero(),game,game.image,storage);
+                            EndScreen endScreen = new EndScreen(stage,Hero.getInstance(),game,game.image,storage);
                             endScreen.endGame(pane,scene2,home_screen,score);
                         });
                     });
                 }
 
                 else{
-                    score++;
+                    if(stick.getHeight() >= pillar2.getX_pos() - pillar1.getWidth() - pillar1.getX_pos() + pillar2.getWidth()/2.0 - 5 && stick.getHeight() <= pillar2.getX_pos() - pillar1.getWidth() - pillar1.getX_pos() + pillar2.getWidth()/2.0 + 5){
+                        score+=2;
+                    }else{
+                        score++;
+                    }
+
                     text_score.setText(((Integer)score).toString());
                     distance =  (pillar2.getX_pos() + pillar2.getWidth() - 45 - (int)view.getLayoutX());
                     for (int i = 0; i < distance; i++) {
@@ -454,7 +454,7 @@ public class GameScreen extends BackgroundHandler {
 
                                                 game_over_flag = true;
 
-                                                EndScreen endScreen = new EndScreen(stage,new Hero(),game,game.image,storage);
+                                                EndScreen endScreen = new EndScreen(stage,Hero.getInstance(),game,game.image,storage);
                                                 endScreen.endGame(pane,scene2,home_screen,score);
                                             });
                                         });
@@ -552,7 +552,7 @@ public class GameScreen extends BackgroundHandler {
             HistoryUnit historyUnit = new HistoryUnit(score, pillar1.getWidth(), pillar2.getWidth(), finalRand_posX, image_link);
             list.add(historyUnit);
 
-            ObjectOutputStream outputStream = null;
+            ObjectOutputStream outputStream;
             try {
                 outputStream = new ObjectOutputStream(new FileOutputStream("Game_Records.txt"));
             } catch (IOException e) {

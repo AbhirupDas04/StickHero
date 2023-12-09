@@ -4,13 +4,20 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 public class Hero {
-    private float speed;
-    private int n_rewards;
-    private Score score;
-    private int level;
-    private int cherriesCollected;
     private ImageView view;
     private boolean isUpsideDown;
+    private static Hero instance;
+
+    private Hero(){
+
+    }
+    public static Hero getInstance(){
+        if(instance == null){
+            instance = new Hero();
+            return instance;
+        }
+        return instance;
+    }
 
     public ImageView getView() {
         return view;
@@ -37,10 +44,4 @@ public class Hero {
     public void setUpsideDown(boolean upsideDown) {
         isUpsideDown = upsideDown;
     }
-
-    public void moveToSide(){}
-    public void moveUp(){}
-    public void moveDown(){}
-    public void collectCherry(){}
-    public void updateLevelCount(int level){}
 }

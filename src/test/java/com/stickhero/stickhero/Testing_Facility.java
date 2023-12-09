@@ -1,15 +1,16 @@
 package com.stickhero.stickhero;
 
 import org.junit.Test;
-import org.junit.runner.JUnitCore;
-import org.junit.runner.Result;
-import org.junit.runner.notification.Failure;
-import static org.junit.Assert.*;
 
 import java.io.*;
 import java.util.ArrayList;
 
-public class Testing_Suite {
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
+
+public class Testing_Facility {
     @Test
     public void Database_Test(){
         BufferedReader fileInputStream;
@@ -62,13 +63,5 @@ public class Testing_Suite {
 
         assertEquals(pillar1,pillar2);
         assertNotEquals(pillar1,pillar3);
-    }
-
-    public static void main(String[] args) {
-        Result result = JUnitCore.runClasses(Testing_Suite.class);
-        for(Failure failure : result.getFailures()){
-            System.out.println(failure.toString());
-        }
-        System.out.println("Result -> " + result.wasSuccessful());
     }
 }

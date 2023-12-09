@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f8d3197-9abd-4249-9eb0-21fbff063383" name="Changes" comment="changes">
+    <list default="true" id="1f8d3197-9abd-4249-9eb0-21fbff063383" name="Changes" comment="Automatic Testing Added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Best_Score.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Best_Score.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game_Details.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Details.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game_Records.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game_Records.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Records.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/GameScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/GameScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/Pillar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/Pillar.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +22,7 @@
       <list>
         <option value="JavaFXApplication" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -69,6 +73,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "Abhirup",
     "last_opened_file_path": "C:/Users/ABHIRUP-ACER/Downloads/StickHero-Abhirup",
     "node.js.selected.package.tslint": "(autodetect)",
@@ -87,6 +93,12 @@
       <recent name="$PROJECT_DIR$/src/main/resources/com/stickhero/stickhero" />
       <recent name="C:\Users\ABHIRUP-ACER\Downloads\CodeTesting\Java\StickHero\src\main\resources\com\stickhero\stickhero" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.stickhero.stickhero" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Testing_Suite" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -100,6 +112,57 @@
       </extension>
       <method v="2">
         <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$" />
+      <setting name="debug" value="false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration name="Testing_Suite.Database_Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="StickHero" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.stickhero.stickhero.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.stickhero.stickhero" />
+      <option name="MAIN_CLASS_NAME" value="com.stickhero.stickhero.Testing_Suite" />
+      <option name="METHOD_NAME" value="Database_Test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration name="Testing_Suite.FlyweightTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="StickHero" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.stickhero.stickhero.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.stickhero.stickhero" />
+      <option name="MAIN_CLASS_NAME" value="com.stickhero.stickhero.Testing_Suite" />
+      <option name="METHOD_NAME" value="FlyweightTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
       </method>
     </configuration>
     <configuration name="Testing_Suite.Game_Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
@@ -118,10 +181,55 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JarApplication">
+      <method v="2">
+        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Java Scratch">
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="StickHero" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="StickHero" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.Testing_Suite.FlyweightTest" />
+        <item itemvalue="JUnit.Testing_Suite.Database_Test" />
         <item itemvalue="JUnit.Testing_Suite.Game_Test" />
         <item itemvalue="Application.Testing_Suite" />
+        <item itemvalue="JUnit.Testing_Suite.Game_Test" />
       </list>
     </recent_temporary>
   </component>
@@ -133,46 +241,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1699383289127</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Changes">
-      <option name="closed" value="true" />
-      <created>1699708090795</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1699708090795</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Changes">
-      <option name="closed" value="true" />
-      <created>1699708932025</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1699708932025</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Changes">
-      <option name="closed" value="true" />
-      <created>1699714052383</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1699714052383</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Changes">
-      <option name="closed" value="true" />
-      <created>1699786839422</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1699786839423</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Changes">
-      <option name="closed" value="true" />
-      <created>1699787046734</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1699787046734</updated>
     </task>
     <task id="LOCAL-00011" summary="Changes">
       <option name="closed" value="true" />
@@ -526,7 +594,47 @@
       <option name="project" value="LOCAL" />
       <updated>1702053603695</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="changes">
+      <option name="closed" value="true" />
+      <created>1702062683201</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1702062683201</updated>
+    </task>
+    <task id="LOCAL-00056" summary="changes">
+      <option name="closed" value="true" />
+      <created>1702070176135</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1702070176135</updated>
+    </task>
+    <task id="LOCAL-00057" summary="One Design Pattern implemented">
+      <option name="closed" value="true" />
+      <created>1702091491966</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1702091491966</updated>
+    </task>
+    <task id="LOCAL-00058" summary="Testing Suite done and Second Design Pattern added">
+      <option name="closed" value="true" />
+      <created>1702092334100</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1702092334101</updated>
+    </task>
+    <task id="LOCAL-00059" summary="Automatic Testing Added">
+      <option name="closed" value="true" />
+      <created>1702092891750</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1702092891751</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -557,6 +665,9 @@
     <MESSAGE value="rough" />
     <MESSAGE value="added animations for hero falling" />
     <MESSAGE value="changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes" />
+    <MESSAGE value="One Design Pattern implemented" />
+    <MESSAGE value="Testing Suite done and Second Design Pattern added" />
+    <MESSAGE value="Automatic Testing Added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Automatic Testing Added" />
   </component>
 </project>
