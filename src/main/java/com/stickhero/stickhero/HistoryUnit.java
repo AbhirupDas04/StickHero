@@ -4,8 +4,6 @@
 
 package com.stickhero.stickhero;
 
-import javafx.scene.image.Image;
-
 import java.io.Serializable;
 
 public class HistoryUnit implements Serializable {
@@ -13,13 +11,23 @@ public class HistoryUnit implements Serializable {
     private int curr_pillar_width;
     private String background;
     private int next_pillar_width;
-    private int gap_bw_pillars;
-    public HistoryUnit(int score, int curr_pillar_width, int next_pillar_width, int gap_bw_pillars, String background){
+    private int next_pillar_start;
+    private int n_cherries;
+    public HistoryUnit(int score, int curr_pillar_width, int next_pillar_width, int next_pillar_start, String background, int n_cherries){
         this.background = background;
         this.score = score;
         this.curr_pillar_width = curr_pillar_width;
-        this.gap_bw_pillars = gap_bw_pillars;
+        this.next_pillar_start = next_pillar_start;
         this.next_pillar_width = next_pillar_width;
+        this.n_cherries = n_cherries;
+    }
+
+    public void setN_cherries(int n_cherries) {
+        this.n_cherries = n_cherries;
+    }
+
+    public int getN_cherries() {
+        return n_cherries;
     }
 
     public int getScore() {
@@ -54,11 +62,11 @@ public class HistoryUnit implements Serializable {
         this.next_pillar_width = next_pillar_width;
     }
 
-    public int getGap_bw_pillars() {
-        return gap_bw_pillars;
+    public int getNext_pillar_start() {
+        return next_pillar_start;
     }
 
-    public void setGap_bw_pillars(int gap_bw_pillars) {
-        this.gap_bw_pillars = gap_bw_pillars;
+    public void setNext_pillar_start(int next_pillar_start) {
+        this.next_pillar_start = next_pillar_start;
     }
 }

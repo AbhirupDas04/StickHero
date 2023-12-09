@@ -6,10 +6,12 @@
 
 package com.stickhero.stickhero;
 
+import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
@@ -223,6 +225,11 @@ public class HomeScreen extends BackgroundHandler {
 
             if(finalN_entries >= 1){
                 GameFile1.setText("GAME 1 - Score: " + new_list.get(0).getScore());
+                GameFile1.setOnMouseClicked(mouseEvent -> {
+                    HistoryUnit unit = new_list.get(0);
+                    GameScreen new_game = new GameScreen(homeScreen.getStage());
+                    new_game.loadGame(homeScreen,unit);
+                });
             }
 
             Button GameFile2 = new Button("EMPTY");
@@ -234,6 +241,11 @@ public class HomeScreen extends BackgroundHandler {
 
             if(finalN_entries >= 2){
                 GameFile2.setText("GAME 2 - Score: " + new_list.get(1).getScore());
+                GameFile2.setOnMouseClicked(mouseEvent -> {
+                    HistoryUnit unit = new_list.get(1);
+                    GameScreen new_game = new GameScreen(homeScreen.getStage());
+                    new_game.loadGame(homeScreen,unit);
+                });
             }
 
             Button GameFile3 = new Button("EMPTY");
@@ -244,7 +256,12 @@ public class HomeScreen extends BackgroundHandler {
             GameFile3.setStyle("-fx-background-color:rgb(197, 197, 197);-fx-border-radius: 145px;-fx-font-size:15;-fx-text-fill:black;-fx-font-weight:bold");
 
             if(finalN_entries >= 3){
-                GameFile3.setText("GAME 1 - Score: " + new_list.get(2).getScore());
+                GameFile3.setText("GAME 3 - Score: " + new_list.get(2).getScore());
+                GameFile3.setOnMouseClicked(mouseEvent -> {
+                    HistoryUnit unit = new_list.get(2);
+                    GameScreen new_game = new GameScreen(homeScreen.getStage());
+                    new_game.loadGame(homeScreen,unit);
+                });
             }
 
 
@@ -279,11 +296,60 @@ public class HomeScreen extends BackgroundHandler {
             Button returnButton = new Button("Return");
             returnButton.setMinSize(50,30);
             returnButton.setMaxSize(100,60);
-            returnButton.setLayoutX(205);
-            returnButton.setLayoutY(460);
+            returnButton.setLayoutX(217);
+            returnButton.setLayoutY(430);
             returnButton.setStyle("-fx-background-color:rgb(197, 0, 0);-fx-border-radius: 150;-fx-font-size:15;-fx-text-fill:white");
 
-            reload_pane.getChildren().addAll(shade,ScrollView, returnButton);
+            Button GameFile1 = new Button("EMPTY");
+            GameFile1.setMinSize(200,50);
+            GameFile1.setMaxSize(200,50);
+            GameFile1.setLayoutY(175);
+            GameFile1.setLayoutX(150);
+            GameFile1.setStyle("-fx-background-color:rgb(197, 197, 197);-fx-border-radius: 145px;-fx-font-size:15;-fx-text-fill:black;-fx-font-weight:bold");
+
+            if(finalN_entries >= 1){
+                GameFile1.setText("GAME 1 - Score: " + new_list.get(0).getScore());
+                GameFile1.setOnMouseClicked(mouseEvent -> {
+                    HistoryUnit unit = new_list.get(0);
+                    GameScreen new_game = new GameScreen(homeScreen.getStage());
+                    new_game.loadGame(homeScreen,unit);
+                });
+            }
+
+            Button GameFile2 = new Button("EMPTY");
+            GameFile2.setMinSize(200,50);
+            GameFile2.setMaxSize(200,50);
+            GameFile2.setLayoutY(250);
+            GameFile2.setLayoutX(150);
+            GameFile2.setStyle("-fx-background-color:rgb(197, 197, 197);-fx-border-radius: 145px;-fx-font-size:15;-fx-text-fill:black;-fx-font-weight:bold");
+
+            if(finalN_entries >= 2){
+                GameFile2.setText("GAME 2 - Score: " + new_list.get(1).getScore());
+                GameFile2.setOnMouseClicked(mouseEvent -> {
+                    HistoryUnit unit = new_list.get(1);
+                    GameScreen new_game = new GameScreen(homeScreen.getStage());
+                    new_game.loadGame(homeScreen,unit);
+                });
+            }
+
+            Button GameFile3 = new Button("EMPTY");
+            GameFile3.setMinSize(200,50);
+            GameFile3.setMaxSize(200,50);
+            GameFile3.setLayoutY(325);
+            GameFile3.setLayoutX(150);
+            GameFile3.setStyle("-fx-background-color:rgb(197, 197, 197);-fx-border-radius: 145px;-fx-font-size:15;-fx-text-fill:black;-fx-font-weight:bold");
+
+            if(finalN_entries >= 3){
+                GameFile3.setText("GAME 3 - Score: " + new_list.get(2).getScore());
+                GameFile3.setOnMouseClicked(mouseEvent -> {
+                    HistoryUnit unit = new_list.get(2);
+                    GameScreen new_game = new GameScreen(homeScreen.getStage());
+                    new_game.loadGame(homeScreen,unit);
+                });
+            }
+
+
+            reload_pane.getChildren().addAll(shade,ScrollView, returnButton, GameFile1,GameFile2,GameFile3);
 
             Scene load_scene = new Scene(reload_pane,500, 650);
             homeScreen.getStage().setScene(load_scene);

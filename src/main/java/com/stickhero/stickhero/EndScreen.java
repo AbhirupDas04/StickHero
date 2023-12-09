@@ -67,7 +67,6 @@ public class EndScreen extends BackgroundHandler {
         return this.endingMusic;
     }
 
-    private Score score;
     public EndScreen(Stage stage, Hero hero, GameScreen game, Image image, HistoryStorage storage){
         super(stage);
         this.hero = hero;

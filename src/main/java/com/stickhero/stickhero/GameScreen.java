@@ -297,6 +297,102 @@ public class GameScreen extends BackgroundHandler {
         return timeline;
     }
 
+    public void loadGame(HomeScreen home_screen, HistoryUnit unit){
+        try {
+            inGameMusic.start(super.getStage());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        String randomImage = unit.getBackground();
+        Image image = new Image(getClass().getResourceAsStream(randomImage));
+
+        BackgroundSize backgroundSize = new BackgroundSize(1000,650,false,false,true,true);
+        BackgroundImage backgroundimage = new BackgroundImage(image, BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT, backgroundSize);
+        this.setBackground(new Background(backgroundimage));
+        this.image = image;
+        this.image_link = randomImage;
+
+        Pane game_pane = this.returnBackground();
+        Pillar pillar = Pillar.getInstance(unit.getCurr_pillar_width(),160,0,490);
+        Rectangle rectangle = pillar.getRectangle();
+        this.pillar1_rect = rectangle;
+        this.curr_pillar_width = unit.getCurr_pillar_width();
+        this.pillar1 = pillar;
+
+        if(pillar.isPrev_used()){
+            if(game_pane.getChildren().contains(rectangle)){
+                game_pane.getChildren().remove(rectangle);
+            }
+        }
+        game_pane.getChildren().add(rectangle);
+
+        int rand_width = unit.getNext_pillar_width();
+        int rand_posX = unit.getNext_pillar_start();
+        Pillar pillar2 = Pillar.getInstance(rand_width,160,rand_posX,490);
+        Rectangle rectangle2 = pillar2.getRectangle();
+
+        this.pillar2_rect = rectangle2;
+        this.pillar2 = pillar2;
+
+        Rectangle rect3 = new Rectangle(10, 5);
+        rect3.setFill(Color.RED);
+        rect3.setLayoutX(rand_posX + rand_width / 2.0 - 5);
+        rect3.setLayoutY(490);
+
+        view = hero.generateStandingHero(35,35,curr_pillar_width - 45,455);
+
+        Rectangle rectangle1 = new Rectangle(70, 40);
+        rectangle1.setFill(Color.GRAY);
+        rectangle1.setLayoutX(215);
+        rectangle1.setLayoutY(50);
+        rectangle1.setArcHeight(15);
+        rectangle1.setArcWidth(15);
+        rectangle1.setOpacity(0.4);
+        this.score_background = rectangle1;
+
+        Text text = new Text();
+        text.setFont(Font.font("verdana", FontPosture.REGULAR, 36));
+        text.setFill(Color.WHITE);
+        text.setLayoutX(239);
+        text.setLayoutY(84);
+        text.setText(Integer.toString(unit.getScore()));
+        this.text_score = text;
+        this.score = unit.getScore();
+
+        Reward cherry = new Reward();
+        ImageView view1 = cherry.generateReward(30,30,467,35);
+        this.cherry_pic = view1;
+
+        Text text1 = new Text();
+        text1.setFont(Font.font("verdana", FontPosture.REGULAR, 16));
+        text1.setFill(Color.WHITE);
+        text1.setLayoutX(450);
+        text1.setLayoutY(56);
+        this.n_cherries = unit.getN_cherries();
+        text1.setText(Integer.toString(n_cherries));
+        this.text_rewards = text1;
+
+        Button bt = new Button("SAVE");
+        bt.setMinSize(50,30);
+        bt.setMaxSize(100,60);
+        bt.setLayoutX(25);
+        bt.setLayoutY(25);
+        bt.setStyle("-fx-background-color:rgb(255, 0, 0);-fx-border-radius: 150;-fx-font-size:15;-fx-text-fill:white");
+        this.save_button = bt;
+
+        game_pane.getChildren().addAll(bt,rectangle2,rect3,rectangle1,view,view1,text,text1);
+        this.setPane(game_pane);
+
+        Scene scene1 = new Scene(game_pane, 500, 650);
+        super.setScene(scene1);
+        super.getStage().setScene(scene1);
+        super.getStage().setResizable(false);
+        super.getStage().show();
+
+        this.playGame(rand_posX,rand_width,rect3, home_screen, 0, 0);
+    }
+
     public void restartGame(HomeScreen home_screen){
         try {
             inGameMusic.start(super.getStage());
@@ -776,14 +872,11 @@ public class GameScreen extends BackgroundHandler {
                                             n_cherries++;
                                             score++;
 
-                                            Platform.runLater(new Runnable() {
-                                                @Override
-                                                public void run() {
-                                                    text_rewards.setText(Integer.toString(n_cherries));
-                                                    text_score.setText(Integer.toString(score));
+                                            Platform.runLater(() -> {
+                                                text_rewards.setText(Integer.toString(n_cherries));
+                                                text_score.setText(Integer.toString(score));
 
-                                                    collectableCherryView.setVisible(false);
-                                                }
+                                                collectableCherryView.setVisible(false);
                                             });
                                         }
                                     }
@@ -876,7 +969,7 @@ public class GameScreen extends BackgroundHandler {
                 }
             }
 
-            HistoryUnit historyUnit = new HistoryUnit(score, pillar1.getWidth(), pillar2.getWidth(), finalRand_posX, image_link);
+            HistoryUnit historyUnit = new HistoryUnit(score,pillar1.getWidth(),pillar2.getWidth(),pillar2.getX_pos(),image_link,n_cherries);
             list.add(historyUnit);
 
             ObjectOutputStream outputStream;
@@ -892,9 +985,9 @@ public class GameScreen extends BackgroundHandler {
 
                 FileOutputStream fileOutputStream;
                 fileOutputStream = new FileOutputStream("Game_Details.txt");
-                Integer i1 = n_entries;
+                int i1 = n_entries;
 
-                fileOutputStream.write(i1.toString().getBytes());
+                fileOutputStream.write(Integer.toString(i1).getBytes());
                 fileOutputStream.close();
             } catch (IOException e) {
                 throw new RuntimeException(e);
