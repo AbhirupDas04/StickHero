@@ -16,7 +16,8 @@ public class Testing_Suite {
         try {
             fileInputStream = new BufferedReader(new FileReader("Game_Details.txt"));
         } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
+            System.out.println("File Not Present");
+            return;
         }
         int n_entries = -1;
         try {

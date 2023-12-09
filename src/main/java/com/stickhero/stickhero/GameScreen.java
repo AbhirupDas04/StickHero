@@ -489,7 +489,6 @@ public class GameScreen extends BackgroundHandler {
         this.playGame(rand_posX,rand_width,rect3, home_screen, 0, 0);
     }
 
-
     public void startGame(HomeScreen home_screen, int mode){
         try {
             inGameMusic.start(super.getStage());
@@ -695,9 +694,9 @@ public class GameScreen extends BackgroundHandler {
                     distance =  stick.getHeight() + 30;
                     for (int i = 0; i < distance; i++) {
                         timeline.getKeyFrames().add(new KeyFrame(Duration.millis(0.7*(10 + i * 10)), new KeyValue(view.translateXProperty(), 1 + i * 1)));
-                        if (i % 20 == 0) {
+                        if (i % 30 == 0) {
                             timeline.getKeyFrames().add(new KeyFrame(Duration.millis(0.7*(5 + i * 10)), new KeyValue(view.imageProperty(), image1)));
-                        } else if (i % 20 == 10) {
+                        } else if (i % 30 == 15) {
                             timeline.getKeyFrames().add(new KeyFrame(Duration.millis(0.7*(5 + i * 10)), new KeyValue(view.imageProperty(), image2)));
                         }
                     }
@@ -764,6 +763,7 @@ public class GameScreen extends BackgroundHandler {
                     timeline.play();
                     timeline.setOnFinished(actionEvent -> {
                         Timeline timeline1 = animateHeroFallingAfterMiss(distance , 3);
+                        Thread_flag = true;
                         timeline1.setOnFinished(actionEvent2 -> {
                             inGameMusic.stop();
                             text_rewards.setVisible(false);
@@ -794,9 +794,9 @@ public class GameScreen extends BackgroundHandler {
                     distance =  (pillar2.getX_pos() + pillar2.getWidth() - 45 - (int)view.getLayoutX());
                     for (int i = 0; i < distance; i++) {
                         timeline.getKeyFrames().add(new KeyFrame(Duration.millis(0.7*(10 + i * 10)), new KeyValue(view.translateXProperty(), 1 + i * 1)));
-                        if (i % 20 == 0) {
+                        if (i % 30 == 0) {
                             timeline.getKeyFrames().add(new KeyFrame(Duration.millis(0.7*(5 + i * 10)), new KeyValue(view.imageProperty(), image1)));
-                        } else if (i % 20 == 10) {
+                        } else if (i % 30 == 15) {
                             timeline.getKeyFrames().add(new KeyFrame(Duration.millis(0.7*(5 + i * 10)), new KeyValue(view.imageProperty(), image2)));
                         }
 
