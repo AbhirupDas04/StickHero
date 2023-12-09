@@ -725,12 +725,12 @@ public class GameScreen extends BackgroundHandler {
                                 }
                                 if(timeline.getStatus() == Animation.Status.RUNNING){
                                     if(view.getTranslateX() >= (pillar2.getX_pos() - pillar1.getX_pos() + 10 - pillar1.getWidth()) && hero.isUpsideDown()){
+                                        heroWalkingMusic.stop();
                                         timeline.stop();
                                         end_timeline.stop();
                                         Platform.runLater(() -> {
                                             Timeline timeline1 = animateFallingHeroAfterHit(distance , 7);
                                             timeline1.setOnFinished(actionEvent -> {
-                                                heroWalkingMusic.stop();
                                                 inGameMusic.stop();
                                                 text_rewards.setVisible(false);
                                                 text_score.setVisible(false);
@@ -860,12 +860,12 @@ public class GameScreen extends BackgroundHandler {
                                 }
                                 if(timeline.getStatus() == Animation.Status.RUNNING){
                                     if(view.getTranslateX() >= (pillar2.getX_pos() - pillar1.getX_pos() + 10 - pillar1.getWidth()) && hero.isUpsideDown()){
+                                        heroWalkingMusic.stop();
                                         timeline.stop();
                                         end_timeline.stop();
                                         Platform.runLater(() -> {
                                             Timeline timeline1 = animateFallingHeroAfterHit(distance , 7);
                                             timeline1.setOnFinished(actionEvent -> {
-                                                heroWalkingMusic.stop();
                                                 inGameMusic.stop();
                                                 text_rewards.setVisible(false);
                                                 text_score.setVisible(false);
