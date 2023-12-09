@@ -26,6 +26,14 @@ Game Features:
 - There is a bonus score awarded if the stick hits the red region at the center of the pillar.
 
 
+Sounds Effects/Animations:-
+
+- Each scene has its own background music.
+- The hero has separate animations for when he hits the pillar while upside down or when the stick is of inappropriate length.
+- We have sound effects for the stick landing.
+- We also have put effects for the walking of the character as well as that of collecting the cherry.
+
+
 Instructions to run the code via cmd:
 
 1. Download the zip folder in GC and extract its contents.

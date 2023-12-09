@@ -45,6 +45,8 @@ public class GameScreen extends BackgroundHandler {
     private Rectangle first_red_bar;
     private Rectangle old_stick;
     private InGameMusic inGameMusic;
+    private StickFallingMusic stickFallingMusic;
+    private CollectCherrySound collectCherrySound;
     private Thread thread;
     private boolean Thread_flag = false;
     private boolean game_over_flag = false;
@@ -199,6 +201,9 @@ public class GameScreen extends BackgroundHandler {
         this.level = 0;
         this.inGameMusic = new InGameMusic();
         super.setMusic(new InGameMusic());
+
+        this.stickFallingMusic = new StickFallingMusic();
+        this.collectCherrySound = new CollectCherrySound();
     }
     public void updateGameSpeed(int speed){
         this.gamespeed = speed;
@@ -656,6 +661,7 @@ public class GameScreen extends BackgroundHandler {
             }
 
             public void fn(){
+                stickFallingMusic.start(stage);
                 end_timeline.setOnFinished(actionEvent -> {
                     Thread_flag = true;
                     curr_pillar_width = next_pillar_width;
@@ -749,6 +755,7 @@ public class GameScreen extends BackgroundHandler {
                                                 @Override
                                                 public void run() {
                                                     collectableCherryView.setVisible(false);
+                                                    collectCherrySound.start(stage);
                                                 }
                                             });
                                         }
@@ -879,6 +886,7 @@ public class GameScreen extends BackgroundHandler {
                                                 text_score.setText(Integer.toString(score));
 
                                                 collectableCherryView.setVisible(false);
+                                                collectCherrySound.start(stage);
                                             });
                                         }
                                     }
