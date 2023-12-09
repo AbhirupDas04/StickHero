@@ -34,6 +34,8 @@ public class Pillar {
         return hashmap.get(key);
     }
 
+
+
     public int getX_pos() {
         return x_pos;
     }
