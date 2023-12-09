@@ -308,6 +308,13 @@ public class GameScreen extends BackgroundHandler {
         this.curr_pillar_width = 100;
         this.pillar1 = pillar;
 
+        if(pillar.isPrev_used()){
+            if(game_pane.getChildren().contains(rectangle)){
+                game_pane.getChildren().remove(rectangle);
+            }
+        }
+        game_pane.getChildren().add(rectangle);
+
         Random rand = new Random();
         int rand_width = rand.nextInt(70) + 30;
         int rand_posX = rand.nextInt(370 - rand_width) + 130;
@@ -361,7 +368,7 @@ public class GameScreen extends BackgroundHandler {
         bt.setStyle("-fx-background-color:rgb(255, 0, 0);-fx-border-radius: 150;-fx-font-size:15;-fx-text-fill:white");
         this.save_button = bt;
 
-        game_pane.getChildren().addAll(rectangle,bt,rectangle2,rect3,rectangle1,view,view1,text,text1);
+        game_pane.getChildren().addAll(bt,rectangle2,rect3,rectangle1,view,view1,text,text1);
         this.setPane(game_pane);
 
         Scene scene1 = new Scene(game_pane, 500, 650);
@@ -392,8 +399,14 @@ public class GameScreen extends BackgroundHandler {
         if (rand_posX <= 500) {
             rand_posX = 500;
         }
-        Pillar pillar3 = Pillar.getInstance(rand_width, 160, rand_posX, 490);
+        Pillar pillar3 = Pillar.getInstance(rand_width, 160, rand_posX, 490, pillar1_rect.getWidth(), pillar1_rect.getLayoutX());
         Rectangle rectangle2 = pillar3.getRectangle();
+        if(pillar3.isPrev_used()){
+            if(pane.getChildren().contains(rectangle2)){
+                pane.getChildren().remove(rectangle2);
+            }
+        }
+        pane.getChildren().add(rectangle2);
 
         Rectangle rect3 = new Rectangle(10, 5);
         rect3.setFill(Color.RED);
@@ -403,11 +416,11 @@ public class GameScreen extends BackgroundHandler {
         collectableCherryView = generateCollectableCherry(pillar1.getWidth() , next_pillar_start - 30);
 
         if (isCherryGenerated != 0){
-            pane.getChildren().addAll(rectangle2, rectangle4, rect3, collectableCherryView);
+            pane.getChildren().addAll(rectangle4, rect3, collectableCherryView);
         }
         else{
             collectableCherryView = null;
-            pane.getChildren().addAll(rectangle2, rectangle4, rect3);
+            pane.getChildren().addAll(rectangle4, rect3);
         }
 
         Timeline timeline = new Timeline();
@@ -482,8 +495,7 @@ public class GameScreen extends BackgroundHandler {
 
                 int distance;
 
-                if(stick.getHeight() < pillar2.getX_pos() - pillar1.getWidth() - pillar1.getX_pos() || stick.getHeight() > pillar2.getX_pos() + pillar2.getWidth() - pillar1.getWidth() -  pillar1.getX_pos() ){
-                    Thread_flag = true;
+                if(stick.getHeight() - 2 < pillar2.getX_pos() - pillar1.getWidth() - pillar1.getX_pos() || stick.getHeight() - 2 > pillar2.getX_pos() + pillar2.getWidth() - pillar1.getWidth() -  pillar1.getX_pos() ){
                     distance =  stick.getHeight() + 30;
                     for (int i = 0; i < distance; i++) {
                         timeline.getKeyFrames().add(new KeyFrame(Duration.millis(10 + i * 10), new KeyValue(view.translateXProperty(), 1 + i * 1)));
@@ -499,7 +511,7 @@ public class GameScreen extends BackgroundHandler {
                         @Override
                         public void run() {
                             while(true){
-                                System.out.println();
+                                System.out.print("");
                                 if(Thread_flag){
                                     Thread_flag = false;
                                     break;
@@ -566,7 +578,7 @@ public class GameScreen extends BackgroundHandler {
                 }
 
                 else{
-                    if(stick.getHeight() >= pillar2.getX_pos() - pillar1.getWidth() - pillar1.getX_pos() + pillar2.getWidth()/2.0 - 5 && stick.getHeight() <= pillar2.getX_pos() - pillar1.getWidth() - pillar1.getX_pos() + pillar2.getWidth()/2.0 + 5){
+                    if(stick.getHeight() - 2 >= pillar2.getX_pos() - pillar1.getWidth() - pillar1.getX_pos() + pillar2.getWidth()/2.0 - 5 && stick.getHeight() - 2 <= pillar2.getX_pos() - pillar1.getWidth() - pillar1.getX_pos() + pillar2.getWidth()/2.0 + 5){
                         score+=2;
                     }else{
                         score++;
@@ -615,7 +627,7 @@ public class GameScreen extends BackgroundHandler {
                         @Override
                         public void run() {
                             while(true){
-                                System.out.println();
+                                System.out.print("");
                                 if(Thread_flag){
                                     Thread_flag = false;
                                     break;

@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f8d3197-9abd-4249-9eb0-21fbff063383" name="Changes" comment="Music Loop Works">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_12_23__10_14am__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_12_23__10_14am__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_12_23__10_37am__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_12_23__10_37am__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_12_23__9_36am__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_12_23__9_36am__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game_Details.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Details.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game_Records.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Records.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/GameScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/GameScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/Pillar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/Pillar.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +102,7 @@
       <recent name="com.stickhero.stickhero" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Testing_Suite">
+  <component name="RunManager">
     <configuration name="Testing_Suite" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.stickhero.stickhero.Testing_Suite" />
       <module name="StickHero" />
@@ -221,10 +227,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Testing_Suite" />
         <item itemvalue="JUnit.Testing_Suite.FlyweightTest" />
         <item itemvalue="JUnit.Testing_Suite.Database_Test" />
         <item itemvalue="JUnit.Testing_Suite.Game_Test" />
-        <item itemvalue="Application.Testing_Suite" />
         <item itemvalue="JUnit.Testing_Suite.Game_Test" />
       </list>
     </recent_temporary>
@@ -237,14 +243,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1699383289127</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Changes">
-      <option name="closed" value="true" />
-      <created>1699788413974</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1699788413974</updated>
     </task>
     <task id="LOCAL-00015" summary="Changes">
       <option name="closed" value="true" />
@@ -630,7 +628,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702098282563</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="Music Loop Works">
+      <option name="closed" value="true" />
+      <created>1702100711325</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1702100711325</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
