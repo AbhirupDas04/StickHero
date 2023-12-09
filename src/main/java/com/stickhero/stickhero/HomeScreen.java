@@ -1,6 +1,7 @@
 /*
-* THIS CLASS HANDLES THE WORKING OF THE HOME SCREEN.
-* */
+ * THIS CLASS HANDLES THE WORKING OF THE HOME SCREEN.
+ * */
+
 
 
 package com.stickhero.stickhero;

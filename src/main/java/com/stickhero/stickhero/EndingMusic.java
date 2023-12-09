@@ -1,6 +1,8 @@
 /*
-* THIS CLASS HANDLES THE WORKING OF THE END SCREEN MUSIC.
-* */
+ * THIS CLASS HANDLES THE WORKING OF THE END SCREEN MUSIC.
+ * */
+
+
 
 package com.stickhero.stickhero;
 

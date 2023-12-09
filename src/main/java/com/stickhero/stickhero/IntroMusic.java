@@ -1,6 +1,6 @@
 /*
-* THIS CLASS HANDLES THE MUSIC ON THE HOME PAGE OF THE GAME.
-* */
+ * THIS CLASS HANDLES THE MUSIC ON THE HOME PAGE OF THE GAME.
+ * */
 
 
 package com.stickhero.stickhero;

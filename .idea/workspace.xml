@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f8d3197-9abd-4249-9eb0-21fbff063383" name="Changes" comment="Reverting to old code" />
+    <list default="true" id="1f8d3197-9abd-4249-9eb0-21fbff063383" name="Changes" comment="Button For Resuming">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/EndScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/EndScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/FlowControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/FlowControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/GameScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/GameScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/HistoryStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stickhero/stickhero/HistoryStorage.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,7 +29,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="Het" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -218,11 +225,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Testing_Suite.Game_Test" />
+        <item itemvalue="Application.Testing_Suite" />
         <item itemvalue="JUnit.Testing_Suite.FlyweightTest" />
         <item itemvalue="JUnit.Testing_Suite.Database_Test" />
-        <item itemvalue="Application.Testing_Suite" />
-        <item itemvalue="Application.Testing_Suite" />
+        <item itemvalue="JUnit.Testing_Suite.Game_Test" />
+        <item itemvalue="JUnit.Testing_Suite.Game_Test" />
       </list>
     </recent_temporary>
   </component>
@@ -234,6 +241,14 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1699383289127</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Changes">
+      <option name="closed" value="true" />
+      <created>1699901478823</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1699901478823</updated>
     </task>
     <task id="LOCAL-00020" summary="Changes">
       <option name="closed" value="true" />
@@ -619,15 +634,7 @@
       <option name="project" value="LOCAL" />
       <updated>1702113996598</updated>
     </task>
-    <task id="LOCAL-00068" summary="Reverting to old code">
-      <option name="closed" value="true" />
-      <created>1702117583475</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1702117583475</updated>
-    </task>
-    <option name="localTasksCounter" value="69" />
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -663,7 +670,6 @@
     <MESSAGE value="Automatic Testing Added" />
     <MESSAGE value="Music Loop Works" />
     <MESSAGE value="Button For Resuming" />
-    <MESSAGE value="Reverting to old code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reverting to old code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Button For Resuming" />
   </component>
 </project>

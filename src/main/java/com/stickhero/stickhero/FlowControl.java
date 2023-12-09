@@ -1,6 +1,6 @@
 /*
-* THIS IS THE MAIN CLASS WHICH SETS UP THE INITIAL GAME.
-* */
+ * THIS IS THE MAIN CLASS WHICH SETS UP THE INITIAL GAME.
+ * */
 
 
 package com.stickhero.stickhero;

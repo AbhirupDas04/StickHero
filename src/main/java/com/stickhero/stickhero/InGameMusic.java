@@ -1,6 +1,6 @@
 /*
-* THIS CLASS HANDLES THE WORKING OF IN-GAME MUSIC
-* */
+ * THIS CLASS HANDLES THE WORKING OF IN-GAME MUSIC
+ * */
 
 
 package com.stickhero.stickhero;
