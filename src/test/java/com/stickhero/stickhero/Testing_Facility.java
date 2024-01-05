@@ -55,14 +55,4 @@ public class Testing_Facility {
 
         assertEquals(hero1,hero2);
     }
-
-    @Test
-    public void FlyweightTest(){
-        Pillar pillar1 = Pillar.getInstance(95, 200, 200, 540);
-        Pillar pillar2 = Pillar.getInstance(95, 250, 200, 590);
-        Pillar pillar3 = Pillar.getInstance(75, 200, 200, 540);
-
-        assertEquals(pillar1,pillar2);
-        assertNotEquals(pillar1,pillar3);
-    }
 }

@@ -121,7 +121,7 @@ public class HomeScreen extends BackgroundHandler {
         text2.setLayoutY(160);
         text2.setText("HERO");
 
-        Pillar pillar = Pillar.getInstance(100,120,200,530);
+        Pillar pillar = new Pillar(100,120,200,530);
         Rectangle rectangle = pillar.getRectangle();
 
         Hero hero = Hero.getInstance();

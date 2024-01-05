@@ -324,7 +324,7 @@ public class GameScreen extends BackgroundHandler {
         this.image_link = randomImage;
 
         Pane game_pane = this.returnBackground();
-        Pillar pillar = Pillar.getInstance(unit.getCurr_pillar_width(),160,0,490);
+        Pillar pillar = new Pillar(unit.getCurr_pillar_width(),160,0,490);
         Rectangle rectangle = pillar.getRectangle();
         this.pillar1_rect = rectangle;
         this.curr_pillar_width = unit.getCurr_pillar_width();
@@ -339,7 +339,7 @@ public class GameScreen extends BackgroundHandler {
 
         int rand_width = unit.getNext_pillar_width();
         int rand_posX = unit.getNext_pillar_start();
-        Pillar pillar2 = Pillar.getInstance(rand_width,160,rand_posX,490);
+        Pillar pillar2 = new Pillar(rand_width,160,rand_posX,490);
         Rectangle rectangle2 = pillar2.getRectangle();
 
         this.pillar2_rect = rectangle2;
@@ -420,7 +420,7 @@ public class GameScreen extends BackgroundHandler {
         this.image_link = randomImage;
 
         Pane game_pane = this.returnBackground();
-        Pillar pillar = Pillar.getInstance(HistoryStorage.getCurr_pillar_width(),160,0,490);
+        Pillar pillar = new Pillar(HistoryStorage.getCurr_pillar_width(),160,0,490);
         Rectangle rectangle = pillar.getRectangle();
         this.pillar1_rect = rectangle;
         this.curr_pillar_width = HistoryStorage.getCurr_pillar_width();
@@ -435,7 +435,7 @@ public class GameScreen extends BackgroundHandler {
 
         int rand_width = HistoryStorage.getNext_pillar_width();
         int rand_posX = HistoryStorage.getNext_pillar_start();
-        Pillar pillar2 = Pillar.getInstance(rand_width,160,rand_posX,490);
+        Pillar pillar2 = new Pillar(rand_width,160,rand_posX,490);
         Rectangle rectangle2 = pillar2.getRectangle();
 
         this.pillar2_rect = rectangle2;
@@ -507,7 +507,7 @@ public class GameScreen extends BackgroundHandler {
         }
 
         Pane game_pane = this.returnBackground();
-        Pillar pillar = Pillar.getInstance(100,160,0,490);
+        Pillar pillar = new Pillar(100,160,0,490);
         Rectangle rectangle = pillar.getRectangle();
         this.pillar1_rect = rectangle;
         this.curr_pillar_width = 100;
@@ -523,7 +523,7 @@ public class GameScreen extends BackgroundHandler {
         Random rand = new Random();
         int rand_width = rand.nextInt(70) + 30;
         int rand_posX = rand.nextInt(370 - rand_width) + 130;
-        Pillar pillar2 = Pillar.getInstance(rand_width,160,rand_posX,490);
+        Pillar pillar2 = new Pillar(rand_width,160,rand_posX,490);
         Rectangle rectangle2 = pillar2.getRectangle();
 
         this.pillar2_rect = rectangle2;

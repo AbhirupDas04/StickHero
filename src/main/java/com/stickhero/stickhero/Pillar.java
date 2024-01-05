@@ -66,7 +66,7 @@ public class Pillar {
 
     private static Map<String, Pillar> hashmap = new HashMap<String,Pillar>();
 
-    private Pillar(int width,int height, int x_pos, int y_pos){
+    public Pillar(int width,int height, int x_pos, int y_pos){
         Rectangle rectangle = new Rectangle(width,height);
         this.x_pos = x_pos;
         this.y_pos = y_pos;
